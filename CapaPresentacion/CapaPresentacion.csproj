@@ -65,11 +65,29 @@
     <Compile Include="frmEncabezadoOrdenes.Designer.cs">
       <DependentUpon>frmEncabezadoOrdenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarios.Designer.cs">
+      <DependentUpon>FrmInventarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenus.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMenus.Designer.cs">
       <DependentUpon>frmMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPagoOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPagoOrdenes.Designer.cs">
+      <DependentUpon>FrmPagoOrdenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPagoPlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPagoPlanillas.Designer.cs">
+      <DependentUpon>FrmPagoPlanillas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,8 +97,17 @@
     <EmbeddedResource Include="frmEncabezadoOrdenes.resx">
       <DependentUpon>frmEncabezadoOrdenes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarios.resx">
+      <DependentUpon>FrmInventarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenus.resx">
       <DependentUpon>frmMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagoOrdenes.resx">
+      <DependentUpon>FrmPagoOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagoPlanillas.resx">
+      <DependentUpon>FrmPagoPlanillas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
