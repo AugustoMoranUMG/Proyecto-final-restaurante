@@ -9,7 +9,7 @@ namespace CapaDatos
 {
     public class CDInventarios
     {
-        CDconexion cd_conexion = new CDconexion();
+        Conexion cd_conexion = new Conexion();
 
         public List<dynamic> MtdListarCategorias()
         {

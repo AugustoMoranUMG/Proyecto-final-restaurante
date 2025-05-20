@@ -8,33 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace Sistema_Restaurante
 {
     public partial class FrmPagoOrdenes: Form
     {
         public FrmPagoOrdenes()
         {
             InitializeComponent();
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFechaActual_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
