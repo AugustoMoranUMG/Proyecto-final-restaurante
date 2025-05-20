@@ -65,6 +65,12 @@
     <Compile Include="frmDetallesOrdenes.Designer.cs">
       <DependentUpon>frmDetallesOrdenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEncabezadoOrdenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     <Compile Include="frmMenus.Designer.cs">
       <DependentUpon>frmMenus.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMesas.Designer.cs">
+      <DependentUpon>frmMesas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPagoOrdenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     <Compile Include="FrmPagoPlanillas.Designer.cs">
       <DependentUpon>FrmPagoPlanillas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmClientes.resx">
@@ -102,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDetallesOrdenes.resx">
       <DependentUpon>frmDetallesOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEncabezadoOrdenes.resx">
       <DependentUpon>frmEncabezadoOrdenes.cs</DependentUpon>
@@ -112,11 +133,17 @@
     <EmbeddedResource Include="frmMenus.resx">
       <DependentUpon>frmMenus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMesas.resx">
+      <DependentUpon>frmMesas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPagoOrdenes.resx">
       <DependentUpon>FrmPagoOrdenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPagoPlanillas.resx">
       <DependentUpon>FrmPagoPlanillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
