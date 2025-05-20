@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDencabezadoOrdenes.cs" />
+    <Compile Include="CDInventarios.cs" />
     <Compile Include="CDmenus.cs" />
+    <Compile Include="CDPagoOrdenes.cs" />
+    <Compile Include="CDPagoPlanillas.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
