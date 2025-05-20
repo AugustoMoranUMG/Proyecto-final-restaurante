@@ -39,7 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvMenus = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblCategoria = new System.Windows.Forms.Label();
             this.txtCodigoMenu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.cboxCategorias = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -169,21 +169,11 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "INVENTARIOS";
             // 
-            // lblCategoria
-            // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(347, 160);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(15, 16);
-            this.lblCategoria.TabIndex = 36;
-            this.lblCategoria.Text = "--";
-            // 
             // txtCodigoMenu
             // 
             this.txtCodigoMenu.Location = new System.Drawing.Point(283, 92);
             this.txtCodigoMenu.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoMenu.Name = "txtCodigoMenu";
-            this.txtCodigoMenu.ReadOnly = true;
             this.txtCodigoMenu.Size = new System.Drawing.Size(164, 22);
             this.txtCodigoMenu.TabIndex = 35;
             // 
@@ -211,6 +201,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboxCategorias);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.lblDiasVigencia);
@@ -220,7 +211,6 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lblCantidad);
-            this.groupBox1.Controls.Add(this.lblCategoria);
             this.groupBox1.Controls.Add(this.txtCodigoMenu);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtCodigoInventario);
@@ -324,6 +314,14 @@
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
+            // cboxCategorias
+            // 
+            this.cboxCategorias.FormattingEnabled = true;
+            this.cboxCategorias.Location = new System.Drawing.Point(283, 151);
+            this.cboxCategorias.Name = "cboxCategorias";
+            this.cboxCategorias.Size = new System.Drawing.Size(164, 24);
+            this.cboxCategorias.TabIndex = 55;
+            // 
             // FrmInventarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -338,6 +336,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmInventarios";
             this.Text = "FrmInventarios";
+            this.Load += new System.EventHandler(this.FrmInventarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -359,7 +358,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvMenus;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.TextBox txtCodigoMenu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
@@ -371,5 +369,6 @@
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnSalir;
+        private System.Windows.Forms.ComboBox cboxCategorias;
     }
 }
