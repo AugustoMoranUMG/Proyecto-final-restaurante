@@ -12,51 +12,44 @@ namespace CapaDatos
     {
         Conexion cd_conexion = new Conexion();
 
-        public List<dynamic> MtdListarCategorias()
+        //primer paso
+        public string MtdConsultarCategoria(string CodigoMenu)
         {
-            List<dynamic> ListaCategorias = new List<dynamic>();
-            string QueryListaCategorias = "Select CodigoMenu,Categoria from tbl_Menus";
-            SqlCommand cmd = new SqlCommand(QueryListaCategorias, cd_conexion.MtdAbrirConexion());
-            SqlDataReader reader = cmd.ExecuteReader();
+            string categoria;
 
-            while (reader.Read())
+            string QueryConsultarCategorias = "Select Categoria from tbl_Menus where CodigoMenu = @CodigoMenu";
+            SqlCommand CommandCategorias = new SqlCommand(QueryConsultarCategorias, cd_conexion.MtdAbrirConexion());
+            CommandCategorias.Parameters.AddWithValue("@CodigoMenu", CodigoMenu);
+            SqlDataReader reader = CommandCategorias.ExecuteReader();
+
+            if (reader.Read())
             {
-                ListaCategorias.Add(new
-                {
-                    Value = reader["CodigoMenu"],
-                    Text = $"{reader["CodigoMenu"]} - {reader["Categoria"]}"
-                });
+                categoria = reader["Categoria"].ToString();
             }
+            else
+            {
+                categoria = "";
+            }
+
             cd_conexion.MtdCerrarConexion();
-            return ListaCategorias;
+            return categoria;
         }
 
-        public DataTable MtdConsultarCategorias()
-        {
-            string QueryConsultarCategorias = "Select * from tbl_Menus";
-            SqlDataAdapter sqlAdapter = new SqlDataAdapter(QueryConsultarCategorias, cd_conexion.MtdAbrirConexion());
-            DataTable dt_Categorias = new DataTable();
-            sqlAdapter.Fill(dt_Categorias);
-
-            cd_conexion.MtdCerrarConexion();
-            return dt_Categorias;
-        }
-
-       /* public void MtdAgregarCategorias()
-        {
-            string QueryAgregarCategorias = "Insert into tbl_Menus(FechaOrden, MontoTotalOrd, Estado, UsuarioSistema, FechaSistema) values (@CodigoOrdenEnc, @CodigoCliente, @CodigoMesa, @CodigoEmpleado, @FechaOrden, @MontoTotalOrd, @Estado, @UsuarioSistema, @FechaSistema)";
-            SqlCommand CommandAgregarCategorias = new SqlCommand(QueryAgregarCategorias, cd_conexion.MtdAbrirConexion());
-            CommandAgregarCategorias.Parameters.AddWithValue("@CodigoCliente", CodigoCliente);
-            CommandAgregarCategorias.Parameters.AddWithValue("@CodigoMesa", CodigoMesa);
-            CommandAgregarCategorias.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
-            CommandAgregarCategorias.Parameters.AddWithValue("@FechaOrden", FechaOrden);
-            CommandAgregarCategorias.Parameters.AddWithValue("@MontoTotalOrd", MontoTotalOrd);
-            CommandAgregarCategorias.Parameters.AddWithValue("@Estado", Estado);
-            CommandAgregarCategorias.Parameters.AddWithValue("@UsuarioSistema", UsuarioSistema);
-            CommandAgregarCategorias.Parameters.AddWithValue("@FechaSistema", FechaSistema);
-            CommandAgregarCategorias.ExecuteNonQuery();
-            cd_conexion.MtdCerrarConexion();
-        }*/
+        /* public void MtdAgregarCategorias()
+         {
+             string QueryAgregarCategorias = "Insert into tbl_Menus(FechaOrden, MontoTotalOrd, Estado, UsuarioSistema, FechaSistema) values (@CodigoOrdenEnc, @CodigoCliente, @CodigoMesa, @CodigoEmpleado, @FechaOrden, @MontoTotalOrd, @Estado, @UsuarioSistema, @FechaSistema)";
+             SqlCommand CommandAgregarCategorias = new SqlCommand(QueryAgregarCategorias, cd_conexion.MtdAbrirConexion());
+             CommandAgregarCategorias.Parameters.AddWithValue("@CodigoCliente", CodigoCliente);
+             CommandAgregarCategorias.Parameters.AddWithValue("@CodigoMesa", CodigoMesa);
+             CommandAgregarCategorias.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
+             CommandAgregarCategorias.Parameters.AddWithValue("@FechaOrden", FechaOrden);
+             CommandAgregarCategorias.Parameters.AddWithValue("@MontoTotalOrd", MontoTotalOrd);
+             CommandAgregarCategorias.Parameters.AddWithValue("@Estado", Estado);
+             CommandAgregarCategorias.Parameters.AddWithValue("@UsuarioSistema", UsuarioSistema);
+             CommandAgregarCategorias.Parameters.AddWithValue("@FechaSistema", FechaSistema);
+             CommandAgregarCategorias.ExecuteNonQuery();
+             cd_conexion.MtdCerrarConexion();
+         }*/
 
     }
 }

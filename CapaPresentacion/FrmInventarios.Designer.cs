@@ -39,7 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvMenus = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCodigoMenu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,7 +49,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.cboxCategorias = new System.Windows.Forms.ComboBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.cboxCodigoMenu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -127,7 +127,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(994, 24);
+            this.label14.Location = new System.Drawing.Point(935, 24);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(115, 22);
@@ -169,14 +169,6 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "INVENTARIOS";
             // 
-            // txtCodigoMenu
-            // 
-            this.txtCodigoMenu.Location = new System.Drawing.Point(283, 92);
-            this.txtCodigoMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodigoMenu.Name = "txtCodigoMenu";
-            this.txtCodigoMenu.Size = new System.Drawing.Size(164, 22);
-            this.txtCodigoMenu.TabIndex = 35;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -201,7 +193,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cboxCategorias);
+            this.groupBox1.Controls.Add(this.cboxCodigoMenu);
+            this.groupBox1.Controls.Add(this.lblCategoria);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.lblDiasVigencia);
@@ -211,7 +204,6 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lblCantidad);
-            this.groupBox1.Controls.Add(this.txtCodigoMenu);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtCodigoInventario);
             this.groupBox1.Controls.Add(this.label4);
@@ -314,13 +306,22 @@
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // cboxCategorias
+            // lblCategoria
             // 
-            this.cboxCategorias.FormattingEnabled = true;
-            this.cboxCategorias.Location = new System.Drawing.Point(283, 151);
-            this.cboxCategorias.Name = "cboxCategorias";
-            this.cboxCategorias.Size = new System.Drawing.Size(164, 24);
-            this.cboxCategorias.TabIndex = 55;
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(343, 160);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(19, 16);
+            this.lblCategoria.TabIndex = 55;
+            this.lblCategoria.Text = "---";
+            // 
+            // cboxCodigoMenu
+            // 
+            this.cboxCodigoMenu.FormattingEnabled = true;
+            this.cboxCodigoMenu.Location = new System.Drawing.Point(283, 90);
+            this.cboxCodigoMenu.Name = "cboxCodigoMenu";
+            this.cboxCodigoMenu.Size = new System.Drawing.Size(164, 24);
+            this.cboxCodigoMenu.TabIndex = 56;
             // 
             // FrmInventarios
             // 
@@ -358,7 +359,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvMenus;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodigoMenu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -369,6 +369,7 @@
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnSalir;
-        private System.Windows.Forms.ComboBox cboxCategorias;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.ComboBox cboxCodigoMenu;
     }
 }

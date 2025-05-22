@@ -22,22 +22,13 @@ namespace Sistema_Restaurante
 
         private void FrmInventarios_Load(object sender, EventArgs e)
         {
-            MtdInsertarListaCategorias();
+            
         }
 
-        
-        public void MtdInsertarListaCategorias()
+        //primer paso
+        private void txtCodigoMenu_TextChanged(object sender, EventArgs e)
         {
-            var listacat = cd_inventarios.MtdListarCategorias();
-            foreach (var ListaCategorias in listacat)
-            {
-                cboxCategorias.Items.Add(ListaCategorias);
-            }
-
-            cboxCategorias.DisplayMember = "Text";
-            cboxCategorias.ValueMember = "Value";
+            lblCategoria.Text = cd_inventarios.MtdConsultarCategoria(txtCodigoMenu.Text);
         }
-
-
     }
 }
