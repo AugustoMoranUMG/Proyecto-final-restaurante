@@ -42,6 +42,7 @@ namespace Sistema_Restaurante
             {
                 cboxCodigoDetalleOrdenes.Items.Add(DetallesOrdenes);
             }
+
             cboxCodigoDetalleOrdenes.DisplayMember = "Text";
             cboxCodigoDetalleOrdenes.ValueMember = "Value";
         }
