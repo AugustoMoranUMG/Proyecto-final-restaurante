@@ -22,13 +22,35 @@ namespace Sistema_Restaurante
 
         private void FrmInventarios_Load(object sender, EventArgs e)
         {
+            MtdMostrarListaMenus();
+        }
+
+        //primer paso CBOX
+        private void MtdMostrarListaMenus()
+        {
+            var ListaMenus = cd_inventarios.MtdListarMenus();
+
+            foreach (var Menus in ListaMenus)
+            {
+                cboxCodigoMenu.Items.Add(Menus);
+            }
+
+            cboxCodigoMenu.DisplayMember = "Text";
+            cboxCodigoMenu.ValueMember = "Value";
+        }
+
+        
+        private void txtCodigoMenu_TextChanged(object sender, EventArgs e)
+        {
             
         }
 
-        //primer paso
-        private void txtCodigoMenu_TextChanged(object sender, EventArgs e)
-        {
-            lblCategoria.Text = cd_inventarios.MtdConsultarCategoria(txtCodigoMenu.Text);
+        //primer paso LBL
+        private void cboxCodigoMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {         
+            var MenuSeleccionado = (dynamic)cboxCodigoMenu.SelectedItem;
+            int CodigoMenu = (int)MenuSeleccionado.Value;
+            lblCategoria.Text = cd_inventarios.MtdConsultarCategoria(CodigoMenu);
         }
     }
 }

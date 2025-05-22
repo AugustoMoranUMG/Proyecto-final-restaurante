@@ -12,8 +12,8 @@ namespace CapaDatos
     {
         Conexion cd_conexion = new Conexion();
 
-        //primer paso
-        public string MtdConsultarCategoria(string CodigoMenu)
+        //primer paso LBL
+        public string MtdConsultarCategoria(int CodigoMenu)
         {
             string categoria;
 
@@ -25,6 +25,7 @@ namespace CapaDatos
             if (reader.Read())
             {
                 categoria = reader["Categoria"].ToString();
+                
             }
             else
             {
@@ -33,6 +34,27 @@ namespace CapaDatos
 
             cd_conexion.MtdCerrarConexion();
             return categoria;
+        }
+
+        //primer paso CBOX
+        public List<dynamic> MtdListarMenus()
+        {
+            List<dynamic> ListaMenu = new List<dynamic>();
+            string QueryListaMenus = "Select CodigoMenu, Nombre from tbl_Menus";
+            SqlCommand cmd = new SqlCommand(QueryListaMenus, cd_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListaMenu.Add(new
+                {
+                    Value = reader["CodigoMenu"],
+                    Text = $"{reader["CodigoMenu"]} - {reader["Nombre"]}"
+                });
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return ListaMenu;
         }
 
         /* public void MtdAgregarCategorias()

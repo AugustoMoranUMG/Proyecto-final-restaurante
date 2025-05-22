@@ -8,5 +8,6 @@ namespace CapaLogica
 {
     class CLInventarios
     {
+        //fechas y dias
     }
 }

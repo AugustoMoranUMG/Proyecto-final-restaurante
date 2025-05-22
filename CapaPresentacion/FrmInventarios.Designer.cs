@@ -322,6 +322,7 @@
             this.cboxCodigoMenu.Name = "cboxCodigoMenu";
             this.cboxCodigoMenu.Size = new System.Drawing.Size(164, 24);
             this.cboxCodigoMenu.TabIndex = 56;
+            this.cboxCodigoMenu.SelectedIndexChanged += new System.EventHandler(this.cboxCodigoMenu_SelectedIndexChanged);
             // 
             // FrmInventarios
             // 
