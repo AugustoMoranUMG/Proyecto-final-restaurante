@@ -37,6 +37,7 @@ namespace Sistema_Restaurante
 
             cboxCodigoMenu.DisplayMember = "Text";
             cboxCodigoMenu.ValueMember = "Value";
+            
         }
 
         
@@ -47,10 +48,8 @@ namespace Sistema_Restaurante
 
         //primer paso LBL
         private void cboxCodigoMenu_SelectedIndexChanged(object sender, EventArgs e)
-        {         
-            var MenuSeleccionado = (dynamic)cboxCodigoMenu.SelectedItem;
-            int CodigoMenu = (int)MenuSeleccionado.Value;
-            lblCategoria.Text = cd_inventarios.MtdConsultarCategoria(CodigoMenu);
+        {
+            lblCategoria.Text = cd_inventarios.MtdConsultarCategoria(int.Parse(cboxCodigoMenu.Text.Split('-')[0].Trim()));
         }
     }
 }
