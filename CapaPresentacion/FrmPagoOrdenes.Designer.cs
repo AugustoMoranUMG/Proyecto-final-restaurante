@@ -32,7 +32,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
-            this.lblMetodoPago = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,12 +53,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigoPago = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.cboxOrdenEncabezado = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
-            this.cboxOrdenEncabezado = new System.Windows.Forms.ComboBox();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.cboxMetodoPago = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +71,7 @@
             "Augusto Morán",
             "Gerber Canahuí",
             "Fernando Fajardo"});
-            this.comboBox2.Location = new System.Drawing.Point(840, 207);
+            this.comboBox2.Location = new System.Drawing.Point(821, 207);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(164, 24);
             this.comboBox2.TabIndex = 51;
@@ -80,7 +80,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(607, 206);
+            this.label19.Location = new System.Drawing.Point(588, 206);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(145, 22);
@@ -90,7 +90,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(840, 164);
+            this.dateTimePicker1.Location = new System.Drawing.Point(821, 164);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(164, 22);
             this.dateTimePicker1.TabIndex = 49;
@@ -99,21 +99,12 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(607, 164);
+            this.label18.Location = new System.Drawing.Point(588, 164);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(107, 22);
             this.label18.TabIndex = 48;
             this.label18.Text = "Fecha Pago:";
-            // 
-            // lblMetodoPago
-            // 
-            this.lblMetodoPago.AutoSize = true;
-            this.lblMetodoPago.Location = new System.Drawing.Point(913, 84);
-            this.lblMetodoPago.Name = "lblMetodoPago";
-            this.lblMetodoPago.Size = new System.Drawing.Size(15, 16);
-            this.lblMetodoPago.TabIndex = 47;
-            this.lblMetodoPago.Text = "--";
             // 
             // comboBox1
             // 
@@ -123,7 +114,7 @@
             "Parcial",
             "Completado",
             "Rechazado"});
-            this.comboBox1.Location = new System.Drawing.Point(840, 122);
+            this.comboBox1.Location = new System.Drawing.Point(821, 122);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 24);
             this.comboBox1.TabIndex = 46;
@@ -132,7 +123,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(607, 124);
+            this.label9.Location = new System.Drawing.Point(588, 124);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 22);
@@ -143,7 +134,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(604, 80);
+            this.label8.Location = new System.Drawing.Point(585, 80);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 22);
@@ -153,7 +144,7 @@
             // lblTotalPago
             // 
             this.lblTotalPago.AutoSize = true;
-            this.lblTotalPago.Location = new System.Drawing.Point(913, 43);
+            this.lblTotalPago.Location = new System.Drawing.Point(894, 43);
             this.lblTotalPago.Name = "lblTotalPago";
             this.lblTotalPago.Size = new System.Drawing.Size(15, 16);
             this.lblTotalPago.TabIndex = 43;
@@ -163,7 +154,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(604, 39);
+            this.label5.Location = new System.Drawing.Point(585, 39);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 22);
@@ -227,6 +218,7 @@
             this.lblMontoOrden.Size = new System.Drawing.Size(15, 16);
             this.lblMontoOrden.TabIndex = 36;
             this.lblMontoOrden.Text = "--";
+            this.lblMontoOrden.Click += new System.EventHandler(this.lblMontoOrden_Click);
             // 
             // label6
             // 
@@ -330,6 +322,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboxMetodoPago);
             this.groupBox1.Controls.Add(this.cboxOrdenEncabezado);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.comboBox2);
@@ -338,7 +331,6 @@
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.lblMetodoPago);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -363,43 +355,14 @@
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             // 
-            // btnEliminar
+            // cboxOrdenEncabezado
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminar.IconColor = System.Drawing.Color.Black;
-            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.IconSize = 24;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(930, 506);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(136, 41);
-            this.btnEliminar.TabIndex = 59;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.Black;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.btnSalir.IconColor = System.Drawing.Color.Black;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 24;
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(1074, 506);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(136, 41);
-            this.btnSalir.TabIndex = 60;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.cboxOrdenEncabezado.FormattingEnabled = true;
+            this.cboxOrdenEncabezado.Location = new System.Drawing.Point(345, 65);
+            this.cboxOrdenEncabezado.Name = "cboxOrdenEncabezado";
+            this.cboxOrdenEncabezado.Size = new System.Drawing.Size(164, 24);
+            this.cboxOrdenEncabezado.TabIndex = 64;
+            this.cboxOrdenEncabezado.SelectedIndexChanged += new System.EventHandler(this.cboxOrdenEncabezado_SelectedIndexChanged);
             // 
             // btnCancelar
             // 
@@ -407,7 +370,7 @@
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 25;
-            this.btnCancelar.Location = new System.Drawing.Point(1062, 194);
+            this.btnCancelar.Location = new System.Drawing.Point(1062, 175);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(117, 34);
@@ -437,7 +400,7 @@
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 25;
-            this.btnAgregar.Location = new System.Drawing.Point(1062, 34);
+            this.btnAgregar.Location = new System.Drawing.Point(1062, 43);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(117, 34);
@@ -446,13 +409,55 @@
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // cboxOrdenEncabezado
+            // btnEliminar
             // 
-            this.cboxOrdenEncabezado.FormattingEnabled = true;
-            this.cboxOrdenEncabezado.Location = new System.Drawing.Point(345, 65);
-            this.cboxOrdenEncabezado.Name = "cboxOrdenEncabezado";
-            this.cboxOrdenEncabezado.Size = new System.Drawing.Size(164, 24);
-            this.cboxOrdenEncabezado.TabIndex = 64;
+            this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 24;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.Location = new System.Drawing.Point(911, 501);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(136, 41);
+            this.btnEliminar.TabIndex = 59;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btnSalir.IconColor = System.Drawing.Color.Black;
+            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalir.IconSize = 24;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.Location = new System.Drawing.Point(1055, 501);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(136, 41);
+            this.btnSalir.TabIndex = 60;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // cboxMetodoPago
+            // 
+            this.cboxMetodoPago.FormattingEnabled = true;
+            this.cboxMetodoPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Tarjeta",
+            "Transferencia"});
+            this.cboxMetodoPago.Location = new System.Drawing.Point(821, 77);
+            this.cboxMetodoPago.Name = "cboxMetodoPago";
+            this.cboxMetodoPago.Size = new System.Drawing.Size(164, 24);
+            this.cboxMetodoPago.TabIndex = 65;
             // 
             // FrmPagoOrdenes
             // 
@@ -483,7 +488,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label lblMetodoPago;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -511,5 +515,6 @@
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnAgregar;
         private System.Windows.Forms.ComboBox cboxOrdenEncabezado;
+        private System.Windows.Forms.ComboBox cboxMetodoPago;
     }
 }
