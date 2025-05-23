@@ -31,17 +31,17 @@
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cboxCargo = new System.Windows.Forms.ComboBox();
+            this.cboxNumeroMesa = new System.Windows.Forms.ComboBox();
+            this.txtUbicacion = new System.Windows.Forms.TextBox();
+            this.cboxTipoMesa = new System.Windows.Forms.ComboBox();
+            this.cboxCantidadSillas = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.cboxUsuarioSistema = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.txtCodigoEmpleado = new System.Windows.Forms.TextBox();
+            this.txtCodigoMesa = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,10 +50,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblFechaActual = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.dgvMesas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMesas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -72,6 +72,7 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
@@ -89,20 +90,21 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.cboxCargo);
+            this.groupBox1.Controls.Add(this.cboxNumeroMesa);
+            this.groupBox1.Controls.Add(this.txtUbicacion);
+            this.groupBox1.Controls.Add(this.cboxTipoMesa);
+            this.groupBox1.Controls.Add(this.cboxCantidadSillas);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.cboxEstado);
             this.groupBox1.Controls.Add(this.cboxUsuarioSistema);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Controls.Add(this.txtCodigoEmpleado);
+            this.groupBox1.Controls.Add(this.txtCodigoMesa);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
@@ -114,64 +116,65 @@
             this.groupBox1.Size = new System.Drawing.Size(934, 152);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // comboBox2
+            // cboxNumeroMesa
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "A1",
-            "A2",
-            "B3",
-            "B4",
-            "C5",
-            "C6",
-            "D7",
-            "D8",
-            "E9",
-            "E10",
-            "F11",
-            "F12",
-            "H13",
-            "H14"});
-            this.comboBox2.Location = new System.Drawing.Point(163, 59);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(124, 21);
-            this.comboBox2.TabIndex = 40;
+            this.cboxNumeroMesa.FormattingEnabled = true;
+            this.cboxNumeroMesa.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"});
+            this.cboxNumeroMesa.Location = new System.Drawing.Point(163, 59);
+            this.cboxNumeroMesa.Name = "cboxNumeroMesa";
+            this.cboxNumeroMesa.Size = new System.Drawing.Size(124, 21);
+            this.cboxNumeroMesa.TabIndex = 40;
             // 
-            // textBox1
+            // txtUbicacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 39;
+            this.txtUbicacion.Location = new System.Drawing.Point(163, 121);
+            this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.Size = new System.Drawing.Size(124, 20);
+            this.txtUbicacion.TabIndex = 39;
             // 
-            // comboBox1
+            // cboxTipoMesa
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboxTipoMesa.FormattingEnabled = true;
+            this.cboxTipoMesa.Items.AddRange(new object[] {
             "Interior",
             "Exterior",
             "Juegos",
             "Privadas"});
-            this.comboBox1.Location = new System.Drawing.Point(512, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 21);
-            this.comboBox1.TabIndex = 38;
+            this.cboxTipoMesa.Location = new System.Drawing.Point(512, 28);
+            this.cboxTipoMesa.Name = "cboxTipoMesa";
+            this.cboxTipoMesa.Size = new System.Drawing.Size(124, 21);
+            this.cboxTipoMesa.TabIndex = 38;
             // 
-            // cboxCargo
+            // cboxCantidadSillas
             // 
-            this.cboxCargo.FormattingEnabled = true;
-            this.cboxCargo.Items.AddRange(new object[] {
+            this.cboxCantidadSillas.FormattingEnabled = true;
+            this.cboxCantidadSillas.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5",
             "6"});
-            this.cboxCargo.Location = new System.Drawing.Point(163, 91);
-            this.cboxCargo.Name = "cboxCargo";
-            this.cboxCargo.Size = new System.Drawing.Size(124, 21);
-            this.cboxCargo.TabIndex = 37;
+            this.cboxCantidadSillas.Location = new System.Drawing.Point(163, 91);
+            this.cboxCantidadSillas.Name = "cboxCantidadSillas";
+            this.cboxCantidadSillas.Size = new System.Drawing.Size(124, 21);
+            this.cboxCantidadSillas.TabIndex = 37;
             // 
             // label10
             // 
@@ -222,6 +225,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
@@ -239,6 +243,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -256,14 +261,15 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtCodigoEmpleado
+            // txtCodigoMesa
             // 
-            this.txtCodigoEmpleado.Location = new System.Drawing.Point(163, 26);
-            this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
-            this.txtCodigoEmpleado.ReadOnly = true;
-            this.txtCodigoEmpleado.Size = new System.Drawing.Size(124, 20);
-            this.txtCodigoEmpleado.TabIndex = 16;
+            this.txtCodigoMesa.Location = new System.Drawing.Point(163, 26);
+            this.txtCodigoMesa.Name = "txtCodigoMesa";
+            this.txtCodigoMesa.ReadOnly = true;
+            this.txtCodigoMesa.Size = new System.Drawing.Size(124, 20);
+            this.txtCodigoMesa.TabIndex = 16;
             // 
             // label8
             // 
@@ -345,16 +351,18 @@
             this.label14.TabIndex = 49;
             this.label14.Text = "Fecha actual:";
             // 
-            // dgvEmpleados
+            // dgvMesas
             // 
-            this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleados.Location = new System.Drawing.Point(10, 215);
-            this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.ReadOnly = true;
-            this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(933, 236);
-            this.dgvEmpleados.TabIndex = 50;
+            this.dgvMesas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMesas.Location = new System.Drawing.Point(10, 215);
+            this.dgvMesas.Name = "dgvMesas";
+            this.dgvMesas.ReadOnly = true;
+            this.dgvMesas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMesas.Size = new System.Drawing.Size(933, 236);
+            this.dgvMesas.TabIndex = 50;
+            this.dgvMesas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMesas_CellClick);
+            this.dgvMesas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMesas_CellContentClick);
             // 
             // label1
             // 
@@ -376,13 +384,14 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblFechaActual);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.dgvEmpleados);
+            this.Controls.Add(this.dgvMesas);
             this.Controls.Add(this.label1);
             this.Name = "frmMesas";
             this.Text = "frmMesas";
+            this.Load += new System.EventHandler(this.frmMesas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMesas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,17 +402,17 @@
         private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox cboxCargo;
+        private System.Windows.Forms.ComboBox cboxNumeroMesa;
+        private System.Windows.Forms.TextBox txtUbicacion;
+        private System.Windows.Forms.ComboBox cboxTipoMesa;
+        private System.Windows.Forms.ComboBox cboxCantidadSillas;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cboxEstado;
         private System.Windows.Forms.ComboBox cboxUsuarioSistema;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnGuardar;
-        private System.Windows.Forms.TextBox txtCodigoEmpleado;
+        private System.Windows.Forms.TextBox txtCodigoMesa;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
@@ -412,7 +421,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblFechaActual;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dgvEmpleados;
+        private System.Windows.Forms.DataGridView dgvMesas;
         private System.Windows.Forms.Label label1;
     }
 }
