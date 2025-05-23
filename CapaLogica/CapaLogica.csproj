@@ -49,8 +49,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLclientes.cs" />
+    <Compile Include="CLempleado.cs" />
     <Compile Include="CLencabezadoOrdenes.cs" />
     <Compile Include="CLmenus.cs" />
+    <Compile Include="CLmesas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
