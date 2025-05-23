@@ -25,8 +25,6 @@ namespace Sistema_Restaurante
         private void FrmInventarios_Load(object sender, EventArgs e)
         {
             MtdMostrarListaMenus();
-            dtpFechaEntrada.ValueChanged += ActualizarDiasVigencia;
-            dtpFechaVencimiento.ValueChanged += ActualizarDiasVigencia;
             lblFechaSistema.Text = DateTime.Now.ToString("dd/MM/yy hh:mm:ss tt");
         }
 
@@ -68,7 +66,7 @@ namespace Sistema_Restaurante
         }
 
         
-        private void ActualizarDiasVigencia(object sender, EventArgs e)
+        private void ActualizarDiasVigencia()
         {
             DateTime fechaEntrada = dtpFechaEntrada.Value.Date;
             DateTime fechaVencimiento = dtpFechaVencimiento.Value.Date;
@@ -84,6 +82,16 @@ namespace Sistema_Restaurante
                 lblDiasVigencia.Text = $"{dias}";
             }
 
+        }
+
+        private void dtpFechaVencimiento_ValueChanged(object sender, EventArgs e)
+        {
+            ActualizarDiasVigencia();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

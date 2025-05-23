@@ -85,7 +85,7 @@
             // lblDiasVigencia
             // 
             this.lblDiasVigencia.AutoSize = true;
-            this.lblDiasVigencia.Location = new System.Drawing.Point(853, 106);
+            this.lblDiasVigencia.Location = new System.Drawing.Point(872, 106);
             this.lblDiasVigencia.Name = "lblDiasVigencia";
             this.lblDiasVigencia.Size = new System.Drawing.Size(15, 16);
             this.lblDiasVigencia.TabIndex = 52;
@@ -115,6 +115,7 @@
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
             this.dtpFechaVencimiento.Size = new System.Drawing.Size(164, 22);
             this.dtpFechaVencimiento.TabIndex = 51;
+            this.dtpFechaVencimiento.ValueChanged += new System.EventHandler(this.dtpFechaVencimiento_ValueChanged);
             // 
             // lblFechaSistema
             // 
@@ -307,11 +308,13 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(332, 110);
+            this.lblCategoria.Location = new System.Drawing.Point(342, 110);
             this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblCategoria.Size = new System.Drawing.Size(19, 16);
             this.lblCategoria.TabIndex = 55;
             this.lblCategoria.Text = "---";
+            this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
             // 
@@ -355,10 +358,10 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 24;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(994, 456);
+            this.btnEliminar.Location = new System.Drawing.Point(979, 456);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(123, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(138, 39);
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -381,6 +384,7 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmInventarios
             // 
