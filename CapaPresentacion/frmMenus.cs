@@ -137,5 +137,10 @@ namespace Sistema_Restaurante
         {
             lblPrecio.Text = cl_menus.MtdPrecioMenu(cboxCategoria.Text).ToString();
         }
+
+        private void dgvMenus_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

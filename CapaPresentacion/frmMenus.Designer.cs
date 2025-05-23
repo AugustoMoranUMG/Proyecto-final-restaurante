@@ -308,6 +308,7 @@
             this.dgvMenus.Size = new System.Drawing.Size(933, 236);
             this.dgvMenus.TabIndex = 26;
             this.dgvMenus.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenus_CellClick);
+            this.dgvMenus.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenus_CellContentClick);
             // 
             // label1
             // 
