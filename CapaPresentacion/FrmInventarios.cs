@@ -15,6 +15,8 @@ namespace Sistema_Restaurante
     public partial class FrmInventarios: Form
     {
         CDInventarios cd_inventarios = new CDInventarios();
+        CLInventarios cl_inventarios = new CLInventarios();
+
         public FrmInventarios()
         {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace Sistema_Restaurante
         private void FrmInventarios_Load(object sender, EventArgs e)
         {
             MtdMostrarListaMenus();
+            lblFechaSistema.Text = DateTime.Now.ToString("dd/MM/yy hh:mm:ss tt");
         }
 
         //primer paso CBOX
@@ -49,7 +52,46 @@ namespace Sistema_Restaurante
         //primer paso LBL
         private void cboxCodigoMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblCategoria.Text = cd_inventarios.MtdConsultarCategoria(int.Parse(cboxCodigoMenu.Text.Split('-')[0].Trim()));
+            /*lblCategoria.Text = cd_inventarios.MtdConsultarCategoria(int.Parse(cboxCodigoMenu.Text.Split('-')[0].Trim()));*/
+
+            /*
+            var MenuSeleccionado = (dynamic)cboxCodigoMenu.SelectedItem;
+            int CodigoMenu = (int)MenuSeleccionado.Value;
+            lblCategoria.Text = cd_inventarios.MtdConsultarCategoria(CodigoMenu);
+            */
+
+            var MenuSeleccionado = cboxCodigoMenu.SelectedItem;
+            int CodigoMenu = (int)MenuSeleccionado.GetType().GetProperty("Value").GetValue(MenuSeleccionado, null);
+            lblCategoria.Text = cd_inventarios.MtdConsultarCategoria(CodigoMenu);
+        }
+
+        
+        private void ActualizarDiasVigencia()
+        {
+            DateTime fechaEntrada = dtpFechaEntrada.Value.Date;
+            DateTime fechaVencimiento = dtpFechaVencimiento.Value.Date;
+
+            int dias = cl_inventarios.MtdDiasVigencia(fechaEntrada, fechaVencimiento);
+
+            if (dias < 0)
+            {
+                lblDiasVigencia.Text = "Fecha inválida";
+            }
+            else
+            {
+                lblDiasVigencia.Text = $"{dias}";
+            }
+
+        }
+
+        private void dtpFechaVencimiento_ValueChanged(object sender, EventArgs e)
+        {
+            ActualizarDiasVigencia();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

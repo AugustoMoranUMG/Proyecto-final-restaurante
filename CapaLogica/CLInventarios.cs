@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace CapaLogica
 {
-    class CLInventarios
+    public class CLInventarios
     {
-        //fechas y dias
+        public  int MtdDiasVigencia(DateTime fechaEntrada, DateTime fechaVencimiento)
+        {
+            int diasVigencia = (fechaVencimiento - fechaEntrada).Days;
+
+            if (diasVigencia < 0)
+            {
+                return -1; //error
+            }
+            
+            return diasVigencia;
+
+        }
     }
 }
