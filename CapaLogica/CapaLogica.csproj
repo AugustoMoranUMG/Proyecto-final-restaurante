@@ -50,7 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLencabezadoOrdenes.cs" />
+    <Compile Include="CLInventarios.cs" />
     <Compile Include="CLmenus.cs" />
+    <Compile Include="CLPagoOrdenes.cs" />
+    <Compile Include="CLPagoPlanillas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
