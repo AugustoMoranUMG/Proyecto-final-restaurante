@@ -16,5 +16,25 @@ namespace Sistema_Restaurante
         {
             InitializeComponent();
         }
+
+        private void dgvMenus_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmPagoOrdenes_Load(object sender, EventArgs e)
+        {
+            lblFechaSistema.Text = DateTime.Now.ToString("dd/MM/yy hh:mm:ss tt");
+        }
     }
 }
