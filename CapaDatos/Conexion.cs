@@ -24,9 +24,9 @@ namespace CapaDatos
 
         public SqlConnection MtdCerrarConexion()
         {
-            if (db_conexion.State == ConnectionState.Closed)
+            if (db_conexion.State == ConnectionState.Open)
             {
-                db_conexion.Open();
+                db_conexion.Close();
             }
 
             return db_conexion;
