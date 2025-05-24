@@ -33,12 +33,23 @@
             this.PanelFormularios = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
+            this.lblRol = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -48,28 +59,17 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.lblRol = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnCerrarSesion = new System.Windows.Forms.PictureBox();
             this.PanelContenedor.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelContenedor
@@ -135,6 +135,60 @@
             this.PanelMenu.Size = new System.Drawing.Size(250, 651);
             this.PanelMenu.TabIndex = 1;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkGray;
+            this.label6.Location = new System.Drawing.Point(87, 594);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 20);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Cerrar sesion:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Location = new System.Drawing.Point(3, 555);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(240, 1);
+            this.panel1.TabIndex = 9;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+            this.btnCerrarSesion.Location = new System.Drawing.Point(30, 578);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(51, 51);
+            this.btnCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrarSesion.TabIndex = 2;
+            this.btnCerrarSesion.TabStop = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Location = new System.Drawing.Point(3, 111);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(240, 1);
+            this.panel2.TabIndex = 9;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.Teal;
+            this.lblEstado.Location = new System.Drawing.Point(168, 64);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(11, 16);
+            this.lblEstado.TabIndex = 13;
+            this.lblEstado.Text = ".";
+            this.lblEstado.Click += new System.EventHandler(this.lblEstado_Click);
+            // 
             // button10
             // 
             this.button10.FlatAppearance.BorderSize = 0;
@@ -151,6 +205,18 @@
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.Teal;
+            this.lblRol.Location = new System.Drawing.Point(168, 42);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(11, 16);
+            this.lblRol.TabIndex = 12;
+            this.lblRol.Text = ".";
+            this.lblRol.Click += new System.EventHandler(this.lblRol_Click);
             // 
             // button9
             // 
@@ -169,6 +235,18 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.Teal;
+            this.lblUsuario.Location = new System.Drawing.Point(168, 23);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(11, 16);
+            this.lblUsuario.TabIndex = 11;
+            this.lblUsuario.Text = ".";
+            this.lblUsuario.Click += new System.EventHandler(this.lblUsuario_Click);
+            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -185,6 +263,17 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkGray;
+            this.label3.Location = new System.Drawing.Point(83, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Estado:";
             // 
             // button7
             // 
@@ -203,6 +292,17 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(83, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Rol:";
+            // 
             // button6
             // 
             this.button6.FlatAppearance.BorderSize = 0;
@@ -220,6 +320,17 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(83, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Usuario:";
+            // 
             // button5
             // 
             this.button5.FlatAppearance.BorderSize = 0;
@@ -236,6 +347,17 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(55, 57);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button4
             // 
@@ -368,122 +490,6 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.ForeColor = System.Drawing.Color.Teal;
-            this.lblEstado.Location = new System.Drawing.Point(168, 64);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(11, 16);
-            this.lblEstado.TabIndex = 13;
-            this.lblEstado.Text = ".";
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.ForeColor = System.Drawing.Color.Teal;
-            this.lblRol.Location = new System.Drawing.Point(168, 42);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(11, 16);
-            this.lblRol.TabIndex = 12;
-            this.lblRol.Text = ".";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.Teal;
-            this.lblUsuario.Location = new System.Drawing.Point(168, 23);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(11, 16);
-            this.lblUsuario.TabIndex = 11;
-            this.lblUsuario.Text = ".";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(83, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 16);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Estado:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(83, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 16);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Rol:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(83, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Usuario:";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(55, 57);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Location = new System.Drawing.Point(3, 111);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 1);
-            this.panel2.TabIndex = 9;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(3, 555);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 1);
-            this.panel1.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkGray;
-            this.label6.Location = new System.Drawing.Point(87, 594);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 20);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Cerrar sesion:";
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(30, 578);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(51, 51);
-            this.btnCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrarSesion.TabIndex = 2;
-            this.btnCerrarSesion.TabStop = false;
-            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -501,13 +507,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelBarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).EndInit();
             this.ResumeLayout(false);
 
         }
