@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CapaLogica
 {
@@ -10,14 +11,11 @@ namespace CapaLogica
     {
         public  int MtdDiasVigencia(DateTime fechaEntrada, DateTime fechaVencimiento)
         {
-            int diasVigencia = (fechaVencimiento - fechaEntrada).Days;
+            int dias = (fechaVencimiento - fechaEntrada).Days;
+            if (fechaEntrada > fechaVencimiento)
+                throw new ArgumentException("La fecha de entrada no puede ser mayor que la fecha de vencimiento.");
 
-            if (diasVigencia < 0)
-            {
-                return -1; //error
-            }
-            
-            return diasVigencia;
+            return dias;
 
         }
     }
