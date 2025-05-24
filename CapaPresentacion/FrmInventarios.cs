@@ -66,27 +66,26 @@ namespace Sistema_Restaurante
         }
 
         
-        private void ActualizarDiasVigencia()
+        private void ActualizacionDiasVigencia()
         {
-            DateTime fechaEntrada = dtpFechaEntrada.Value.Date;
-            DateTime fechaVencimiento = dtpFechaVencimiento.Value.Date;
-
-            int dias = cl_inventarios.MtdDiasVigencia(fechaEntrada, fechaVencimiento);
-
-            if (dias < 0)
+            try
             {
-                lblDiasVigencia.Text = "Fecha inválida";
-            }
-            else
-            {
+                DateTime fechaEntrada = dtpFechaEntrada.Value.Date;
+                DateTime fechaVencimiento = dtpFechaVencimiento.Value.Date;
+     
+                int dias = cl_inventarios.MtdDiasVigencia(fechaEntrada, fechaVencimiento);
                 lblDiasVigencia.Text = $"{dias}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
         private void dtpFechaVencimiento_ValueChanged(object sender, EventArgs e)
         {
-            ActualizarDiasVigencia();
+            ActualizacionDiasVigencia();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
