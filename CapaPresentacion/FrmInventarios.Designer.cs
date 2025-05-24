@@ -399,6 +399,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmInventarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInventarios";
             this.Load += new System.EventHandler(this.FrmInventarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).EndInit();

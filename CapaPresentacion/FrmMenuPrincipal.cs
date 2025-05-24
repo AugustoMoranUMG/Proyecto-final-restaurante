@@ -191,12 +191,12 @@ namespace Sistema_Restaurante
                 formulario = new MiForm();
                 formulario.TopLevel = false; //Evita que el formulario se comporte como un formulario normal
                 formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.Dock = DockStyle.Fill; // Ajusta el formulario al panel
+                formulario.Dock = DockStyle.Fill; // Ajusta el formulario al panel              
                 PanelFormularios.Controls.Add(formulario); //Agrega el formulario al panel
                 PanelFormularios.Tag = formulario; //Asigna el formulario al panel
                 formulario.Show(); //Muestra el formulario
                 formulario.BringToFront(); //Trae el formulario al frente
-                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms); //Cierra el formulario
             }
             else
             {
