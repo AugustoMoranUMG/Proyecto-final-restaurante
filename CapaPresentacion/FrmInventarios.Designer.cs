@@ -45,7 +45,6 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnDiasVigencia = new System.Windows.Forms.Button();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.cboxCodigoMenu = new System.Windows.Forms.ComboBox();
@@ -196,7 +195,6 @@
             this.groupBox1.Controls.Add(this.iconButton1);
             this.groupBox1.Controls.Add(this.iconButton2);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.btnDiasVigencia);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.cboxCodigoMenu);
@@ -259,11 +257,6 @@
             this.label7.TabIndex = 61;
             this.label7.Text = "Dias Vigencia:";
             // 
-
-            this.btnDiasVigencia.Location = new System.Drawing.Point(0, 0);
-            this.btnDiasVigencia.Name = "btnDiasVigencia";
-            this.btnDiasVigencia.Size = new System.Drawing.Size(75, 23);
-            this.btnDiasVigencia.TabIndex = 0;
             // 
             // btnAgregar
             // 
