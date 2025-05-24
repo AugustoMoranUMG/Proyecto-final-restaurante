@@ -16,7 +16,7 @@ namespace Sistema_Restaurante
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEmpleados());
+            Application.Run(new FrmInventarios());
         }
     }
 }

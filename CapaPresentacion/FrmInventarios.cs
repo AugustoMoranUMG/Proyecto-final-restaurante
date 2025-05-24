@@ -93,5 +93,10 @@ namespace Sistema_Restaurante
         {
             this.Close();
         }
+
+        private void lblCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

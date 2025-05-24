@@ -43,7 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnDiasVigencia = new System.Windows.Forms.Button();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
@@ -66,54 +65,56 @@
             "Augusto Morán",
             "Gerber Canahuí",
             "Fernando Fajardo"});
-            this.comboBox2.Location = new System.Drawing.Point(797, 133);
+            this.comboBox2.Location = new System.Drawing.Point(598, 108);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(164, 24);
+            this.comboBox2.Size = new System.Drawing.Size(124, 21);
             this.comboBox2.TabIndex = 54;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(541, 138);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(406, 112);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(145, 22);
+            this.label19.Size = new System.Drawing.Size(110, 19);
             this.label19.TabIndex = 53;
             this.label19.Text = "Usuario Sistema:";
             // 
             // lblDiasVigencia
             // 
             this.lblDiasVigencia.AutoSize = true;
-            this.lblDiasVigencia.Location = new System.Drawing.Point(872, 106);
+            this.lblDiasVigencia.Location = new System.Drawing.Point(654, 86);
+            this.lblDiasVigencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiasVigencia.Name = "lblDiasVigencia";
-            this.lblDiasVigencia.Size = new System.Drawing.Size(15, 16);
+            this.lblDiasVigencia.Size = new System.Drawing.Size(13, 13);
             this.lblDiasVigencia.TabIndex = 52;
             this.lblDiasVigencia.Text = "--";
             // 
             // dtpFechaEntrada
             // 
             this.dtpFechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaEntrada.Location = new System.Drawing.Point(797, 31);
+            this.dtpFechaEntrada.Location = new System.Drawing.Point(598, 25);
+            this.dtpFechaEntrada.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
-            this.dtpFechaEntrada.Size = new System.Drawing.Size(164, 22);
+            this.dtpFechaEntrada.Size = new System.Drawing.Size(124, 20);
             this.dtpFechaEntrada.TabIndex = 50;
             // 
             // txtCodigoInventario
             // 
-            this.txtCodigoInventario.Location = new System.Drawing.Point(283, 31);
-            this.txtCodigoInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoInventario.Location = new System.Drawing.Point(212, 25);
             this.txtCodigoInventario.Name = "txtCodigoInventario";
             this.txtCodigoInventario.ReadOnly = true;
-            this.txtCodigoInventario.Size = new System.Drawing.Size(164, 22);
+            this.txtCodigoInventario.Size = new System.Drawing.Size(124, 20);
             this.txtCodigoInventario.TabIndex = 16;
             // 
             // dtpFechaVencimiento
             // 
             this.dtpFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVencimiento.Location = new System.Drawing.Point(797, 68);
+            this.dtpFechaVencimiento.Location = new System.Drawing.Point(598, 55);
+            this.dtpFechaVencimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
-            this.dtpFechaVencimiento.Size = new System.Drawing.Size(164, 22);
+            this.dtpFechaVencimiento.Size = new System.Drawing.Size(124, 20);
             this.dtpFechaVencimiento.TabIndex = 51;
             this.dtpFechaVencimiento.ValueChanged += new System.EventHandler(this.dtpFechaVencimiento_ValueChanged);
             // 
@@ -121,10 +122,9 @@
             // 
             this.lblFechaSistema.AutoSize = true;
             this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaSistema.Location = new System.Drawing.Point(1048, 29);
-            this.lblFechaSistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaSistema.Location = new System.Drawing.Point(786, 24);
             this.lblFechaSistema.Name = "lblFechaSistema";
-            this.lblFechaSistema.Size = new System.Drawing.Size(13, 17);
+            this.lblFechaSistema.Size = new System.Drawing.Size(11, 15);
             this.lblFechaSistema.TabIndex = 49;
             this.lblFechaSistema.Text = "-";
             // 
@@ -132,10 +132,9 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(862, 24);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(646, 20);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 22);
+            this.label14.Size = new System.Drawing.Size(88, 19);
             this.label14.TabIndex = 47;
             this.label14.Text = "Fecha actual:";
             // 
@@ -143,10 +142,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 106);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(18, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 22);
+            this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Categoría:";
             // 
@@ -154,23 +152,21 @@
             // 
             this.dgvMenus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvMenus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMenus.Location = new System.Drawing.Point(17, 241);
-            this.dgvMenus.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvMenus.Location = new System.Drawing.Point(13, 196);
             this.dgvMenus.Name = "dgvMenus";
             this.dgvMenus.ReadOnly = true;
             this.dgvMenus.RowHeadersWidth = 51;
             this.dgvMenus.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMenus.Size = new System.Drawing.Size(1244, 207);
+            this.dgvMenus.Size = new System.Drawing.Size(933, 168);
             this.dgvMenus.TabIndex = 48;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(411, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(308, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 31);
+            this.label1.Size = new System.Drawing.Size(152, 24);
             this.label1.TabIndex = 45;
             this.label1.Text = "INVENTARIOS";
             // 
@@ -178,10 +174,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 66);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(17, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 22);
+            this.label6.Size = new System.Drawing.Size(96, 19);
             this.label6.TabIndex = 34;
             this.label6.Text = "Codigo Menú:\r\n";
             // 
@@ -189,17 +184,15 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 138);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(17, 112);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 22);
+            this.label4.Size = new System.Drawing.Size(67, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Cantidad:";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.btnDiasVigencia);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnAgregar);
@@ -218,11 +211,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(16, 50);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1245, 183);
+            this.groupBox1.Size = new System.Drawing.Size(934, 149);
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             // 
@@ -230,19 +221,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(543, 102);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(407, 83);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 22);
+            this.label7.Size = new System.Drawing.Size(94, 19);
             this.label7.TabIndex = 61;
             this.label7.Text = "Dias Vigencia:";
-            // 
-            // btnDiasVigencia
-            // 
-            this.btnDiasVigencia.Location = new System.Drawing.Point(0, 0);
-            this.btnDiasVigencia.Name = "btnDiasVigencia";
-            this.btnDiasVigencia.Size = new System.Drawing.Size(75, 23);
-            this.btnDiasVigencia.TabIndex = 0;
             // 
             // btnCancelar
             // 
@@ -250,10 +233,9 @@
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 25;
-            this.btnCancelar.Location = new System.Drawing.Point(1111, 123);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(833, 100);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(117, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(88, 28);
             this.btnCancelar.TabIndex = 60;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -265,10 +247,9 @@
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 25;
-            this.btnEditar.Location = new System.Drawing.Point(1111, 80);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(833, 65);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(117, 34);
+            this.btnEditar.Size = new System.Drawing.Size(88, 28);
             this.btnEditar.TabIndex = 59;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -280,10 +261,9 @@
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 25;
-            this.btnAgregar.Location = new System.Drawing.Point(1111, 36);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(833, 29);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(117, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(88, 28);
             this.btnAgregar.TabIndex = 58;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -291,39 +271,42 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(283, 139);
+            this.txtCantidad.Location = new System.Drawing.Point(212, 113);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(164, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(124, 20);
             this.txtCantidad.TabIndex = 57;
             // 
             // cboxCodigoMenu
             // 
             this.cboxCodigoMenu.FormattingEnabled = true;
-            this.cboxCodigoMenu.Location = new System.Drawing.Point(283, 65);
+            this.cboxCodigoMenu.Location = new System.Drawing.Point(212, 53);
+            this.cboxCodigoMenu.Margin = new System.Windows.Forms.Padding(2);
             this.cboxCodigoMenu.Name = "cboxCodigoMenu";
-            this.cboxCodigoMenu.Size = new System.Drawing.Size(164, 24);
+            this.cboxCodigoMenu.Size = new System.Drawing.Size(124, 21);
             this.cboxCodigoMenu.TabIndex = 56;
             this.cboxCodigoMenu.SelectedIndexChanged += new System.EventHandler(this.cboxCodigoMenu_SelectedIndexChanged);
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(342, 110);
+            this.lblCategoria.Location = new System.Drawing.Point(256, 89);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCategoria.Size = new System.Drawing.Size(19, 16);
+            this.lblCategoria.Size = new System.Drawing.Size(16, 13);
             this.lblCategoria.TabIndex = 55;
             this.lblCategoria.Text = "---";
             this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblCategoria.Click += new System.EventHandler(this.lblCategoria_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(541, 68);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(406, 55);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 22);
+            this.label8.Size = new System.Drawing.Size(126, 19);
             this.label8.TabIndex = 44;
             this.label8.Text = "Fecha Vencimiento:";
             // 
@@ -331,10 +314,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(541, 34);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(406, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 22);
+            this.label5.Size = new System.Drawing.Size(100, 19);
             this.label5.TabIndex = 42;
             this.label5.Text = "Fecha Entrada:";
             // 
@@ -342,10 +324,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 33);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(17, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 22);
+            this.label2.Size = new System.Drawing.Size(121, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Codigo Inventario:";
             // 
@@ -358,10 +339,9 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 24;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(979, 456);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(734, 370);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(138, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(104, 32);
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -376,10 +356,9 @@
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 24;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(1138, 456);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Location = new System.Drawing.Point(854, 370);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(123, 39);
+            this.btnSalir.Size = new System.Drawing.Size(92, 32);
             this.btnSalir.TabIndex = 60;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -388,9 +367,9 @@
             // 
             // FrmInventarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 503);
+            this.ClientSize = new System.Drawing.Size(956, 409);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblFechaSistema);
@@ -398,6 +377,7 @@
             this.Controls.Add(this.dgvMenus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmInventarios";
             this.Text = "FrmInventarios";
             this.Load += new System.EventHandler(this.FrmInventarios_Load);
@@ -436,7 +416,6 @@
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnAgregar;
-        private System.Windows.Forms.Button btnDiasVigencia;
         private System.Windows.Forms.Label label7;
     }
 }
