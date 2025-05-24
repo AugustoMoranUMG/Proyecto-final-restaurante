@@ -16,5 +16,10 @@ namespace Sistema_Restaurante
         {
             InitializeComponent();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
