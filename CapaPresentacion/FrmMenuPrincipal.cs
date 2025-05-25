@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaPresentacion.Seguridad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -219,6 +220,11 @@ namespace Sistema_Restaurante
 
         }
 
+        private void PanelFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
 
         #endregion
 
@@ -245,6 +251,16 @@ namespace Sistema_Restaurante
             }
         }
 
+        private void PanelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            LoadUserData();
+        }
+
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["FrmInventarios"] == null)           
@@ -268,6 +284,12 @@ namespace Sistema_Restaurante
             if (Application.OpenForms["frmUsuarios"] == null)
                 button10.BackColor = Color.FromArgb(12, 61, 92);
 
+        }
+        private void LoadUserData()
+        {
+            lblUsuario.Text = UserCache.NombreUsuario;
+            lblRol.Text = UserCache.Rol;
+            lblEstado.Text = UserCache.Estado;
         }
     }
 }
