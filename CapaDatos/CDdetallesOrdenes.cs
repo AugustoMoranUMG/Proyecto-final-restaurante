@@ -117,7 +117,7 @@ namespace CapaDatos
 
         public void MtdEliminarDetallesOrdenes(int CodigoOrdenDet)
         {
-            string QueryEliminarDetallesOrdenes = "Delete tbl_Servicios where CodigoOrdenDet = @CodigoOrdenDet";
+            string QueryEliminarDetallesOrdenes = "Delete tbl_DetallesOrdenes where CodigoOrdenDet = @CodigoOrdenDet";
             SqlCommand CommandEliminarDetallesOrdenes = new SqlCommand(QueryEliminarDetallesOrdenes, cd_conexion.MtdAbrirConexion());
             CommandEliminarDetallesOrdenes.Parameters.AddWithValue("@CodigoOrdenDet", CodigoOrdenDet);
             CommandEliminarDetallesOrdenes.ExecuteNonQuery();

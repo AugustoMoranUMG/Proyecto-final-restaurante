@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 
 namespace Sistema_Restaurante
 {
@@ -81,7 +82,7 @@ namespace Sistema_Restaurante
                 int Cantidad = int.Parse(txtCantidad.Text);
                 decimal PrecioUnitario = cd_detallesOrdenes.MtdPrecioUnitario(CodigoMenu);
                 decimal PrecioTotal = cl_detallesOrdenes.MtdPrecioTotal(Cantidad, PrecioUnitario);
-                string UsuarioSistema = "temporal";
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_detallesOrdenes.MtdFechaActual();
 
                 cd_detallesOrdenes.MtdAgregarDetallesOrdenes(CodigoOrdenEnc, CodigoMenu, Cantidad, PrecioUnitario, PrecioTotal, UsuarioSistema, FechaSistema);
@@ -105,7 +106,7 @@ namespace Sistema_Restaurante
                 int Cantidad = int.Parse(txtCantidad.Text);
                 decimal PrecioUnitario = cd_detallesOrdenes.MtdPrecioUnitario(CodigoMenu);
                 decimal PrecioTotal = cl_detallesOrdenes.MtdPrecioTotal(Cantidad, PrecioUnitario);
-                string UsuarioSistema = "temporal";
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_detallesOrdenes.MtdFechaActual();
 
                 cd_detallesOrdenes.MtdActualizarDetallesOrdenes(CodigoOrdenDet, CodigoOrdenEnc, CodigoMenu, Cantidad, PrecioUnitario, PrecioTotal, UsuarioSistema, FechaSistema);
@@ -155,24 +156,23 @@ namespace Sistema_Restaurante
             lblPrecioUnitario.Text = dgvDetallesOrdenes.SelectedCells[4].Value.ToString();
             lblPrecioTotal.Text = dgvDetallesOrdenes.SelectedCells[5].Value.ToString();
         }
+        private void cboxCodigoMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                lblPrecioUnitario.Text = cd_detallesOrdenes.MtdPrecioUnitario(int.Parse(cboxCodigoMenu.Text.Split('-')[0].Trim())).ToString();
+        }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
-            if (txtCantidad.Text == "")
-            {
-                lblPrecioTotal.Text = "0.00";
-            }
+                if (txtCantidad.Text == "")
+                {
+                    lblPrecioTotal.Text = "0.00";
+                }
             else
             {
-                lblPrecioTotal.Text = cl_detallesOrdenes.MtdPrecioTotal(int.Parse(txtCantidad.Text), decimal.Parse(lblPrecioUnitario.Text)).ToString();
+                decimal PrecioUnitario = cd_detallesOrdenes.MtdPrecioUnitario(int.Parse(cboxCodigoMenu.Text.Split('-')[0].Trim().ToString()));
+                lblPrecioTotal.Text = cl_detallesOrdenes.MtdPrecioTotal(int.Parse(txtCantidad.Text), PrecioUnitario).ToString();
             }
         }
 
-        private void cboxCodigoMenu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-                var MenuSeleccionado = cboxCodigoMenu.SelectedItem;
-                int CodigoMenu = (int)MenuSeleccionado.GetType().GetProperty("Value").GetValue(MenuSeleccionado, null);
-                lblPrecioUnitario.Text = cd_detallesOrdenes.MtdPrecioUnitario(CodigoMenu).ToString();
-        }
     }
 }
