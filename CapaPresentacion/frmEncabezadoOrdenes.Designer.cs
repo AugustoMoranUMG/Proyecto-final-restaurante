@@ -40,6 +40,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboxCodigoDetalleOrdenes = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cboxCodigoEmpleado = new System.Windows.Forms.ComboBox();
+            this.cboxCodigoMesa = new System.Windows.Forms.ComboBox();
+            this.cboxCodigoCliente = new System.Windows.Forms.ComboBox();
+            this.dtpFechaOrden = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblMontoTotalOrden = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,13 +56,6 @@
             this.dgvEncabezadoOrdenes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dtpFechaOrden = new System.Windows.Forms.DateTimePicker();
-            this.cboxCodigoCliente = new System.Windows.Forms.ComboBox();
-            this.cboxCodigoMesa = new System.Windows.Forms.ComboBox();
-            this.cboxCodigoEmpleado = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cboxCodigoDetalleOrdenes = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncabezadoOrdenes)).BeginInit();
             this.SuspendLayout();
@@ -227,6 +227,77 @@
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             // 
+            // cboxCodigoDetalleOrdenes
+            // 
+            this.cboxCodigoDetalleOrdenes.FormattingEnabled = true;
+            this.cboxCodigoDetalleOrdenes.Location = new System.Drawing.Point(200, 30);
+            this.cboxCodigoDetalleOrdenes.Name = "cboxCodigoDetalleOrdenes";
+            this.cboxCodigoDetalleOrdenes.Size = new System.Drawing.Size(124, 21);
+            this.cboxCodigoDetalleOrdenes.TabIndex = 43;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(17, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(159, 19);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Codigo Detalle Ordenes:";
+            // 
+            // cboxCodigoEmpleado
+            // 
+            this.cboxCodigoEmpleado.FormattingEnabled = true;
+            this.cboxCodigoEmpleado.Items.AddRange(new object[] {
+            "Creado",
+            "Preparacion",
+            "Entregado",
+            "Finalizado",
+            "Cancelado"});
+            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(200, 112);
+            this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
+            this.cboxCodigoEmpleado.Size = new System.Drawing.Size(124, 21);
+            this.cboxCodigoEmpleado.TabIndex = 41;
+            // 
+            // cboxCodigoMesa
+            // 
+            this.cboxCodigoMesa.FormattingEnabled = true;
+            this.cboxCodigoMesa.Items.AddRange(new object[] {
+            "Creado",
+            "Preparacion",
+            "Entregado",
+            "Finalizado",
+            "Cancelado"});
+            this.cboxCodigoMesa.Location = new System.Drawing.Point(200, 84);
+            this.cboxCodigoMesa.Name = "cboxCodigoMesa";
+            this.cboxCodigoMesa.Size = new System.Drawing.Size(124, 21);
+            this.cboxCodigoMesa.TabIndex = 40;
+            // 
+            // cboxCodigoCliente
+            // 
+            this.cboxCodigoCliente.FormattingEnabled = true;
+            this.cboxCodigoCliente.Location = new System.Drawing.Point(200, 54);
+            this.cboxCodigoCliente.Name = "cboxCodigoCliente";
+            this.cboxCodigoCliente.Size = new System.Drawing.Size(124, 21);
+            this.cboxCodigoCliente.TabIndex = 39;
+            // 
+            // dtpFechaOrden
+            // 
+            this.dtpFechaOrden.Location = new System.Drawing.Point(522, 25);
+            this.dtpFechaOrden.Name = "dtpFechaOrden";
+            this.dtpFechaOrden.Size = new System.Drawing.Size(124, 20);
+            this.dtpFechaOrden.TabIndex = 38;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(370, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 19);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Usuario Sistema:";
+            // 
             // lblMontoTotalOrden
             // 
             this.lblMontoTotalOrden.AutoSize = true;
@@ -289,7 +360,7 @@
             // 
             // dgvEncabezadoOrdenes
             // 
-            this.dgvEncabezadoOrdenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvEncabezadoOrdenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEncabezadoOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEncabezadoOrdenes.Location = new System.Drawing.Point(20, 229);
             this.dgvEncabezadoOrdenes.Name = "dgvEncabezadoOrdenes";
@@ -324,77 +395,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(370, 115);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 19);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Usuario Sistema:";
-            // 
-            // dtpFechaOrden
-            // 
-            this.dtpFechaOrden.Location = new System.Drawing.Point(522, 25);
-            this.dtpFechaOrden.Name = "dtpFechaOrden";
-            this.dtpFechaOrden.Size = new System.Drawing.Size(124, 20);
-            this.dtpFechaOrden.TabIndex = 38;
-            // 
-            // cboxCodigoCliente
-            // 
-            this.cboxCodigoCliente.FormattingEnabled = true;
-            this.cboxCodigoCliente.Location = new System.Drawing.Point(200, 54);
-            this.cboxCodigoCliente.Name = "cboxCodigoCliente";
-            this.cboxCodigoCliente.Size = new System.Drawing.Size(124, 21);
-            this.cboxCodigoCliente.TabIndex = 39;
-            // 
-            // cboxCodigoMesa
-            // 
-            this.cboxCodigoMesa.FormattingEnabled = true;
-            this.cboxCodigoMesa.Items.AddRange(new object[] {
-            "Creado",
-            "Preparacion",
-            "Entregado",
-            "Finalizado",
-            "Cancelado"});
-            this.cboxCodigoMesa.Location = new System.Drawing.Point(200, 84);
-            this.cboxCodigoMesa.Name = "cboxCodigoMesa";
-            this.cboxCodigoMesa.Size = new System.Drawing.Size(124, 21);
-            this.cboxCodigoMesa.TabIndex = 40;
-            // 
-            // cboxCodigoEmpleado
-            // 
-            this.cboxCodigoEmpleado.FormattingEnabled = true;
-            this.cboxCodigoEmpleado.Items.AddRange(new object[] {
-            "Creado",
-            "Preparacion",
-            "Entregado",
-            "Finalizado",
-            "Cancelado"});
-            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(200, 112);
-            this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
-            this.cboxCodigoEmpleado.Size = new System.Drawing.Size(124, 21);
-            this.cboxCodigoEmpleado.TabIndex = 41;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 19);
-            this.label10.TabIndex = 42;
-            this.label10.Text = "Codigo Detalle Ordenes:";
-            // 
-            // cboxCodigoDetalleOrdenes
-            // 
-            this.cboxCodigoDetalleOrdenes.FormattingEnabled = true;
-            this.cboxCodigoDetalleOrdenes.Location = new System.Drawing.Point(200, 30);
-            this.cboxCodigoDetalleOrdenes.Name = "cboxCodigoDetalleOrdenes";
-            this.cboxCodigoDetalleOrdenes.Size = new System.Drawing.Size(124, 21);
-            this.cboxCodigoDetalleOrdenes.TabIndex = 43;
             // 
             // frmEncabezadoOrdenes
             // 

@@ -53,6 +53,18 @@ CREATE TABLE tbl_DetallesOrdenes
 	Foreign key (CodigoMenu) references tbl_Menus (CodigoMenu)
 );
 
+Insert into tbl_DetallesOrdenes(CodigoOrdenEnc, CodigoMenu, Cantidad, PrecioUnitario, PrecioTotal, UsuarioSistema, FechaSistema) values (@CodigoOrdenEnc, @CodigoMenu, @Cantidad, @PrecioUnitario, @PrecioTotal, @UsuarioSistema, @FechaSistema);
+
+Update tbl_DetallesOrdenes
+set CodigoOrdenEnc = @CodigoOrdenEnc,
+	CodigoMenu = @CodigoMenu,
+	Cantidad = @Cantidad,
+	PrecioUnitario = @PrecioUnitario,
+	PrecioTotal = @PrecioTotal,
+	UsuarioSistema = @UsuarioSistema,
+	FechaSistema = @FechaSistema
+where CodigoOrdenDet = @CodigoOrdenDet;
+
 Select * From tbl_DetallesOrdenes;
 
 Select * From tbl_clientes;
@@ -141,7 +153,7 @@ VALUES
 
   INSERT INTO tbl_usuarios(CodigoEmpleado, NombreUsuario, Contrasenia, Rol, Estado, UsuarioSistema, FechaSistema)
 VALUES
-(1, 'AugustoMoran', '12345678', 'Admin', 'Activo', 'GerberCanahui', '2025-05-13');
+(6, 'GerberCanahui', '123456', 'Admin', 'Activo', 'AugustoMoran', '2025-05-13');
 
 
 --Script para actualizar datos
@@ -176,10 +188,4 @@ set Nombre = 'Elmer Moran',
 where CodigoCliente = 1;
 
 Update tbl_usuarios
-set NombreUsuario = 'AugustoMoran',
-	Contrasenia = '87654321',
-	Rol = 'Cocina',
-	Estado = 'Activo',
-	UsuarioSistema = 'GerberCanahui',
-	FechaSistema = '2025-05-13'
-where CodigoEmpleado = 1;
+set CodigoEmpleado = 7 where CodigoUsuario = 3;

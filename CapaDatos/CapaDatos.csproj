@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDClientes.cs" />
+    <Compile Include="CDdetallesOrdenes.cs" />
     <Compile Include="CDEmpleados.cs" />
     <Compile Include="CDencabezadoOrdenes.cs" />
     <Compile Include="CDInventarios.cs" />
