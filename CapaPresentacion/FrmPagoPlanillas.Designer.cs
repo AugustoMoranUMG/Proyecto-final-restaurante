@@ -31,7 +31,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblMontoTotal = new System.Windows.Forms.Label();
             this.txtHorasExtras = new System.Windows.Forms.TextBox();
-            this.lblDono = new System.Windows.Forms.Label();
+            this.lblBono = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -41,18 +41,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblSalario = new System.Windows.Forms.Label();
-            this.txtCodigoEmpelado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCodigoPagPlanilla = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvMenus = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblFechaActual = new System.Windows.Forms.Label();
+            this.lblFechaSistema = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.cboxCodigoEmpleado = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).BeginInit();
             this.SuspendLayout();
@@ -85,15 +85,16 @@
             this.txtHorasExtras.Name = "txtHorasExtras";
             this.txtHorasExtras.Size = new System.Drawing.Size(164, 22);
             this.txtHorasExtras.TabIndex = 58;
+            this.txtHorasExtras.TextChanged += new System.EventHandler(this.txtHorasExtras_TextChanged);
             // 
-            // lblDono
+            // lblBono
             // 
-            this.lblDono.AutoSize = true;
-            this.lblDono.Location = new System.Drawing.Point(352, 238);
-            this.lblDono.Name = "lblDono";
-            this.lblDono.Size = new System.Drawing.Size(15, 16);
-            this.lblDono.TabIndex = 57;
-            this.lblDono.Text = "--";
+            this.lblBono.AutoSize = true;
+            this.lblBono.Location = new System.Drawing.Point(337, 238);
+            this.lblBono.Name = "lblBono";
+            this.lblBono.Size = new System.Drawing.Size(15, 16);
+            this.lblBono.TabIndex = 57;
+            this.lblBono.Text = "--";
             // 
             // label10
             // 
@@ -102,9 +103,9 @@
             this.label10.Location = new System.Drawing.Point(23, 234);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 22);
+            this.label10.Size = new System.Drawing.Size(58, 22);
             this.label10.TabIndex = 56;
-            this.label10.Text = "Dono:";
+            this.label10.Text = "Bono:";
             // 
             // dateTimePicker1
             // 
@@ -172,10 +173,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cboxCodigoEmpleado);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblMontoTotal);
             this.groupBox1.Controls.Add(this.txtHorasExtras);
-            this.groupBox1.Controls.Add(this.lblDono);
+            this.groupBox1.Controls.Add(this.lblBono);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.comboBox2);
@@ -184,9 +187,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lblSalario);
-            this.groupBox1.Controls.Add(this.txtCodigoEmpelado);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtCodigoPagPlanilla);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -201,20 +202,11 @@
             // lblSalario
             // 
             this.lblSalario.AutoSize = true;
-            this.lblSalario.Location = new System.Drawing.Point(352, 188);
+            this.lblSalario.Location = new System.Drawing.Point(337, 188);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(15, 16);
             this.lblSalario.TabIndex = 37;
             this.lblSalario.Text = "--";
-            // 
-            // txtCodigoEmpelado
-            // 
-            this.txtCodigoEmpelado.Location = new System.Drawing.Point(283, 82);
-            this.txtCodigoEmpelado.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodigoEmpelado.Name = "txtCodigoEmpelado";
-            this.txtCodigoEmpelado.ReadOnly = true;
-            this.txtCodigoEmpelado.Size = new System.Drawing.Size(164, 22);
-            this.txtCodigoEmpelado.TabIndex = 35;
             // 
             // label6
             // 
@@ -226,15 +218,6 @@
             this.label6.Size = new System.Drawing.Size(159, 22);
             this.label6.TabIndex = 34;
             this.label6.Text = "Codigo Empleado:\r\n";
-            // 
-            // txtCodigoPagPlanilla
-            // 
-            this.txtCodigoPagPlanilla.Location = new System.Drawing.Point(283, 31);
-            this.txtCodigoPagPlanilla.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodigoPagPlanilla.Name = "txtCodigoPagPlanilla";
-            this.txtCodigoPagPlanilla.ReadOnly = true;
-            this.txtCodigoPagPlanilla.Size = new System.Drawing.Size(164, 22);
-            this.txtCodigoPagPlanilla.TabIndex = 16;
             // 
             // label4
             // 
@@ -293,22 +276,22 @@
             this.label1.TabIndex = 52;
             this.label1.Text = "PAGO PLANILLAS";
             // 
-            // lblFechaActual
+            // lblFechaSistema
             // 
-            this.lblFechaActual.AutoSize = true;
-            this.lblFechaActual.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaActual.Location = new System.Drawing.Point(1146, 21);
-            this.lblFechaActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFechaActual.Name = "lblFechaActual";
-            this.lblFechaActual.Size = new System.Drawing.Size(17, 22);
-            this.lblFechaActual.TabIndex = 56;
-            this.lblFechaActual.Text = "-";
+            this.lblFechaSistema.AutoSize = true;
+            this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaSistema.Location = new System.Drawing.Point(1046, 24);
+            this.lblFechaSistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaSistema.Name = "lblFechaSistema";
+            this.lblFechaSistema.Size = new System.Drawing.Size(13, 17);
+            this.lblFechaSistema.TabIndex = 56;
+            this.lblFechaSistema.Text = "-";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(990, 22);
+            this.label14.Location = new System.Drawing.Point(881, 20);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(115, 22);
@@ -352,6 +335,23 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // cboxCodigoEmpleado
+            // 
+            this.cboxCodigoEmpleado.FormattingEnabled = true;
+            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(283, 79);
+            this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
+            this.cboxCodigoEmpleado.Size = new System.Drawing.Size(164, 24);
+            this.cboxCodigoEmpleado.TabIndex = 62;
+            this.cboxCodigoEmpleado.SelectedIndexChanged += new System.EventHandler(this.cboxCodigoEmpleado_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(283, 33);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(164, 22);
+            this.textBox1.TabIndex = 63;
+            // 
             // FrmPagoPlanillas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,10 +362,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvMenus);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblFechaActual);
+            this.Controls.Add(this.lblFechaSistema);
             this.Controls.Add(this.label14);
             this.Name = "FrmPagoPlanillas";
             this.Text = "FrmPagoPlanillas";
+            this.Load += new System.EventHandler(this.FrmPagoPlanillas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).EndInit();
@@ -379,7 +380,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblMontoTotal;
         private System.Windows.Forms.TextBox txtHorasExtras;
-        private System.Windows.Forms.Label lblDono;
+        private System.Windows.Forms.Label lblBono;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -389,17 +390,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblSalario;
-        private System.Windows.Forms.TextBox txtCodigoEmpelado;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCodigoPagPlanilla;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvMenus;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblFechaActual;
+        private System.Windows.Forms.Label lblFechaSistema;
         private System.Windows.Forms.Label label14;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnSalir;
+        private System.Windows.Forms.ComboBox cboxCodigoEmpleado;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

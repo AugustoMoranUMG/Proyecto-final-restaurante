@@ -179,6 +179,47 @@ namespace Sistema_Restaurante
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Quiere cerrar sesion?", "Advertencia",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
+        }
+
+        /*private void LoadUserData()
+        {
+            lblUsuario.Text = UserCache.NombreUsuario;
+            lblRol.Text = UserCache.Rol;
+            lblEstado.Text = UserCache.Estado;
+        }*/
+
+        private void lblUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRol_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEstado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         #endregion
 
         //METODO PARA ABRIR FORMULARIO DENTRO DEL PANEL
