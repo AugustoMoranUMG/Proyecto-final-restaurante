@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
-            this.cboxUsuarioSistema = new System.Windows.Forms.ComboBox();
             this.txtIngredientes = new System.Windows.Forms.TextBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
@@ -41,7 +40,6 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,7 +57,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cboxEstado);
-            this.groupBox1.Controls.Add(this.cboxUsuarioSistema);
             this.groupBox1.Controls.Add(this.txtIngredientes);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnEditar);
@@ -70,7 +67,6 @@
             this.groupBox1.Controls.Add(this.lblPrecio);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -89,26 +85,14 @@
             "Inactivo",
             "Especial",
             "Temporada"});
-            this.cboxEstado.Location = new System.Drawing.Point(501, 56);
+            this.cboxEstado.Location = new System.Drawing.Point(518, 74);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(124, 21);
             this.cboxEstado.TabIndex = 33;
             // 
-            // cboxUsuarioSistema
-            // 
-            this.cboxUsuarioSistema.FormattingEnabled = true;
-            this.cboxUsuarioSistema.Items.AddRange(new object[] {
-            "Augusto Morán",
-            "Gerber Canahuí",
-            "Fernando Fajardo"});
-            this.cboxUsuarioSistema.Location = new System.Drawing.Point(501, 26);
-            this.cboxUsuarioSistema.Name = "cboxUsuarioSistema";
-            this.cboxUsuarioSistema.Size = new System.Drawing.Size(124, 21);
-            this.cboxUsuarioSistema.TabIndex = 32;
-            // 
             // txtIngredientes
             // 
-            this.txtIngredientes.Location = new System.Drawing.Point(163, 85);
+            this.txtIngredientes.Location = new System.Drawing.Point(163, 115);
             this.txtIngredientes.Name = "txtIngredientes";
             this.txtIngredientes.Size = new System.Drawing.Size(124, 20);
             this.txtIngredientes.TabIndex = 31;
@@ -176,7 +160,7 @@
             "Cenas",
             "Postres",
             "Bebidas"});
-            this.cboxCategoria.Location = new System.Drawing.Point(163, 113);
+            this.cboxCategoria.Location = new System.Drawing.Point(518, 31);
             this.cboxCategoria.Name = "cboxCategoria";
             this.cboxCategoria.Size = new System.Drawing.Size(124, 21);
             this.cboxCategoria.TabIndex = 19;
@@ -184,7 +168,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(163, 57);
+            this.txtNombre.Location = new System.Drawing.Point(163, 72);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(124, 20);
             this.txtNombre.TabIndex = 17;
@@ -201,7 +185,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(547, 84);
+            this.lblPrecio.Location = new System.Drawing.Point(514, 114);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(15, 19);
             this.lblPrecio.TabIndex = 11;
@@ -211,7 +195,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(370, 84);
+            this.label7.Location = new System.Drawing.Point(370, 112);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 19);
             this.label7.TabIndex = 7;
@@ -221,27 +205,17 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(370, 56);
+            this.label8.Location = new System.Drawing.Point(372, 72);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 19);
             this.label8.TabIndex = 6;
             this.label8.Text = "Estado";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(370, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 19);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Usuario Sistema";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 114);
+            this.label5.Location = new System.Drawing.Point(372, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 19);
             this.label5.TabIndex = 4;
@@ -251,7 +225,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 84);
+            this.label4.Location = new System.Drawing.Point(17, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 19);
             this.label4.TabIndex = 3;
@@ -261,7 +235,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 56);
+            this.label3.Location = new System.Drawing.Point(17, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 2;
@@ -388,7 +362,6 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -403,7 +376,6 @@
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.ComboBox cboxEstado;
-        private System.Windows.Forms.ComboBox cboxUsuarioSistema;
         private System.Windows.Forms.TextBox txtIngredientes;
     }
 }

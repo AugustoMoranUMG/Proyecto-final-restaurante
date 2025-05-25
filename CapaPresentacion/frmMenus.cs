@@ -1,5 +1,6 @@
 ﻿using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +36,6 @@ namespace Sistema_Restaurante
             txtNombre.Text = "";
             txtIngredientes.Text = "";
             cboxCategoria.Text = "";
-            cboxUsuarioSistema.Text = "";
             cboxEstado.Text = "";
             lblPrecio.Text = "";
         }
@@ -49,7 +49,7 @@ namespace Sistema_Restaurante
                 string categoria = cboxCategoria.Text;
                 decimal precio = cl_menus.MtdPrecioMenu(cboxCategoria.Text);
                 string estado = cboxEstado.Text;
-                string usuarioSistema = cboxUsuarioSistema.Text;
+                string usuarioSistema = UserCache.NombreUsuario;
                 DateTime fecha = cl_menus.MtdFechaActual();
 
                 cd_menus.MtdAgregarMenu(nombre, ingredientes, categoria, precio, estado, usuarioSistema, fecha);
@@ -80,7 +80,7 @@ namespace Sistema_Restaurante
                 string categoria = cboxCategoria.Text;
                 decimal precio = cl_menus.MtdPrecioMenu(cboxCategoria.Text);
                 string estado = cboxEstado.Text;
-                string usuarioSistema = cboxUsuarioSistema.Text;
+                string usuarioSistema = UserCache.NombreUsuario;
                 DateTime fecha = cl_menus.MtdFechaActual();
 
                 cd_menus.MtdActualizarMenu(CodigoMenu, nombre, ingredientes, categoria, precio, estado, usuarioSistema, fecha);
@@ -128,9 +128,8 @@ namespace Sistema_Restaurante
             txtNombre.Text = dgvMenus.SelectedCells[1].Value.ToString();
             txtIngredientes.Text = dgvMenus.SelectedCells[2].Value.ToString();
             cboxCategoria.Text = dgvMenus.SelectedCells[3].Value.ToString();
-            cboxUsuarioSistema.Text = dgvMenus.SelectedCells[6].Value.ToString();
-            cboxEstado.Text = dgvMenus.SelectedCells[5].Value.ToString();
             lblPrecio.Text = dgvMenus.SelectedCells[4].Value.ToString();
+            cboxEstado.Text = dgvMenus.SelectedCells[5].Value.ToString();
         }
 
         private void cboxCategoria_TextChanged(object sender, EventArgs e)
