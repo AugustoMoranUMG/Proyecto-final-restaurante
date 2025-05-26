@@ -56,22 +56,60 @@ namespace CapaDatos
             cd_conexion.MtdCerrarConexion();
             return ListaMenu;
         }
+        public DataTable MtdConsultarInventario()
+        {
+            string QueryConsultarInventario = "Select * from tbl_Inventarios";
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter(QueryConsultarInventario, cd_conexion.MtdAbrirConexion());
+            DataTable dt_inventario = new DataTable();
+            sqlAdapter.Fill(dt_inventario);
 
-        /* public void MtdAgregarCategorias()
+            return dt_inventario;
+
+            cd_conexion.MtdCerrarConexion();
+        }
+
+        public void MtdAgregarInventarios(int CodigoMenu, string Categoria, int Cantidad, DateTime FechaEntrada, DateTime FechaVencimiento, int DiasVigencia, string UsuarioSistema, DateTime FechaSistema)
          {
-             string QueryAgregarCategorias = "Insert into tbl_Menus(FechaOrden, MontoTotalOrd, Estado, UsuarioSistema, FechaSistema) values (@CodigoOrdenEnc, @CodigoCliente, @CodigoMesa, @CodigoEmpleado, @FechaOrden, @MontoTotalOrd, @Estado, @UsuarioSistema, @FechaSistema)";
-             SqlCommand CommandAgregarCategorias = new SqlCommand(QueryAgregarCategorias, cd_conexion.MtdAbrirConexion());
-             CommandAgregarCategorias.Parameters.AddWithValue("@CodigoCliente", CodigoCliente);
-             CommandAgregarCategorias.Parameters.AddWithValue("@CodigoMesa", CodigoMesa);
-             CommandAgregarCategorias.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
-             CommandAgregarCategorias.Parameters.AddWithValue("@FechaOrden", FechaOrden);
-             CommandAgregarCategorias.Parameters.AddWithValue("@MontoTotalOrd", MontoTotalOrd);
-             CommandAgregarCategorias.Parameters.AddWithValue("@Estado", Estado);
-             CommandAgregarCategorias.Parameters.AddWithValue("@UsuarioSistema", UsuarioSistema);
-             CommandAgregarCategorias.Parameters.AddWithValue("@FechaSistema", FechaSistema);
-             CommandAgregarCategorias.ExecuteNonQuery();
+             string QueryAgregarInventarios = "Insert into tbl_Inventarios(CodigoMenu, Categoria, Cantidad, FechaEntrada, FechaVencimiento, DiasVigencia, UsuarioSistema, FechaSistema) values (@CodigoMenu, @Categoria, @Cantidad, @FechaEntrada, @FechaVencimiento, @DiasVigencia, @UsuarioSistema, @FechaSistema)";
+             SqlCommand CommandAgregarInventarios = new SqlCommand(QueryAgregarInventarios, cd_conexion.MtdAbrirConexion());
+            CommandAgregarInventarios.Parameters.AddWithValue("@CodigoMenu", CodigoMenu);
+            CommandAgregarInventarios.Parameters.AddWithValue("@Categoria", Categoria);
+            CommandAgregarInventarios.Parameters.AddWithValue("@Cantidad", Cantidad);
+            CommandAgregarInventarios.Parameters.AddWithValue("@FechaEntrada", FechaEntrada);
+            CommandAgregarInventarios.Parameters.AddWithValue("@FechaVencimiento", FechaVencimiento);
+            CommandAgregarInventarios.Parameters.AddWithValue("@DiasVigencia", DiasVigencia);
+            CommandAgregarInventarios.Parameters.AddWithValue("@UsuarioSistema", UsuarioSistema);
+            CommandAgregarInventarios.Parameters.AddWithValue("@FechaSistema", FechaSistema);
+            CommandAgregarInventarios.ExecuteNonQuery();
              cd_conexion.MtdCerrarConexion();
-         }*/
+            
+         }
+
+        public void MtdActualizarInventario(int CodigoInventario, int CodigoMenu, string Categoria, int Cantidad, DateTime FechaEntrada, DateTime FechaVencimiento, int DiasVigencia, string UsuarioSistema, DateTime FechaSistema)
+        {
+            string QueryActualizarInventario = "Update tbl_Inventarios set CodigoMenu = @CodigoMenu, Categoria = @Categoria, Cantidad = @Cantidad, FechaEntrada = @FechaEntrada, FechaVencimiento = @FechaVencimiento, DiasVigencia = @DiasVigencia, UsuarioSistema = @UsuarioSistema, FechaSistema= @FechaSistema where CodigoInventario = @CodigoInventario";
+            SqlCommand CommandActualizarInventarios = new SqlCommand(QueryActualizarInventario, cd_conexion.MtdAbrirConexion());
+            CommandActualizarInventarios.Parameters.AddWithValue("@CodigoInventario", CodigoInventario);
+            CommandActualizarInventarios.Parameters.AddWithValue("@CodigoMenu", CodigoMenu);
+            CommandActualizarInventarios.Parameters.AddWithValue("@Categoria", Categoria);
+            CommandActualizarInventarios.Parameters.AddWithValue("@Cantidad", Cantidad);
+            CommandActualizarInventarios.Parameters.AddWithValue("@FechaEntrada", FechaEntrada);
+            CommandActualizarInventarios.Parameters.AddWithValue("@FechaVencimiento", FechaVencimiento);
+            CommandActualizarInventarios.Parameters.AddWithValue("@DiasVigencia", DiasVigencia);
+            CommandActualizarInventarios.Parameters.AddWithValue("@UsuarioSistema", UsuarioSistema);
+            CommandActualizarInventarios.Parameters.AddWithValue("@FechaSistema", FechaSistema);
+            CommandActualizarInventarios.ExecuteNonQuery();
+            cd_conexion.MtdCerrarConexion();
+        }
+
+        public void MtdEliminarInventario(int CodigoInventario)
+        {
+            string QueryEliminarInventario = "Delete tbl_Inventarios where CodigoInventario = @CodigoInventario";
+            SqlCommand CommandEliminarInventario = new SqlCommand(QueryEliminarInventario, cd_conexion.MtdAbrirConexion());
+            CommandEliminarInventario.Parameters.AddWithValue("@CodigoInventario", CodigoInventario);
+            CommandEliminarInventario.ExecuteNonQuery();
+            cd_conexion.MtdCerrarConexion();
+        }
 
     }
 }
