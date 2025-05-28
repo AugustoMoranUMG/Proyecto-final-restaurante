@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 
 namespace Sistema_Restaurante
 {
@@ -20,6 +21,13 @@ namespace Sistema_Restaurante
         public frmEncabezadoOrdenes()
         {
             InitializeComponent();
+        }
+        private void frmEncabezadoOrdenes_Load(object sender, EventArgs e)
+        {
+            MtdMostrarListaClientes();
+            MtdMostrarListaMesas();
+            MtdMostrarListaEmpleados();
+            mtdConsultarEncabezadoOrdenes();
         }
 
         private void MtdMostrarListaClientes()
@@ -35,16 +43,45 @@ namespace Sistema_Restaurante
             cboxCodigoCliente.ValueMember = "Value";
         }
 
-        private void MtdMostrarListaDetallesOrdenes()
+        private void MtdMostrarListaMesas()
         {
-            var ListaDetallesOrdenes = cd_encabezadoOrdenes.MtdListarDetallesOrdenes();
-            foreach (var DetallesOrdenes in ListaDetallesOrdenes)
+            var ListaMesas = cd_encabezadoOrdenes.MtdListarMesas();
+            foreach (var Mesas in ListaMesas)
             {
-                cboxCodigoDetalleOrdenes.Items.Add(DetallesOrdenes);
+                cboxCodigoMesa.Items.Add(Mesas);
             }
 
-            cboxCodigoDetalleOrdenes.DisplayMember = "Text";
-            cboxCodigoDetalleOrdenes.ValueMember = "Value";
+            cboxCodigoMesa.DisplayMember = "Text";
+            cboxCodigoMesa.ValueMember = "Value";
+        }
+
+        private void MtdMostrarListaEmpleados()
+        {
+            var ListaEmpleados = cd_encabezadoOrdenes.MtdListarEmpleados();
+            foreach (var Empleados in ListaEmpleados)
+            {
+                cboxCodigoEmpleado.Items.Add(Empleados);
+            }
+
+            cboxCodigoEmpleado.DisplayMember = "Text";
+            cboxCodigoEmpleado.ValueMember = "Value";
+        }
+
+        private void mtdConsultarEncabezadoOrdenes()
+        {
+            DataTable dtEncabezadoOrdenes = cd_encabezadoOrdenes.MtdConsultarEncabezadoOrdenes();
+            dgvEncabezadoOrdenes.DataSource = dtEncabezadoOrdenes;
+        }
+
+        public void mtdLimpiarCampos()
+        {
+            txtCodigoOrdenEncabezado.Text = "";
+            cboxCodigoCliente.Text = "";
+            cboxCodigoMesa.Text = "";
+            cboxCodigoEmpleado.Text = "";
+            dtpFechaOrden.Value = DateTime.Now;
+            lblMontoTotalOrden.Text = "0.00";
+            cboxEstado.Text = "";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -53,17 +90,18 @@ namespace Sistema_Restaurante
             {
                 int CodigoCliente = int.Parse(cboxCodigoCliente.Text.Split('-')[0].Trim());
                 //Valores temporales para codigomesa y codigoempleado mientras se crean los metodos correspondientes.
-                int CodigoMesa = 1;
-                int CodigoEmpleado = 1;
+                int CodigoMesa = int.Parse(cboxCodigoMesa.Text.Split('-')[0].Trim());
+                int CodigoEmpleado = int.Parse(cboxCodigoEmpleado.Text.Split('-')[0].Trim());
                 DateTime FechaOrden = dtpFechaOrden.Value;
-                decimal MontoTotalOrden = cd_encabezadoOrdenes.MtdConsultarEncabezadoOrdenes(int.Parse(txtCodigoOrdenEncabezado.Text));
+                decimal MontoTotalOrden = cd_encabezadoOrdenes.MtdTotalOrd(int.Parse(txtCodigoOrdenEncabezado.Text));
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = txtUsuarioSistema.Text;
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_encabdezadoOrdenes.MtdFechaActual();
 
                 cd_encabezadoOrdenes.MtdAgregarEncabezadoOrdenes(CodigoCliente, CodigoMesa, CodigoEmpleado, FechaOrden, MontoTotalOrden, Estado, UsuarioSistema, FechaSistema);
                 MessageBox.Show("Orden agregada", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                mtdLimpiarCampos();
+                mtdConsultarEncabezadoOrdenes();
             }
             catch (Exception ex)
             {
@@ -71,10 +109,39 @@ namespace Sistema_Restaurante
             }
         }
 
-        private void frmEncabezadoOrdenes_Load(object sender, EventArgs e)
+
+
+        private void txtCodigoOrdenEncabezado_TextChanged(object sender, EventArgs e)
         {
-            MtdMostrarListaClientes();
-            MtdMostrarListaDetallesOrdenes();
+            if(txtCodigoOrdenEncabezado.Text == "")
+            {
+                lblMontoTotalOrden.Text = "0.00";
+            }
+            else
+            {
+                lblMontoTotalOrden.Text = cd_encabezadoOrdenes.MtdTotalOrd(int.Parse(txtCodigoOrdenEncabezado.Text)).ToString();
+            }
+        }
+
+        private void dgvEncabezadoOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigoOrdenEncabezado.Text = dgvEncabezadoOrdenes.SelectedCells[0].Value.ToString();
+            cboxCodigoCliente.Text = dgvEncabezadoOrdenes.SelectedCells[1].Value.ToString();
+            cboxCodigoMesa.Text = dgvEncabezadoOrdenes.SelectedCells[2].Value.ToString();
+            cboxCodigoEmpleado.Text = dgvEncabezadoOrdenes.SelectedCells[3].Value.ToString();
+            dtpFechaOrden.Text = dgvEncabezadoOrdenes.SelectedCells[4].Value.ToString();
+            lblMontoTotalOrden.Text = dgvEncabezadoOrdenes.SelectedCells[5].Value.ToString();
+            cboxEstado.Text = dgvEncabezadoOrdenes.SelectedCells[6].Value.ToString();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            mtdLimpiarCampos();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
