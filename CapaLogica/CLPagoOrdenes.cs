@@ -10,6 +10,11 @@ namespace CapaLogica
     {
         //METODOS PARA HACER: PROPINA, IMPUESTOS, DESCUENTO, TOTALPAGO
 
+        public DateTime MtdFechaActual()
+        {
+            return DateTime.Today;
+        }
+
         public double MtdPropina (double MontoTotalOrd)
         {
             Double propina = 0.10 * MontoTotalOrd;

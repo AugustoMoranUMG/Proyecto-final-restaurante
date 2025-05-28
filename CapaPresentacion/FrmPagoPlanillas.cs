@@ -76,5 +76,15 @@ namespace Sistema_Restaurante
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSalario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

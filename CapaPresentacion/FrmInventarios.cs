@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 
 namespace Sistema_Restaurante
 {
@@ -25,7 +26,8 @@ namespace Sistema_Restaurante
         private void FrmInventarios_Load(object sender, EventArgs e)
         {
             MtdMostrarListaMenus();
-            lblFechaSistema.Text = DateTime.Now.ToString("dd/MM/yy hh:mm:ss tt");
+            lblFechaSistema.Text = cl_inventarios.MtdFechaSistema().ToString("dd/MM/yyyy");
+            MtdConsultarInventario();
         }
 
         //primer paso CBOX
@@ -96,6 +98,120 @@ namespace Sistema_Restaurante
         private void lblCategoria_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblDiasVigencia_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void MtdConsultarInventario()
+        {
+            DataTable dt_inventario = cd_inventarios.MtdConsultarInventario();
+            dgvInventarios.DataSource = dt_inventario;
+        }
+
+        public void MtdLimpiarCampos()
+        {
+            txtCodigoInventario.Text = "";
+            cboxCodigoMenu.Text = "";
+            lblCategoria.Text = "";
+            txtCantidad.Text = "";
+            dtpFechaEntrada.Value = DateTime.Now;
+            dtpFechaVencimiento.Value = DateTime.Now;
+            lblDiasVigencia.Text = "0";
+        }
+        /*private void btnAgregar_Click(object sender, EventArgs e, DateTime DateTimePicker)
+        {
+            
+        }*/
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int codigoinventario = int.Parse(txtCodigoInventario.Text);
+                int codigomenu = int.Parse(cboxCodigoMenu.Text.Split('-')[0].Trim());
+                string categorias = lblCategoria.Text;
+                int cantidad = int.Parse(txtCantidad.Text);
+                DateTime Fechaentrada = dtpFechaEntrada.Value;
+                DateTime Fechavencimiento = dtpFechaVencimiento.Value;
+                int diasvigencia = int.Parse(lblDiasVigencia.Text);
+                string usuarioSistema = UserCache.NombreUsuario;
+                DateTime fechasistema = cl_inventarios.MtdFechaSistema();
+
+                cd_inventarios.MtdActualizarInventario(codigoinventario, codigomenu, categorias, cantidad, Fechaentrada, Fechavencimiento, diasvigencia, usuarioSistema, fechasistema);
+                MessageBox.Show("Menú agregado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MtdConsultarInventario();
+                MtdLimpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            MtdLimpiarCampos();
+        }
+
+        private void lblFechaSistema_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvInventarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigoInventario.Text = dgvInventarios.SelectedCells[0].Value.ToString();
+            cboxCodigoMenu.Text = dgvInventarios.SelectedCells[1].Value.ToString();
+            lblCategoria.Text = dgvInventarios.SelectedCells[2].Value.ToString();
+            txtCantidad.Text = dgvInventarios.SelectedCells[3].Value.ToString();
+            dtpFechaEntrada.Text = dgvInventarios.SelectedCells[4].Value.ToString();
+            dtpFechaVencimiento.Text = dgvInventarios.SelectedCells[5].Value.ToString();
+            lblDiasVigencia.Text = dgvInventarios.SelectedCells[6].Value.ToString();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int codigomenu = int.Parse(cboxCodigoMenu.Text.Split('-')[0].Trim());
+                string categorias = lblCategoria.Text;
+                int cantidad = int.Parse(txtCantidad.Text);
+                DateTime Fechaentrada = dtpFechaEntrada.Value;
+                DateTime Fechavencimiento = dtpFechaVencimiento.Value;
+                int diasvigencia = int.Parse(lblDiasVigencia.Text);
+                string usuarioSistema = UserCache.NombreUsuario;
+                DateTime fechasistema = cl_inventarios.MtdFechaSistema();
+
+                cd_inventarios.MtdAgregarInventarios(codigomenu, categorias, cantidad, Fechaentrada, Fechavencimiento, diasvigencia, usuarioSistema, fechasistema);
+                MessageBox.Show("Menú agregado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MtdConsultarInventario();
+                MtdLimpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int CodigoInventario = (int.Parse(txtCodigoInventario.Text));
+
+                cd_inventarios.MtdEliminarInventario(CodigoInventario);
+                MessageBox.Show("Inventario Eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MtdConsultarInventario();
+                MtdLimpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

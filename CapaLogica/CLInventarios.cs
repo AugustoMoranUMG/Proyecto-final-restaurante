@@ -9,6 +9,11 @@ namespace CapaLogica
 {
     public class CLInventarios
     {
+
+        public DateTime MtdFechaSistema()
+        {
+             return DateTime.Today;
+        }
         public  int MtdDiasVigencia(DateTime fechaEntrada, DateTime fechaVencimiento)
         {
             int dias = (fechaVencimiento - fechaEntrada).Days;
