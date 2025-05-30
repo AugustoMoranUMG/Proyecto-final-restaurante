@@ -31,24 +31,44 @@ namespace CapaDatos
             return ListaCliente;
         }
 
-        public List<dynamic> MtdListarDetallesOrdenes()
+        public List<dynamic> MtdListarMesas()
         {
-            List<dynamic> ListaDetallesOrdenes = new List<dynamic>();
-            string QueryListaDetallesOrdenes = "Select CodigoOrdenEnc from tbl_DetallesOrdenes";
-            SqlCommand cmd = new SqlCommand(QueryListaDetallesOrdenes, cd_conexion.MtdAbrirConexion());
+            List<dynamic> ListaMesas = new List<dynamic>();
+            string QueryListaMesas = "Select CodigoMesa, NumeroMesa from tbl_Mesas";
+            SqlCommand cmd = new SqlCommand(QueryListaMesas, cd_conexion.MtdAbrirConexion());
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
-                ListaDetallesOrdenes.Add(new
+                ListaMesas.Add(new
                 {
-                    Value = reader["CodigoOrdenEnc"],
-                    Text = reader["CodigoOrdenEnc"]
+                    Value = reader["CodigoMesa"],
+                    Text = $"{reader["CodigoMesa"]} - Mesa numero {reader["NumeroMesa"]}"
                 });
             }
 
             cd_conexion.MtdCerrarConexion();
-            return ListaDetallesOrdenes;
+            return ListaMesas;
+        }
+
+        public List<dynamic> MtdListarEmpleados()
+        {
+            List<dynamic> ListaEmpleados = new List<dynamic>();
+            string QueryListaEmpleados = "Select CodigoEmpleado, Nombre from tbl_Empleados";
+            SqlCommand cmd = new SqlCommand(QueryListaEmpleados, cd_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListaEmpleados.Add(new
+                {
+                    Value = reader["CodigoEmpleado"],
+                    Text = $"{reader["CodigoEmpleado"]} - {reader["Nombre"]}"
+                });
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return ListaEmpleados;
         }
 
         public DataTable MtdConsultarEncabezadoOrdenes()
@@ -62,13 +82,13 @@ namespace CapaDatos
             return dt_EncabezadoOrdenes;
         }
 
-        public Decimal MtdConsultarEncabezadoOrdenes(int CodigoOrdenDet)
+        public Decimal MtdTotalOrd(int CodigoOrdenEnc)
         {
             decimal preciototal = 0;
 
-            string QueryConsultarPrecioOrden = "Select PrecioTotal from tbl_DetallesOrdenes where CodigoOrdenDet = @CodigoOrdenDet";
+            string QueryConsultarPrecioOrden = "Select PrecioTotal from tbl_DetallesOrdenes where CodigoOrdenEnc = @CodigoOrdenEnc";
             SqlCommand CommandPrecioOrden = new SqlCommand(QueryConsultarPrecioOrden, cd_conexion.MtdAbrirConexion());
-            CommandPrecioOrden.Parameters.AddWithValue("@CodigoOrdenDet", CodigoOrdenDet);
+            CommandPrecioOrden.Parameters.AddWithValue("@CodigoOrdenEnc", CodigoOrdenEnc);
             SqlDataReader reader = CommandPrecioOrden.ExecuteReader();
 
             if (reader.Read())
@@ -87,7 +107,7 @@ namespace CapaDatos
 
         public void MtdAgregarEncabezadoOrdenes(int CodigoCliente, int CodigoMesa, int CodigoEmpleado, DateTime FechaOrden, decimal MontoTotalOrd, string Estado, string UsuarioSistema, DateTime FechaSistema)
         {
-            string QueryAgregarEncabezadoOrdenes = "Insert into tbl_EncabezadoOrdenes(FechaOrden, MontoTotalOrd, Estado, UsuarioSistema, FechaSistema) values (@CodigoOrdenEnc, @CodigoCliente, @CodigoMesa, @CodigoEmpleado, @FechaOrden, @MontoTotalOrd, @Estado, @UsuarioSistema, @FechaSistema)";
+            string QueryAgregarEncabezadoOrdenes = "Insert into tbl_EncabezadoOrdenes(CodigoCliente, CodigoMesa, CodigoEmpleado, FechaOrden, MontoTotalOrd, Estado, UsuarioSistema, FechaSistema) values (@CodigoCliente, @CodigoMesa, @CodigoEmpleado, @FechaOrden, @MontoTotalOrd, @Estado, @UsuarioSistema, @FechaSistema)";
             SqlCommand CommandAgregarEncabezadoOrdenes = new SqlCommand(QueryAgregarEncabezadoOrdenes, cd_conexion.MtdAbrirConexion());
             CommandAgregarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoCliente", CodigoCliente);
             CommandAgregarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoMesa", CodigoMesa);
@@ -122,7 +142,7 @@ namespace CapaDatos
         {
             string QueryEliminarEncabezadoOrdenes = "Delete tbl_EncabezadoOrdenes where CodigoOrdenEnc = @CodigoOrdenEnc";
             SqlCommand CommandEliminarEncabezadoOrdenes = new SqlCommand(QueryEliminarEncabezadoOrdenes, cd_conexion.MtdAbrirConexion());
-            CommandEliminarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoMenu", CodigoOrdenEnc);
+            CommandEliminarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoOrdenEnc", CodigoOrdenEnc);
             CommandEliminarEncabezadoOrdenes.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
         }
