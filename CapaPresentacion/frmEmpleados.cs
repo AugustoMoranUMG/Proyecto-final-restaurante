@@ -1,5 +1,6 @@
 ﻿using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,7 @@ namespace Sistema_Restaurante
         private void frmEmpleados_Load(object sender, EventArgs e)
         {
 
-            lblFechaActual.Text = clempleados.mtdFechaActual().ToString();
+            lblFechaActual.Text = clempleados.mtdFechaActual().ToString("dd/MM/yyyy");
             mtdConsultarEmpleados();
 
         }
@@ -44,7 +45,6 @@ namespace Sistema_Restaurante
             cboxCargo.Text = " ";
             lblSalario.Text = " ";
             cboxEstado.Text = " ";
-            cboxUsuarioSistema.Text = " ";
 
         }
 
@@ -58,7 +58,7 @@ namespace Sistema_Restaurante
                 decimal Salario = clempleados.mtdSalarioEmpleado(Cargo);
                 DateTime FechaContratacion = DateTime.Parse(dtpFechaContratacion.Text);
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = cboxUsuarioSistema.Text;
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = clempleados.mtdFechaActual();
 
                 cdempleados.MtdAgregarEmpleado(Nombre, Cargo, Salario, FechaContratacion, Estado, UsuarioSistema, FechaSistema);
@@ -88,7 +88,6 @@ namespace Sistema_Restaurante
             lblSalario.Text = dgvEmpleados.SelectedCells[3].Value.ToString();
             dtpFechaContratacion.Text = dgvEmpleados.SelectedCells[4].Value.ToString();
             cboxEstado.Text = dgvEmpleados.SelectedCells[5].Value.ToString();
-            cboxUsuarioSistema.Text = dgvEmpleados.SelectedCells[6].Value.ToString();
 
         }
 
@@ -104,7 +103,7 @@ namespace Sistema_Restaurante
                 decimal Salario = decimal.Parse(lblSalario.Text);
                 DateTime FechaContratacion = DateTime.Parse(dtpFechaContratacion.Text);
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = cboxUsuarioSistema.Text;
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = clempleados.mtdFechaActual();
 
                 cdempleados.MtdActualizarEmpleado(CodigoEmpleado, Nombre, Cargo, Salario, FechaContratacion, Estado, UsuarioSistema, FechaSistema);

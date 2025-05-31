@@ -66,7 +66,7 @@
             // 
             this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaPago.Location = new System.Drawing.Point(556, 121);
-            this.dtpFechaPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaPago.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaPago.Name = "dtpFechaPago";
             this.dtpFechaPago.Size = new System.Drawing.Size(124, 20);
             this.dtpFechaPago.TabIndex = 49;
@@ -90,7 +90,7 @@
             "Completado",
             "Rechazado"});
             this.cboxEstado.Location = new System.Drawing.Point(556, 85);
-            this.cboxEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(124, 21);
             this.cboxEstado.TabIndex = 46;
@@ -239,10 +239,10 @@
             // lblFechaSistema
             // 
             this.lblFechaSistema.AutoSize = true;
-            this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaSistema.Location = new System.Drawing.Point(834, 21);
+            this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.lblFechaSistema.Location = new System.Drawing.Point(833, 20);
             this.lblFechaSistema.Name = "lblFechaSistema";
-            this.lblFechaSistema.Size = new System.Drawing.Size(11, 15);
+            this.lblFechaSistema.Size = new System.Drawing.Size(15, 19);
             this.lblFechaSistema.TabIndex = 42;
             this.lblFechaSistema.Text = "-";
             // 
@@ -326,7 +326,7 @@
             "Tarjeta",
             "Transferencia"});
             this.cboxMetodoPago.Location = new System.Drawing.Point(556, 51);
-            this.cboxMetodoPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxMetodoPago.Margin = new System.Windows.Forms.Padding(2);
             this.cboxMetodoPago.Name = "cboxMetodoPago";
             this.cboxMetodoPago.Size = new System.Drawing.Size(124, 21);
             this.cboxMetodoPago.TabIndex = 65;
@@ -335,7 +335,7 @@
             // 
             this.cboxOrdenEncabezado.FormattingEnabled = true;
             this.cboxOrdenEncabezado.Location = new System.Drawing.Point(224, 44);
-            this.cboxOrdenEncabezado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxOrdenEncabezado.Margin = new System.Windows.Forms.Padding(2);
             this.cboxOrdenEncabezado.Name = "cboxOrdenEncabezado";
             this.cboxOrdenEncabezado.Size = new System.Drawing.Size(124, 21);
             this.cboxOrdenEncabezado.TabIndex = 64;
@@ -440,7 +440,7 @@
             this.Controls.Add(this.dgvMenus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPagoOrdenes";
             this.Text = "FrmPagoOrdenes";
             this.Load += new System.EventHandler(this.FrmPagoOrdenes_Load);

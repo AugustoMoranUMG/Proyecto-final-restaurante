@@ -37,12 +37,10 @@
             this.cboxCantidadSillas = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
-            this.cboxUsuarioSistema = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.txtCodigoMesa = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -100,12 +98,10 @@
             this.groupBox1.Controls.Add(this.cboxCantidadSillas);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.cboxEstado);
-            this.groupBox1.Controls.Add(this.cboxUsuarioSistema);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.txtCodigoMesa);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -136,14 +132,14 @@
             "12",
             "13",
             "14"});
-            this.cboxNumeroMesa.Location = new System.Drawing.Point(163, 55);
+            this.cboxNumeroMesa.Location = new System.Drawing.Point(163, 68);
             this.cboxNumeroMesa.Name = "cboxNumeroMesa";
             this.cboxNumeroMesa.Size = new System.Drawing.Size(124, 21);
             this.cboxNumeroMesa.TabIndex = 40;
             // 
             // txtUbicacion
             // 
-            this.txtUbicacion.Location = new System.Drawing.Point(163, 121);
+            this.txtUbicacion.Location = new System.Drawing.Point(526, 22);
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Size = new System.Drawing.Size(124, 20);
             this.txtUbicacion.TabIndex = 39;
@@ -156,7 +152,7 @@
             "Exterior",
             "Juegos",
             "Privadas"});
-            this.cboxTipoMesa.Location = new System.Drawing.Point(512, 23);
+            this.cboxTipoMesa.Location = new System.Drawing.Point(527, 68);
             this.cboxTipoMesa.Name = "cboxTipoMesa";
             this.cboxTipoMesa.Size = new System.Drawing.Size(124, 21);
             this.cboxTipoMesa.TabIndex = 38;
@@ -171,7 +167,7 @@
             "4",
             "5",
             "6"});
-            this.cboxCantidadSillas.Location = new System.Drawing.Point(163, 89);
+            this.cboxCantidadSillas.Location = new System.Drawing.Point(163, 115);
             this.cboxCantidadSillas.Name = "cboxCantidadSillas";
             this.cboxCantidadSillas.Size = new System.Drawing.Size(124, 21);
             this.cboxCantidadSillas.TabIndex = 37;
@@ -180,7 +176,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(18, 54);
+            this.label10.Location = new System.Drawing.Point(18, 67);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(104, 19);
             this.label10.TabIndex = 34;
@@ -192,22 +188,10 @@
             this.cboxEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cboxEstado.Location = new System.Drawing.Point(512, 70);
+            this.cboxEstado.Location = new System.Drawing.Point(527, 115);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(124, 21);
             this.cboxEstado.TabIndex = 33;
-            // 
-            // cboxUsuarioSistema
-            // 
-            this.cboxUsuarioSistema.FormattingEnabled = true;
-            this.cboxUsuarioSistema.Items.AddRange(new object[] {
-            "Augusto Morán",
-            "Gerber Canahuí",
-            "Fernando Fajardo"});
-            this.cboxUsuarioSistema.Location = new System.Drawing.Point(512, 116);
-            this.cboxUsuarioSistema.Name = "cboxUsuarioSistema";
-            this.cboxUsuarioSistema.Size = new System.Drawing.Size(124, 21);
-            this.cboxUsuarioSistema.TabIndex = 32;
             // 
             // btnCancelar
             // 
@@ -271,21 +255,11 @@
             this.txtCodigoMesa.Size = new System.Drawing.Size(124, 20);
             this.txtCodigoMesa.TabIndex = 16;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(381, 115);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 19);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Usuario Sistema:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(381, 69);
+            this.label9.Location = new System.Drawing.Point(381, 117);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 19);
             this.label9.TabIndex = 5;
@@ -295,7 +269,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(381, 24);
+            this.label5.Location = new System.Drawing.Point(381, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 19);
             this.label5.TabIndex = 4;
@@ -305,7 +279,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 120);
+            this.label4.Location = new System.Drawing.Point(380, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 19);
             this.label4.TabIndex = 3;
@@ -315,7 +289,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 89);
+            this.label3.Location = new System.Drawing.Point(17, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 19);
             this.label3.TabIndex = 2;
@@ -325,7 +299,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 22);
+            this.label2.Location = new System.Drawing.Point(18, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 19);
             this.label2.TabIndex = 1;
@@ -353,7 +327,7 @@
             // 
             // dgvMesas
             // 
-            this.dgvMesas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMesas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMesas.Location = new System.Drawing.Point(17, 227);
             this.dgvMesas.Name = "dgvMesas";
@@ -408,12 +382,10 @@
         private System.Windows.Forms.ComboBox cboxCantidadSillas;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cboxEstado;
-        private System.Windows.Forms.ComboBox cboxUsuarioSistema;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private System.Windows.Forms.TextBox txtCodigoMesa;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

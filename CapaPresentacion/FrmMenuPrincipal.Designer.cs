@@ -60,6 +60,7 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.lblReloj = new System.Windows.Forms.Label();
             this.PanelContenedor.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,6 +93,7 @@
             // 
             this.PanelFormularios.BackColor = System.Drawing.SystemColors.Control;
             this.PanelFormularios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFormularios.BackgroundImage")));
+            this.PanelFormularios.Controls.Add(this.lblReloj);
             this.PanelFormularios.Controls.Add(this.pictureBox1);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFormularios.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -559,6 +561,19 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // lblReloj
+            // 
+            this.lblReloj.AutoSize = true;
+            this.lblReloj.BackColor = System.Drawing.Color.Transparent;
+            this.lblReloj.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReloj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblReloj.Location = new System.Drawing.Point(721, 25);
+            this.lblReloj.Name = "lblReloj";
+            this.lblReloj.Size = new System.Drawing.Size(18, 24);
+            this.lblReloj.TabIndex = 1;
+            this.lblReloj.Text = "-";
+            this.lblReloj.Click += new System.EventHandler(this.lblReloj_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +592,7 @@
             this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.PanelContenedor.ResumeLayout(false);
             this.PanelFormularios.ResumeLayout(false);
+            this.PanelFormularios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenu.PerformLayout();
@@ -625,5 +641,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblReloj;
     }
 }
