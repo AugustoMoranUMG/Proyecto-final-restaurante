@@ -100,9 +100,9 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Navy;
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnCancelar.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 24;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -118,9 +118,9 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.Navy;
+            this.btnEditar.ForeColor = System.Drawing.Color.Black;
             this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.btnEditar.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 24;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -136,9 +136,9 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Navy;
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnGuardar.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnGuardar.IconColor = System.Drawing.Color.Black;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 24;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -297,9 +297,9 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.Navy;
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminar.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 24;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -315,9 +315,9 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.Navy;
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.btnSalir.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 24;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;

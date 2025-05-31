@@ -61,9 +61,10 @@
             // lblDiasVigencia
             // 
             this.lblDiasVigencia.AutoSize = true;
-            this.lblDiasVigencia.Location = new System.Drawing.Point(872, 142);
+            this.lblDiasVigencia.Location = new System.Drawing.Point(640, 115);
+            this.lblDiasVigencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiasVigencia.Name = "lblDiasVigencia";
-            this.lblDiasVigencia.Size = new System.Drawing.Size(15, 16);
+            this.lblDiasVigencia.Size = new System.Drawing.Size(13, 13);
             this.lblDiasVigencia.TabIndex = 52;
             this.lblDiasVigencia.Text = "--";
             this.lblDiasVigencia.Click += new System.EventHandler(this.lblDiasVigencia_Click);
@@ -71,28 +72,27 @@
             // dtpFechaEntrada
             // 
             this.dtpFechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaEntrada.Location = new System.Drawing.Point(797, 41);
-            this.dtpFechaEntrada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpFechaEntrada.Location = new System.Drawing.Point(584, 33);
+            this.dtpFechaEntrada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
-            this.dtpFechaEntrada.Size = new System.Drawing.Size(164, 22);
+            this.dtpFechaEntrada.Size = new System.Drawing.Size(124, 20);
             this.dtpFechaEntrada.TabIndex = 50;
             // 
             // txtCodigoInventario
             // 
-            this.txtCodigoInventario.Location = new System.Drawing.Point(283, 31);
-            this.txtCodigoInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoInventario.Location = new System.Drawing.Point(212, 25);
             this.txtCodigoInventario.Name = "txtCodigoInventario";
             this.txtCodigoInventario.ReadOnly = true;
-            this.txtCodigoInventario.Size = new System.Drawing.Size(164, 22);
+            this.txtCodigoInventario.Size = new System.Drawing.Size(124, 20);
             this.txtCodigoInventario.TabIndex = 16;
             // 
             // dtpFechaVencimiento
             // 
             this.dtpFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVencimiento.Location = new System.Drawing.Point(797, 90);
-            this.dtpFechaVencimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpFechaVencimiento.Location = new System.Drawing.Point(584, 73);
+            this.dtpFechaVencimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
-            this.dtpFechaVencimiento.Size = new System.Drawing.Size(164, 22);
+            this.dtpFechaVencimiento.Size = new System.Drawing.Size(124, 20);
             this.dtpFechaVencimiento.TabIndex = 51;
             this.dtpFechaVencimiento.ValueChanged += new System.EventHandler(this.dtpFechaVencimiento_ValueChanged);
             // 
@@ -100,10 +100,9 @@
             // 
             this.lblFechaSistema.AutoSize = true;
             this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaSistema.Location = new System.Drawing.Point(1097, 36);
-            this.lblFechaSistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaSistema.Location = new System.Drawing.Point(833, 20);
             this.lblFechaSistema.Name = "lblFechaSistema";
-            this.lblFechaSistema.Size = new System.Drawing.Size(13, 17);
+            this.lblFechaSistema.Size = new System.Drawing.Size(11, 15);
             this.lblFechaSistema.TabIndex = 49;
             this.lblFechaSistema.Text = "-";
             this.lblFechaSistema.Click += new System.EventHandler(this.lblFechaSistema_Click);
@@ -112,10 +111,9 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(910, 31);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(725, 21);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 22);
+            this.label14.Size = new System.Drawing.Size(88, 19);
             this.label14.TabIndex = 47;
             this.label14.Text = "Fecha actual:";
             // 
@@ -123,10 +121,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 102);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(17, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 22);
+            this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Categoría:";
             // 
@@ -134,13 +131,12 @@
             // 
             this.dgvInventarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInventarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventarios.Location = new System.Drawing.Point(17, 281);
-            this.dgvInventarios.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvInventarios.Location = new System.Drawing.Point(17, 227);
             this.dgvInventarios.Name = "dgvInventarios";
             this.dgvInventarios.ReadOnly = true;
             this.dgvInventarios.RowHeadersWidth = 51;
             this.dgvInventarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventarios.Size = new System.Drawing.Size(1254, 290);
+            this.dgvInventarios.Size = new System.Drawing.Size(933, 236);
             this.dgvInventarios.TabIndex = 48;
             this.dgvInventarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventarios_CellClick);
             // 
@@ -148,10 +144,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(453, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(408, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 31);
+            this.label1.Size = new System.Drawing.Size(152, 24);
             this.label1.TabIndex = 45;
             this.label1.Text = "INVENTARIOS";
             // 
@@ -159,10 +154,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 69);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(17, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 22);
+            this.label6.Size = new System.Drawing.Size(96, 19);
             this.label6.TabIndex = 34;
             this.label6.Text = "Codigo Menú:\r\n";
             // 
@@ -170,10 +164,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 145);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(16, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 22);
+            this.label4.Size = new System.Drawing.Size(67, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Cantidad:";
             // 
@@ -198,25 +191,23 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(17, 86);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(16, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1254, 187);
+            this.groupBox1.Size = new System.Drawing.Size(934, 152);
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Remove;
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.IconSize = 25;
+            this.btnCancelar.IconSize = 24;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(1034, 137);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(757, 108);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(193, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(145, 33);
             this.btnCancelar.TabIndex = 65;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -225,15 +216,15 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
             this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditar.IconSize = 25;
+            this.btnEditar.IconSize = 24;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(1034, 79);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(757, 65);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(193, 41);
+            this.btnEditar.Size = new System.Drawing.Size(145, 33);
             this.btnEditar.TabIndex = 64;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -246,10 +237,10 @@
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(1481, 151);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.iconButton1.Location = new System.Drawing.Point(1111, 123);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(156, 42);
+            this.iconButton1.Size = new System.Drawing.Size(117, 34);
             this.iconButton1.TabIndex = 65;
             this.iconButton1.Text = "Cancelar";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -261,10 +252,10 @@
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(1481, 96);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(5);
+            this.iconButton2.Location = new System.Drawing.Point(1111, 78);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(156, 42);
+            this.iconButton2.Size = new System.Drawing.Size(117, 34);
             this.iconButton2.TabIndex = 64;
             this.iconButton2.Text = "Editar";
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -274,55 +265,55 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(543, 138);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(407, 112);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 22);
+            this.label7.Size = new System.Drawing.Size(94, 19);
             this.label7.TabIndex = 61;
             this.label7.Text = "Dias Vigencia:";
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
             this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregar.IconSize = 25;
+            this.btnAgregar.IconSize = 24;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(1034, 23);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(757, 22);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(193, 41);
+            this.btnAgregar.Size = new System.Drawing.Size(145, 33);
             this.btnAgregar.TabIndex = 58;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Guardar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(282, 146);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCantidad.Location = new System.Drawing.Point(212, 119);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(164, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(124, 20);
             this.txtCantidad.TabIndex = 57;
             // 
             // cboxCodigoMenu
             // 
             this.cboxCodigoMenu.FormattingEnabled = true;
-            this.cboxCodigoMenu.Location = new System.Drawing.Point(283, 68);
-            this.cboxCodigoMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboxCodigoMenu.Location = new System.Drawing.Point(212, 55);
+            this.cboxCodigoMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboxCodigoMenu.Name = "cboxCodigoMenu";
-            this.cboxCodigoMenu.Size = new System.Drawing.Size(164, 24);
+            this.cboxCodigoMenu.Size = new System.Drawing.Size(124, 21);
             this.cboxCodigoMenu.TabIndex = 56;
             this.cboxCodigoMenu.SelectedIndexChanged += new System.EventHandler(this.cboxCodigoMenu_SelectedIndexChanged);
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(340, 106);
+            this.lblCategoria.Location = new System.Drawing.Point(255, 86);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCategoria.Size = new System.Drawing.Size(19, 16);
+            this.lblCategoria.Size = new System.Drawing.Size(16, 13);
             this.lblCategoria.TabIndex = 55;
             this.lblCategoria.Text = "---";
             this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -332,10 +323,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(541, 90);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(406, 73);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 22);
+            this.label8.Size = new System.Drawing.Size(126, 19);
             this.label8.TabIndex = 44;
             this.label8.Text = "Fecha Vencimiento:";
             // 
@@ -343,10 +333,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(541, 44);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(406, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 22);
+            this.label5.Size = new System.Drawing.Size(100, 19);
             this.label5.TabIndex = 42;
             this.label5.Text = "Fecha Entrada:";
             // 
@@ -354,10 +343,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 33);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(17, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 22);
+            this.label2.Size = new System.Drawing.Size(121, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Codigo Inventario:";
             // 
@@ -370,10 +358,9 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 24;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(961, 579);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(729, 469);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(139, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(102, 33);
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -389,10 +376,9 @@
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 24;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(1121, 579);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Location = new System.Drawing.Point(837, 469);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(123, 39);
+            this.btnSalir.Size = new System.Drawing.Size(102, 33);
             this.btnSalir.TabIndex = 60;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -401,9 +387,9 @@
             // 
             // FrmInventarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1301, 640);
+            this.ClientSize = new System.Drawing.Size(976, 520);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblFechaSistema);
@@ -411,7 +397,7 @@
             this.Controls.Add(this.dgvInventarios);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmInventarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInventarios";
