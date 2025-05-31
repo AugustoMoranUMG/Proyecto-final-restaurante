@@ -121,61 +121,61 @@ namespace Sistema_Restaurante
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmInventarios>();
-            button1.BackColor = Color.FromArgb(12, 61, 92);
+            button1.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmPagoOrdenes>();
-            button2.BackColor = Color.FromArgb(12, 61, 92);
+            button2.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmPagoPlanillas>();
-            button3.BackColor = Color.FromArgb(12, 61, 92);
+            button3.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmClientes>();
-            button4.BackColor = Color.FromArgb(12, 61, 92);
+            button4.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmDetallesOrdenes>();
-            button5.BackColor = Color.FromArgb(12, 61, 92);
+            button5.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmEmpleados>();
-            button6.BackColor = Color.FromArgb(12, 61, 92);
+            button6.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmEncabezadoOrdenes>();
-            button7.BackColor = Color.FromArgb(12, 61, 92);
+            button7.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmMenus>();
-            button8.BackColor = Color.FromArgb(12, 61, 92);
+            button8.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmMesas>();
-            button9.BackColor = Color.FromArgb(12, 61, 92);
+            button9.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmUsuarios>();
-            button10.BackColor = Color.FromArgb(12, 61, 92);
+            button10.BackgroundImage = Properties.Resources.lineafondo2;
         }
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -263,26 +263,26 @@ namespace Sistema_Restaurante
 
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms["FrmInventarios"] == null)           
-                button1.BackColor = Color.FromArgb(12, 61, 92);
+            if (Application.OpenForms["FrmInventarios"] == null)
+                button1.BackgroundImage = Properties.Resources.lineafondo;
             if (Application.OpenForms["FrmPagoOrenes"] == null)
-                button2.BackColor = Color.FromArgb(12, 61, 92);
+                button2.BackgroundImage = Properties.Resources.lineafondo;
             if (Application.OpenForms["FrmPagoPlanillas"] == null)
-                button3.BackColor = Color.FromArgb(12, 61, 92);
+                button3.BackgroundImage = Properties.Resources.lineafondo;
             if (Application.OpenForms["frmClientes"] == null)
-                button4.BackColor = Color.FromArgb(12, 61, 92);
+                button4.BackgroundImage = Properties.Resources.lineafondo;
             if (Application.OpenForms["frmDetallesOrdenes"] == null)
-                button5.BackColor = Color.FromArgb(12, 61, 92);
+                button5.BackgroundImage = Properties.Resources.lineafondo;
             if (Application.OpenForms["frmEmpleados"] == null)
-                button6.BackColor = Color.FromArgb(12, 61, 92);
+                button6.BackgroundImage = Properties.Resources.lineafondo;
             if (Application.OpenForms["frmEncabezadoOrdenes"] == null)
-                button7.BackColor = Color.FromArgb(12, 61, 92);
+                button7.BackgroundImage = Properties.Resources.lineafondo;
             if (Application.OpenForms["frmMenus"] == null)
-                button8.BackColor = Color.FromArgb(12, 61, 92);
+                button8.BackgroundImage = Properties.Resources.lineafondo;
             if (Application.OpenForms["frmMesas"] == null)
-                button9.BackColor = Color.FromArgb(12, 61, 92);
+                button9.BackgroundImage = Properties.Resources.lineafondo;
             if (Application.OpenForms["frmUsuarios"] == null)
-                button10.BackColor = Color.FromArgb(12, 61, 92);
+                button10.BackgroundImage = Properties.Resources.lineafondo;
 
         }
         private void LoadUserData()
