@@ -71,9 +71,30 @@ namespace CapaDatos
             return ListaEmpleados;
         }
 
+        public List<dynamic> MtdListarDetallesOrdenes()
+        {
+            List<dynamic> ListaDetallesOrdenes = new List<dynamic>();
+            string QueryListaDetallesOrdenes = "Select CodigoOrdenDet from tbl_DetallesOrdenes";
+            SqlCommand cmd = new SqlCommand(QueryListaDetallesOrdenes, cd_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListaDetallesOrdenes.Add(new
+                {
+                    Value = reader["CodigoOrdenDet"],
+                    Text = $"Orden No. - {reader["CodigoOrdenDet"]}"
+                });
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return ListaDetallesOrdenes;
+        }
+
+
         public DataTable MtdConsultarEncabezadoOrdenes()
         {
-            string QueryConsultarEncabezadoOrdenes = "Select * from tbl_EncabezadoOrdenes";
+            string QueryConsultarEncabezadoOrdenes = "Select CodigoOrdenEnc, CodigoOrdenDet, CodigoCliente, CodigoMesa, CodigoEmpleado, FechaOrden, MontoTotalOrd, Estado, UsuarioSistema, FechaSistema from tbl_EncabezadoOrdenes";
             SqlDataAdapter sqlAdapter = new SqlDataAdapter(QueryConsultarEncabezadoOrdenes, cd_conexion.MtdAbrirConexion());
             DataTable dt_EncabezadoOrdenes = new DataTable();
             sqlAdapter.Fill(dt_EncabezadoOrdenes);
@@ -82,13 +103,13 @@ namespace CapaDatos
             return dt_EncabezadoOrdenes;
         }
 
-        public Decimal MtdTotalOrd(int CodigoOrdenEnc)
+        public Decimal MtdTotalOrd(int CodigoOrdenDet)
         {
             decimal preciototal = 0;
 
-            string QueryConsultarPrecioOrden = "Select PrecioTotal from tbl_DetallesOrdenes where CodigoOrdenEnc = @CodigoOrdenEnc";
+            string QueryConsultarPrecioOrden = "Select PrecioTotal from tbl_DetallesOrdenes where CodigoOrdenDet = @CodigoOrdenDet";
             SqlCommand CommandPrecioOrden = new SqlCommand(QueryConsultarPrecioOrden, cd_conexion.MtdAbrirConexion());
-            CommandPrecioOrden.Parameters.AddWithValue("@CodigoOrdenEnc", CodigoOrdenEnc);
+            CommandPrecioOrden.Parameters.AddWithValue("@CodigoOrdenDet", CodigoOrdenDet);
             SqlDataReader reader = CommandPrecioOrden.ExecuteReader();
 
             if (reader.Read())
@@ -105,10 +126,11 @@ namespace CapaDatos
         }
 
 
-        public void MtdAgregarEncabezadoOrdenes(int CodigoCliente, int CodigoMesa, int CodigoEmpleado, DateTime FechaOrden, decimal MontoTotalOrd, string Estado, string UsuarioSistema, DateTime FechaSistema)
+        public void MtdAgregarEncabezadoOrdenes(int CodigoOrdenDet, int CodigoCliente, int CodigoMesa, int CodigoEmpleado, DateTime FechaOrden, decimal MontoTotalOrd, string Estado, string UsuarioSistema, DateTime FechaSistema)
         {
-            string QueryAgregarEncabezadoOrdenes = "Insert into tbl_EncabezadoOrdenes(CodigoCliente, CodigoMesa, CodigoEmpleado, FechaOrden, MontoTotalOrd, Estado, UsuarioSistema, FechaSistema) values (@CodigoCliente, @CodigoMesa, @CodigoEmpleado, @FechaOrden, @MontoTotalOrd, @Estado, @UsuarioSistema, @FechaSistema)";
+            string QueryAgregarEncabezadoOrdenes = "Insert into tbl_EncabezadoOrdenes(CodigoOrdenDet, CodigoCliente, CodigoMesa, CodigoEmpleado, FechaOrden, MontoTotalOrd, Estado, UsuarioSistema, FechaSistema) values (@CodigoOrdenDet, @CodigoCliente, @CodigoMesa, @CodigoEmpleado, @FechaOrden, @MontoTotalOrd, @Estado, @UsuarioSistema, @FechaSistema)";
             SqlCommand CommandAgregarEncabezadoOrdenes = new SqlCommand(QueryAgregarEncabezadoOrdenes, cd_conexion.MtdAbrirConexion());
+            CommandAgregarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoOrdenDet", CodigoOrdenDet);
             CommandAgregarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoCliente", CodigoCliente);
             CommandAgregarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoMesa", CodigoMesa);
             CommandAgregarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
@@ -121,11 +143,12 @@ namespace CapaDatos
             cd_conexion.MtdCerrarConexion();
         }
 
-        public void MtdActualizarEncabezadoOrdenes(int CodigoOrdenEnc, int CodigoCliente, int CodigoMesa, int CodigoEmpleado, DateTime FechaOrden, decimal MontoTotalOrd, string Estado, string UsuarioSistema, DateTime FechaSistema)
+        public void MtdActualizarEncabezadoOrdenes(int CodigoOrdenEnc, int CodigoOrdenDet, int CodigoCliente, int CodigoMesa, int CodigoEmpleado, DateTime FechaOrden, decimal MontoTotalOrd, string Estado, string UsuarioSistema, DateTime FechaSistema)
         {
-            string QueryActualizarEncabezadoOrdenes = "Update tbl_EncabezadoOrdenes set CodigoCliente = @CodigoCliente, CodigoMesa = @CodigoMesa, CodigoEmpleado = @CodigoEmpleado, FechaOrden = @FechaOrden, MontoTotalOrd = @MontoTotalOrd, Estado = @Estado, UsuarioSistema = @UsuarioSistema, FechaSistema = @FechaSistema where CodigoOrdenEnc = @CodigoOrdenEnc";
+            string QueryActualizarEncabezadoOrdenes = "Update tbl_EncabezadoOrdenes set CodigoOrdenDet = @CodigoOrdenDet, CodigoCliente = @CodigoCliente, CodigoMesa = @CodigoMesa, CodigoEmpleado = @CodigoEmpleado, FechaOrden = @FechaOrden, MontoTotalOrd = @MontoTotalOrd, Estado = @Estado, UsuarioSistema = @UsuarioSistema, FechaSistema = @FechaSistema where CodigoOrdenEnc = @CodigoOrdenEnc";
             SqlCommand CommandActualizarEncabezadoOrdenes = new SqlCommand(QueryActualizarEncabezadoOrdenes, cd_conexion.MtdAbrirConexion());
             CommandActualizarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoOrdenEnc", CodigoOrdenEnc);
+            CommandActualizarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoOrdenDet", CodigoOrdenDet);
             CommandActualizarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoCliente", CodigoCliente);
             CommandActualizarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoMesa", CodigoMesa);
             CommandActualizarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
