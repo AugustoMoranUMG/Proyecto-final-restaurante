@@ -39,6 +39,11 @@ ALTER TABLE tbl_EncabezadoOrdenes ADD Foreign key (CodigoEmpleado) references tb
 Insert into tbl_EncabezadoOrdenes(FechaOrden, MontoTotalOrd, Estado, UsuarioSistema, FechaSistema)
 values ('11/05/2025', 100, 'Activo', 'Fernando Fajardo', '12/05/2025');
 
+ALTER TABLE tbl_EncabezadoOrdenes
+ADD CodigoOrdenDet INT;
+
+ALTER TABLE tbl_EncabezadoOrdenes Add Foreign key (CodigoOrdenDet) references tbl_DetallesOrdenes (CodigoOrdenDet);
+
 CREATE TABLE tbl_DetallesOrdenes
 (
 	CodigoOrdenDet int primary key identity(1,1) not null,
