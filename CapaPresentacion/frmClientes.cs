@@ -35,7 +35,7 @@ namespace Sistema_Restaurante
         private void frmClientes_Load(object sender, EventArgs e)
         {
 
-            lblFechaActual.Text = clclientes.MtdFechaActual().ToString();
+            lblFechaActual.Text = clclientes.MtdFechaActual().ToString("dd/MM/yyyy");
             mtdConsultarClientes();
 
         }

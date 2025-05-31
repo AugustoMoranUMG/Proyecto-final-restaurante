@@ -46,7 +46,7 @@ namespace Sistema_Restaurante
         private void FrmPagoPlanillas_Load(object sender, EventArgs e)
         {
             MtdMostrarListaEmpleados();
-            lblFechaSistema.Text = cl_pagoplanillas.MtdFechaSistema().ToString();
+            lblFechaSistema.Text = cl_pagoplanillas.MtdFechaSistema().ToString("dd/MM/yyyy");
             MtdConsultarPagoPlanilla();
         }
 

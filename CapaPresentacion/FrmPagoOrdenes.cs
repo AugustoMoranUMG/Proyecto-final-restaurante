@@ -55,7 +55,7 @@ namespace Sistema_Restaurante
         private void FrmPagoOrdenes_Load(object sender, EventArgs e)
         {
             MtdMostrarListaOrdenEnc();
-            lblFechaSistema.Text = DateTime.Now.ToString("dd/MM/yy hh:mm:ss tt");
+            lblFechaSistema.Text = cl_pagoordenes.MtdFechaActual().ToString("dd/MM/yyyy");
             MtdConsultarPagoOrdenes();
         }
 
