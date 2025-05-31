@@ -9,11 +9,6 @@ namespace CapaLogica
     public class CLPagoPlanillas
     {
         // Bono, MontoTotal
-        public DateTime MtdFechaSistema()
-        {
-            DateTime fechaSistema = DateTime.Now;
-            return fechaSistema;
-        }
 
         public double MtdBono (double Salario)
         {
