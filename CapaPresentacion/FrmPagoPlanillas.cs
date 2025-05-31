@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaLogica;
-using CapaPresentacion.Seguridad;
 
 namespace Sistema_Restaurante
 {
@@ -46,8 +45,7 @@ namespace Sistema_Restaurante
         private void FrmPagoPlanillas_Load(object sender, EventArgs e)
         {
             MtdMostrarListaEmpleados();
-            lblFechaSistema.Text = cl_pagoplanillas.MtdFechaSistema().ToString();
-            MtdConsultarPagoPlanilla();
+            lblFechaSistema.Text = DateTime.Now.ToString("dd/MM/yy hh:mm:ss tt");
         }
 
         private void cboxCodigoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,23 +53,28 @@ namespace Sistema_Restaurante
             var EmpleadoSeleccionado = cboxCodigoEmpleado.SelectedItem;
             int CodigoEmpleado = (int)EmpleadoSeleccionado.GetType().GetProperty("Value").GetValue(EmpleadoSeleccionado, null);
             lblSalario.Text = cd_pagoplanillas.MtdConsultarEmpleado(CodigoEmpleado);
-            lblBono.Text = cl_pagoplanillas.MtdBono(double.Parse(lblSalario.Text)).ToString();
+            lblBono.Text = cl_pagoplanillas.MtdBono(double.Parse(lblSalario.Text)).ToString("c");
  
         }
 
         private void txtHorasExtras_TextChanged(object sender, EventArgs e)
         {
-            if (txtHorasExtras.Text == "")
+            try
             {
-                lblMontoTotal.Text = "0.00";
-            }else
-            {
+                if (string.IsNullOrWhiteSpace(txtHorasExtras.Text))
+                {
+                    throw new Exception("El campo no debe de estar vacío");
+                }
+
                 double salario = double.Parse(lblSalario.Text);
                 double horasExtras = double.Parse(txtHorasExtras.Text);
 
-                lblMontoTotal.Text = cl_pagoplanillas.MtdMontoTotalSalario(salario, horasExtras).ToString();
+                lblMontoTotal.Text = cl_pagoplanillas.MtdMontoTotalSalario(salario, horasExtras).ToString("C");
             }
-                           
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -82,95 +85,6 @@ namespace Sistema_Restaurante
         private void lblSalario_Click(object sender, EventArgs e)
         {
 
-        }
-
-        public void MtdConsultarPagoPlanilla()
-        {
-            DataTable dt_pagoplanilla = cd_pagoplanillas.MtdVerificarPagoPlanilla();
-            dgvPagoPlanillas.DataSource = dt_pagoplanilla;
-        }
-
-        public void MtdLimpiarCampos()
-        {
-            txtPagoPlanilla.Text = "";
-            cboxCodigoEmpleado.Text = "";
-            lblSalario.Text = "";
-            lblBono.Text = "";
-            txtHorasExtras.Text = "";
-            lblMontoTotal.Text = "";
-            cboxEstado.Text = "";
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            
-                int codigoEmpleado = int.Parse(cboxCodigoEmpleado.Text.Split('-')[0].Trim());
-                DateTime Fechapago = dtpFechaPago.Value;
-                double salario = double.Parse(lblSalario.Text);
-                double bono = double.Parse(lblBono.Text);
-                double horasExtras = double.Parse(txtHorasExtras.Text);
-                double montoTotal = double.Parse(lblMontoTotal.Text);
-                string estado = cboxEstado.Text;
-                string usuarioSistema = UserCache.NombreUsuario;
-                DateTime fechasistema = cl_pagoplanillas.MtdFechaSistema();
-
-                cd_pagoplanillas.MtdAgregarPagoPlanilla(codigoEmpleado, Fechapago, salario, bono, horasExtras, montoTotal, estado, usuarioSistema, fechasistema);
-                MessageBox.Show("Pago realizado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MtdConsultarPagoPlanilla();
-                MtdLimpiarCampos();
-        }
-
-        private void dgvPagoPlanillas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtPagoPlanilla.Text = dgvPagoPlanillas.SelectedCells[0].Value.ToString();
-            cboxCodigoEmpleado.Text = dgvPagoPlanillas.SelectedCells[1].Value.ToString();
-            dtpFechaPago.Text = dgvPagoPlanillas.SelectedCells[2].Value.ToString();
-            lblSalario.Text = dgvPagoPlanillas.SelectedCells[3].Value.ToString();
-            lblBono.Text = dgvPagoPlanillas.SelectedCells[4].Value.ToString();
-            txtHorasExtras.Text = dgvPagoPlanillas.SelectedCells[5].Value.ToString();
-            lblMontoTotal.Text = dgvPagoPlanillas.SelectedCells[6].Value.ToString();
-            cboxEstado.Text = dgvPagoPlanillas.SelectedCells[7].Value.ToString();
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            int codigoPagoPlanilla = int.Parse(txtPagoPlanilla.Text);
-            int codigoEmpleado = int.Parse(cboxCodigoEmpleado.Text.Split('-')[0].Trim());
-            DateTime Fechapago = dtpFechaPago.Value;
-            double salario = double.Parse(lblSalario.Text);
-            double bono = double.Parse(lblBono.Text);
-            double horasExtras = double.Parse(txtHorasExtras.Text);
-            double montoTotal = double.Parse(lblMontoTotal.Text);
-            string estado = cboxEstado.Text;
-            string usuarioSistema = UserCache.NombreUsuario;
-            DateTime fechasistema = cl_pagoplanillas.MtdFechaSistema();
-
-            cd_pagoplanillas.MtdActualizarPagoPlanilla(codigoPagoPlanilla, codigoEmpleado, Fechapago, salario, bono, horasExtras, montoTotal, estado, usuarioSistema, fechasistema);
-            MessageBox.Show("Pago actualizado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MtdConsultarPagoPlanilla();
-            MtdLimpiarCampos();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            MtdLimpiarCampos();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int CodigoPagoPlanilla = (int.Parse(txtPagoPlanilla.Text));
-
-                cd_pagoplanillas.MtdEliminarPagoPlanilla(CodigoPagoPlanilla);
-                MessageBox.Show("Pago Eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MtdConsultarPagoPlanilla();
-                MtdLimpiarCampos();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }
