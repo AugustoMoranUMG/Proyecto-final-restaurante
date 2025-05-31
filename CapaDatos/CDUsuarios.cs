@@ -9,7 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CapaDatos
 {
-    class CDUsuarios
+    public class CDUsuarios
     {
         Conexion cd_conexion = new Conexion();
 
@@ -48,7 +48,7 @@ namespace CapaDatos
 
         public void MtdAgregarUsuario(int CodigoEmpleado, string NombreUsuario, string Contrasenia, string Rol, string Estado, string UsuarioSistema, DateTime FechaSistema)
         {
-            string QueryAgregarUsuario = "Insert into tbl_usuarios(CodigoEmpleado, NombreUsuario, Contrasenia, Rol, FechaContratacion, Estado, UsuarioSistema, Fechasistema) values (@CodigoEmpleado, @NombreUsuario, @Contrasenia, @Rol, @Estado, @UsuarioSistema, @FechaSistema);";
+            string QueryAgregarUsuario = "Insert into tbl_usuarios(CodigoEmpleado, NombreUsuario, Contrasenia, Rol, Estado, UsuarioSistema, Fechasistema) values (@CodigoEmpleado, @NombreUsuario, @Contrasenia, @Rol, @Estado, @UsuarioSistema, @FechaSistema);";
             SqlCommand CommandAgregarUsuario = new SqlCommand(QueryAgregarUsuario, cd_conexion.MtdAbrirConexion());
             CommandAgregarUsuario.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
             CommandAgregarUsuario.Parameters.AddWithValue("@NombreUsuario", NombreUsuario);

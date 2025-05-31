@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogica
 {
-    class CLusuarios
+    public class CLusuarios
     {
 
         public DateTime MtdFechaActual()
