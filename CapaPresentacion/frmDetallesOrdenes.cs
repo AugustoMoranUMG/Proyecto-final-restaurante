@@ -26,7 +26,6 @@ namespace Sistema_Restaurante
         private void frmDetallesOrdenes_Load(object sender, EventArgs e)
         {
             mtdConsultarDetallesOrdenes();
-            mtdMostrarEncabezadoOrdenes();
             mtdMostrarMenus();
             lblFechaActual.Text = cl_detallesOrdenes.MtdFechaActual().ToString("dd/MM/yyyy");   
         }
@@ -35,19 +34,6 @@ namespace Sistema_Restaurante
         {
             DataTable dtDetallesOrdenes = cd_detallesOrdenes.MtdConsultarDetallesOrdenes();
             dgvDetallesOrdenes.DataSource = dtDetallesOrdenes;
-        }
-
-        private void mtdMostrarEncabezadoOrdenes()
-        {
-            var ListaEncabezadoOrdenes = cd_detallesOrdenes.MtdListarEncabezadoOrdenes();
-
-            foreach (var Encabezado in ListaEncabezadoOrdenes)
-            {
-                cboxCodigoOrdenEncabezado.Items.Add(Encabezado);
-            }
-
-            cboxCodigoOrdenEncabezado.DisplayMember = "Text";
-            cboxCodigoOrdenEncabezado.ValueMember = "Value";
         }
 
         private void mtdMostrarMenus()
@@ -66,7 +52,6 @@ namespace Sistema_Restaurante
         private void mtdLimpiarCampos()
         {
             txtCodigoOrdenDetalles.Text = "";
-            cboxCodigoOrdenEncabezado.Text = "";
             cboxCodigoMenu.Text = "";
             txtCantidad.Text = "";
             lblPrecioUnitario.Text = "0.00";
@@ -77,7 +62,6 @@ namespace Sistema_Restaurante
         {
             try
             {
-                int CodigoOrdenEnc = int.Parse(cboxCodigoOrdenEncabezado.Text.Split('-')[0].Trim());
                 int CodigoMenu = int.Parse(cboxCodigoMenu.Text.Split('-')[0].Trim());
                 int Cantidad = int.Parse(txtCantidad.Text);
                 decimal PrecioUnitario = cd_detallesOrdenes.MtdPrecioUnitario(CodigoMenu);
@@ -85,7 +69,7 @@ namespace Sistema_Restaurante
                 string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_detallesOrdenes.MtdFechaActual();
 
-                cd_detallesOrdenes.MtdAgregarDetallesOrdenes(CodigoOrdenEnc, CodigoMenu, Cantidad, PrecioUnitario, PrecioTotal, UsuarioSistema, FechaSistema);
+                cd_detallesOrdenes.MtdAgregarDetallesOrdenes(CodigoMenu, Cantidad, PrecioUnitario, PrecioTotal, UsuarioSistema, FechaSistema);
                 MessageBox.Show("Detalles de la orden guardados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 mtdConsultarDetallesOrdenes();
                 mtdLimpiarCampos();
@@ -101,7 +85,6 @@ namespace Sistema_Restaurante
             try
             {
                 int CodigoOrdenDet = int.Parse(txtCodigoOrdenDetalles.Text);
-                int CodigoOrdenEnc = int.Parse(cboxCodigoOrdenEncabezado.Text.Split('-')[0].Trim());
                 int CodigoMenu = int.Parse(cboxCodigoMenu.Text.Split('-')[0].Trim());
                 int Cantidad = int.Parse(txtCantidad.Text);
                 decimal PrecioUnitario = cd_detallesOrdenes.MtdPrecioUnitario(CodigoMenu);
@@ -109,7 +92,7 @@ namespace Sistema_Restaurante
                 string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_detallesOrdenes.MtdFechaActual();
 
-                cd_detallesOrdenes.MtdActualizarDetallesOrdenes(CodigoOrdenDet, CodigoOrdenEnc, CodigoMenu, Cantidad, PrecioUnitario, PrecioTotal, UsuarioSistema, FechaSistema);
+                cd_detallesOrdenes.MtdActualizarDetallesOrdenes(CodigoOrdenDet, CodigoMenu, Cantidad, PrecioUnitario, PrecioTotal, UsuarioSistema, FechaSistema);
                 MessageBox.Show("Detalles de la orden actualizados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 mtdConsultarDetallesOrdenes();
                 mtdLimpiarCampos();
@@ -150,11 +133,10 @@ namespace Sistema_Restaurante
         private void dgvDetallesOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtCodigoOrdenDetalles.Text = dgvDetallesOrdenes.SelectedCells[0].Value.ToString();
-            cboxCodigoOrdenEncabezado.Text = dgvDetallesOrdenes.SelectedCells[1].Value.ToString();
-            cboxCodigoMenu.Text = dgvDetallesOrdenes.SelectedCells[2].Value.ToString();
-            txtCantidad.Text = dgvDetallesOrdenes.SelectedCells[3].Value.ToString();
-            lblPrecioUnitario.Text = dgvDetallesOrdenes.SelectedCells[4].Value.ToString();
-            lblPrecioTotal.Text = dgvDetallesOrdenes.SelectedCells[5].Value.ToString();
+            cboxCodigoMenu.Text = dgvDetallesOrdenes.SelectedCells[1].Value.ToString();
+            txtCantidad.Text = dgvDetallesOrdenes.SelectedCells[2].Value.ToString();
+            lblPrecioUnitario.Text = dgvDetallesOrdenes.SelectedCells[3].Value.ToString();
+            lblPrecioTotal.Text = dgvDetallesOrdenes.SelectedCells[4].Value.ToString();
         }
         private void cboxCodigoMenu_SelectedIndexChanged(object sender, EventArgs e)
         {

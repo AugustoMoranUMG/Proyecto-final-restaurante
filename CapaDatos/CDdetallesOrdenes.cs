@@ -12,26 +12,6 @@ namespace CapaDatos
     {
         Conexion cd_conexion = new Conexion();
 
-        public List<dynamic> MtdListarEncabezadoOrdenes()
-        {
-            List<dynamic> ListaEncabezadoOrdenes = new List<dynamic>();
-            string QueryListaEncabezadoOrdenes = "Select CodigoOrdenEnc, CodigoCliente from tbl_EncabezadoOrdenes";
-            SqlCommand cmd = new SqlCommand(QueryListaEncabezadoOrdenes, cd_conexion.MtdAbrirConexion());
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                ListaEncabezadoOrdenes.Add(new
-                {
-                    Value = reader["CodigoOrdenEnc"],
-                    Text = $"{reader["CodigoOrdenEnc"]} - Cliente {reader["CodigoCliente"]}"
-                });
-            }
-
-            cd_conexion.MtdCerrarConexion();
-            return ListaEncabezadoOrdenes;
-        }
-
         public List<dynamic> MtdListarMenus()
         {
             List<dynamic> ListaMenus = new List<dynamic>();
@@ -84,11 +64,10 @@ namespace CapaDatos
             return dt_detallesOrdenes;
         }
 
-        public void MtdAgregarDetallesOrdenes(int CodigoOrdenEnc, int CodigoMenu, int Cantidad, decimal PrecioUnitario, decimal PrecioTotal, string UsuarioSistema, DateTime FechaSistema)
+        public void MtdAgregarDetallesOrdenes(int CodigoMenu, int Cantidad, decimal PrecioUnitario, decimal PrecioTotal, string UsuarioSistema, DateTime FechaSistema)
         {
-            string QueryAgregarDetallesOrdenes = "Insert into tbl_DetallesOrdenes(CodigoOrdenEnc, CodigoMenu, Cantidad, PrecioUnitario, PrecioTotal, UsuarioSistema, FechaSistema) values (@CodigoOrdenEnc, @CodigoMenu, @Cantidad, @PrecioUnitario, @PrecioTotal, @UsuarioSistema, @FechaSistema)";
+            string QueryAgregarDetallesOrdenes = "Insert into tbl_DetallesOrdenes(CodigoMenu, Cantidad, PrecioUnitario, PrecioTotal, UsuarioSistema, FechaSistema) values (@CodigoMenu, @Cantidad, @PrecioUnitario, @PrecioTotal, @UsuarioSistema, @FechaSistema)";
             SqlCommand CommandAgregarDetallesOrdenes = new SqlCommand(QueryAgregarDetallesOrdenes, cd_conexion.MtdAbrirConexion());
-            CommandAgregarDetallesOrdenes.Parameters.AddWithValue("@CodigoOrdenEnc", CodigoOrdenEnc);
             CommandAgregarDetallesOrdenes.Parameters.AddWithValue("@CodigoMenu", CodigoMenu);
             CommandAgregarDetallesOrdenes.Parameters.AddWithValue("@Cantidad", Cantidad);
             CommandAgregarDetallesOrdenes.Parameters.AddWithValue("@PrecioUnitario", PrecioUnitario);
@@ -99,12 +78,11 @@ namespace CapaDatos
             cd_conexion.MtdCerrarConexion();
         }
 
-        public void MtdActualizarDetallesOrdenes(int CodigoOrdenDet, int CodigoOrdenEnc, int CodigoMenu, int Cantidad, decimal PrecioUnitario, decimal PrecioTotal, string UsuarioSistema, DateTime FechaSistema)
+        public void MtdActualizarDetallesOrdenes(int CodigoOrdenDet, int CodigoMenu, int Cantidad, decimal PrecioUnitario, decimal PrecioTotal, string UsuarioSistema, DateTime FechaSistema)
         {
-            string QueryActualizarDetallesOrdenes = "Update tbl_DetallesOrdenes set CodigoOrdenEnc = @CodigoOrdenEnc, CodigoMenu = @CodigoMenu, Cantidad = @Cantidad, PrecioUnitario = @PrecioUnitario, PrecioTotal = @PrecioTotal, UsuarioSistema = @UsuarioSistema, FechaSistema = @FechaSistema where CodigoOrdenDet = @CodigoOrdenDet";
+            string QueryActualizarDetallesOrdenes = "Update tbl_DetallesOrdenes set CodigoMenu = @CodigoMenu, Cantidad = @Cantidad, PrecioUnitario = @PrecioUnitario, PrecioTotal = @PrecioTotal, UsuarioSistema = @UsuarioSistema, FechaSistema = @FechaSistema where CodigoOrdenDet = @CodigoOrdenDet";
             SqlCommand CommandActualizarDetallesOrdenes = new SqlCommand(QueryActualizarDetallesOrdenes, cd_conexion.MtdAbrirConexion());
             CommandActualizarDetallesOrdenes.Parameters.AddWithValue("@CodigoOrdenDet", CodigoOrdenDet);
-            CommandActualizarDetallesOrdenes.Parameters.AddWithValue("@CodigoOrdenEnc", CodigoOrdenEnc);
             CommandActualizarDetallesOrdenes.Parameters.AddWithValue("@CodigoMenu", CodigoMenu);
             CommandActualizarDetallesOrdenes.Parameters.AddWithValue("@Cantidad", Cantidad);
             CommandActualizarDetallesOrdenes.Parameters.AddWithValue("@PrecioUnitario", PrecioUnitario);
