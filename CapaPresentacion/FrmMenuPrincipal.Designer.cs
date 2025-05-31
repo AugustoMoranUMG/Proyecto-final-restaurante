@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.PanelFormularios = new System.Windows.Forms.Panel();
+            this.lblReloj = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.lblReloj = new System.Windows.Forms.Label();
             this.PanelContenedor.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,6 +103,19 @@
             this.PanelFormularios.Size = new System.Drawing.Size(1004, 529);
             this.PanelFormularios.TabIndex = 2;
             this.PanelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelFormularios_Paint);
+            // 
+            // lblReloj
+            // 
+            this.lblReloj.AutoSize = true;
+            this.lblReloj.BackColor = System.Drawing.Color.Transparent;
+            this.lblReloj.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReloj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblReloj.Location = new System.Drawing.Point(51, 470);
+            this.lblReloj.Name = "lblReloj";
+            this.lblReloj.Size = new System.Drawing.Size(18, 24);
+            this.lblReloj.TabIndex = 1;
+            this.lblReloj.Text = "-";
+            this.lblReloj.Click += new System.EventHandler(this.lblReloj_Click);
             // 
             // pictureBox1
             // 
@@ -560,19 +573,6 @@
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // lblReloj
-            // 
-            this.lblReloj.AutoSize = true;
-            this.lblReloj.BackColor = System.Drawing.Color.Transparent;
-            this.lblReloj.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReloj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblReloj.Location = new System.Drawing.Point(721, 25);
-            this.lblReloj.Name = "lblReloj";
-            this.lblReloj.Size = new System.Drawing.Size(18, 24);
-            this.lblReloj.TabIndex = 1;
-            this.lblReloj.Text = "-";
-            this.lblReloj.Click += new System.EventHandler(this.lblReloj_Click);
             // 
             // FrmMenuPrincipal
             // 
