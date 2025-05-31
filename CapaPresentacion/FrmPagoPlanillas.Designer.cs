@@ -28,40 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboxEstado = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblMontoTotal = new System.Windows.Forms.Label();
             this.txtHorasExtras = new System.Windows.Forms.TextBox();
             this.lblBono = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
-            this.txtPagoPlanilla = new System.Windows.Forms.TextBox();
-            this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnAgregar = new FontAwesome.Sharp.IconButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.cboxCodigoEmpleado = new System.Windows.Forms.ComboBox();
             this.lblSalario = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvPagoPlanillas = new System.Windows.Forms.DataGridView();
+            this.dgvMenus = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFechaSistema = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.btnEditar = new FontAwesome.Sharp.IconButton();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPagoPlanillas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).BeginInit();
             this.SuspendLayout();
             // 
-            // cboxEstado
+            // comboBox1
             // 
-            this.cboxEstado.FormattingEnabled = true;
-            this.cboxEstado.Items.AddRange(new object[] {
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "Pendiente",
             "Proceso",
             "Pagado",
@@ -99,7 +99,7 @@
             this.lblBono.Name = "lblBono";
             this.lblBono.Size = new System.Drawing.Size(28, 13);
             this.lblBono.TabIndex = 57;
-            this.lblBono.Text = "0.00";
+            this.lblBono.Text = "--";
             // 
             // label10
             // 
@@ -111,7 +111,7 @@
             this.label10.TabIndex = 56;
             this.label10.Text = "Bono:";
             // 
-            // dtpFechaPago
+            // dateTimePicker1
             // 
             this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaPago.Location = new System.Drawing.Point(212, 72);
@@ -153,16 +153,16 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnCancelar);
-            this.groupBox1.Controls.Add(this.txtPagoPlanilla);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.cboxCodigoEmpleado);
-            this.groupBox1.Controls.Add(this.cboxEstado);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblMontoTotal);
             this.groupBox1.Controls.Add(this.txtHorasExtras);
             this.groupBox1.Controls.Add(this.lblBono);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.dtpFechaPago);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
@@ -249,7 +249,7 @@
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(28, 13);
             this.lblSalario.TabIndex = 37;
-            this.lblSalario.Text = "0.00";
+            this.lblSalario.Text = "--";
             this.lblSalario.Click += new System.EventHandler(this.lblSalario_Click);
             // 
             // label6
@@ -293,7 +293,7 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Codigo Pago Planilla:";
             // 
-            // dgvPagoPlanillas
+            // dgvMenus
             // 
             this.dgvPagoPlanillas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPagoPlanillas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -352,7 +352,6 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
@@ -372,6 +371,51 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Remove;
+            this.btnCancelar.IconColor = System.Drawing.Color.Black;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.IconSize = 25;
+            this.btnCancelar.Location = new System.Drawing.Point(1109, 132);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(117, 34);
+            this.btnCancelar.TabIndex = 68;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
+            this.btnEditar.IconColor = System.Drawing.Color.Black;
+            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditar.IconSize = 25;
+            this.btnEditar.Location = new System.Drawing.Point(1109, 84);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(117, 34);
+            this.btnEditar.TabIndex = 67;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAgregar.IconColor = System.Drawing.Color.Black;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.IconSize = 25;
+            this.btnAgregar.Location = new System.Drawing.Point(1109, 35);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(117, 34);
+            this.btnAgregar.TabIndex = 66;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
             // FrmPagoPlanillas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,7 +424,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgvPagoPlanillas);
+            this.Controls.Add(this.dgvMenus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFechaSistema);
             this.Controls.Add(this.label14);
@@ -390,7 +434,7 @@
             this.Load += new System.EventHandler(this.FrmPagoPlanillas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPagoPlanillas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,12 +442,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cboxEstado;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblMontoTotal;
         private System.Windows.Forms.TextBox txtHorasExtras;
         private System.Windows.Forms.Label lblBono;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dtpFechaPago;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
@@ -413,14 +457,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvPagoPlanillas;
+        private System.Windows.Forms.DataGridView dgvMenus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFechaSistema;
         private System.Windows.Forms.Label label14;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.ComboBox cboxCodigoEmpleado;
-        private System.Windows.Forms.TextBox txtPagoPlanilla;
+        private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnAgregar;
