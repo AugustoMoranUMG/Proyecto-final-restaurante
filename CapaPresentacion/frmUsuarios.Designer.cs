@@ -33,7 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtContrasenia = new System.Windows.Forms.TextBox();
-            this.txtCodigoEmpleado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.cboxCodigoEmpleado = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -92,9 +92,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboxCodigoEmpleado);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.txtContrasenia);
-            this.groupBox1.Controls.Add(this.txtCodigoEmpleado);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtNombreUsuario);
             this.groupBox1.Controls.Add(this.label10);
@@ -135,14 +135,6 @@
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(124, 20);
             this.txtContrasenia.TabIndex = 41;
-            // 
-            // txtCodigoEmpleado
-            // 
-            this.txtCodigoEmpleado.Location = new System.Drawing.Point(163, 58);
-            this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
-            this.txtCodigoEmpleado.ReadOnly = true;
-            this.txtCodigoEmpleado.Size = new System.Drawing.Size(124, 20);
-            this.txtCodigoEmpleado.TabIndex = 40;
             // 
             // label6
             // 
@@ -344,6 +336,20 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "USUARIOS";
             // 
+            // cboxCodigoEmpleado
+            // 
+            this.cboxCodigoEmpleado.FormattingEnabled = true;
+            this.cboxCodigoEmpleado.Items.AddRange(new object[] {
+            "Admin",
+            "Cocina",
+            "Mesa",
+            "Caja",
+            "Bodega"});
+            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(163, 59);
+            this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
+            this.cboxCodigoEmpleado.Size = new System.Drawing.Size(124, 21);
+            this.cboxCodigoEmpleado.TabIndex = 43;
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,7 +379,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtContrasenia;
-        private System.Windows.Forms.TextBox txtCodigoEmpleado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.Label label10;
@@ -392,5 +397,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboxCodigoEmpleado;
     }
 }
