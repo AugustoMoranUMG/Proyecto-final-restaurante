@@ -30,6 +30,7 @@
         {
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboxCodigoMenu = new System.Windows.Forms.ComboBox();
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
@@ -41,15 +42,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFechaActual = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvDetallesOrdenes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.cboxCodigoOrdenEncabezado = new System.Windows.Forms.ComboBox();
-            this.cboxCodigoMenu = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesOrdenes)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +73,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cboxCodigoMenu);
-            this.groupBox1.Controls.Add(this.cboxCodigoOrdenEncabezado);
             this.groupBox1.Controls.Add(this.lblPrecioUnitario);
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.btnCancelar);
@@ -87,13 +84,21 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(21, 65);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(934, 152);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
+            // 
+            // cboxCodigoMenu
+            // 
+            this.cboxCodigoMenu.FormattingEnabled = true;
+            this.cboxCodigoMenu.Location = new System.Drawing.Point(200, 73);
+            this.cboxCodigoMenu.Name = "cboxCodigoMenu";
+            this.cboxCodigoMenu.Size = new System.Drawing.Size(124, 21);
+            this.cboxCodigoMenu.TabIndex = 38;
+            this.cboxCodigoMenu.SelectedIndexChanged += new System.EventHandler(this.cboxCodigoMenu_SelectedIndexChanged);
             // 
             // lblPrecioUnitario
             // 
@@ -219,21 +224,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 119);
+            this.label4.Location = new System.Drawing.Point(17, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Codigo Menú:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Codigo Orden Encabezado:";
             // 
             // label2
             // 
@@ -305,23 +300,6 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // cboxCodigoOrdenEncabezado
-            // 
-            this.cboxCodigoOrdenEncabezado.FormattingEnabled = true;
-            this.cboxCodigoOrdenEncabezado.Location = new System.Drawing.Point(200, 74);
-            this.cboxCodigoOrdenEncabezado.Name = "cboxCodigoOrdenEncabezado";
-            this.cboxCodigoOrdenEncabezado.Size = new System.Drawing.Size(124, 21);
-            this.cboxCodigoOrdenEncabezado.TabIndex = 37;
-            // 
-            // cboxCodigoMenu
-            // 
-            this.cboxCodigoMenu.FormattingEnabled = true;
-            this.cboxCodigoMenu.Location = new System.Drawing.Point(200, 120);
-            this.cboxCodigoMenu.Name = "cboxCodigoMenu";
-            this.cboxCodigoMenu.Size = new System.Drawing.Size(124, 21);
-            this.cboxCodigoMenu.TabIndex = 38;
-            this.cboxCodigoMenu.SelectedIndexChanged += new System.EventHandler(this.cboxCodigoMenu_SelectedIndexChanged);
-            // 
             // frmDetallesOrdenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,7 +337,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblFechaActual;
         private System.Windows.Forms.Label label14;
@@ -368,6 +345,5 @@
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.Label lblPrecioUnitario;
         private System.Windows.Forms.ComboBox cboxCodigoMenu;
-        private System.Windows.Forms.ComboBox cboxCodigoOrdenEncabezado;
     }
 }
