@@ -61,7 +61,7 @@
             // lblDiasVigencia
             // 
             this.lblDiasVigencia.AutoSize = true;
-            this.lblDiasVigencia.Location = new System.Drawing.Point(873, 135);
+            this.lblDiasVigencia.Location = new System.Drawing.Point(872, 142);
             this.lblDiasVigencia.Name = "lblDiasVigencia";
             this.lblDiasVigencia.Size = new System.Drawing.Size(15, 16);
             this.lblDiasVigencia.TabIndex = 52;
@@ -100,7 +100,7 @@
             // 
             this.lblFechaSistema.AutoSize = true;
             this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaSistema.Location = new System.Drawing.Point(1048, 30);
+            this.lblFechaSistema.Location = new System.Drawing.Point(1097, 36);
             this.lblFechaSistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaSistema.Name = "lblFechaSistema";
             this.lblFechaSistema.Size = new System.Drawing.Size(13, 17);
@@ -112,7 +112,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(861, 25);
+            this.label14.Location = new System.Drawing.Point(910, 31);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(115, 22);
@@ -134,13 +134,13 @@
             // 
             this.dgvInventarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInventarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventarios.Location = new System.Drawing.Point(17, 241);
+            this.dgvInventarios.Location = new System.Drawing.Point(17, 281);
             this.dgvInventarios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInventarios.Name = "dgvInventarios";
             this.dgvInventarios.ReadOnly = true;
             this.dgvInventarios.RowHeadersWidth = 51;
             this.dgvInventarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventarios.Size = new System.Drawing.Size(1244, 207);
+            this.dgvInventarios.Size = new System.Drawing.Size(1254, 290);
             this.dgvInventarios.TabIndex = 48;
             this.dgvInventarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventarios_CellClick);
             // 
@@ -148,7 +148,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(411, 14);
+            this.label1.Location = new System.Drawing.Point(453, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 31);
@@ -159,7 +159,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 66);
+            this.label6.Location = new System.Drawing.Point(23, 69);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 22);
@@ -170,7 +170,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 138);
+            this.label4.Location = new System.Drawing.Point(22, 145);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 22);
@@ -198,11 +198,11 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(16, 50);
+            this.groupBox1.Location = new System.Drawing.Point(17, 86);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1245, 183);
+            this.groupBox1.Size = new System.Drawing.Size(1254, 187);
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             // 
@@ -212,10 +212,11 @@
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 25;
-            this.btnCancelar.Location = new System.Drawing.Point(1083, 126);
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(1034, 137);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(145, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(193, 41);
             this.btnCancelar.TabIndex = 65;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -224,14 +225,15 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 25;
-            this.btnEditar.Location = new System.Drawing.Point(1083, 78);
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.Location = new System.Drawing.Point(1034, 79);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(145, 34);
+            this.btnEditar.Size = new System.Drawing.Size(193, 41);
             this.btnEditar.TabIndex = 64;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -272,7 +274,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(544, 131);
+            this.label7.Location = new System.Drawing.Point(543, 138);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 22);
@@ -285,10 +287,11 @@
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 25;
-            this.btnAgregar.Location = new System.Drawing.Point(1083, 29);
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.Location = new System.Drawing.Point(1034, 23);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(145, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(193, 41);
             this.btnAgregar.TabIndex = 58;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -297,7 +300,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(283, 139);
+            this.txtCantidad.Location = new System.Drawing.Point(282, 146);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(164, 22);
@@ -306,7 +309,7 @@
             // cboxCodigoMenu
             // 
             this.cboxCodigoMenu.FormattingEnabled = true;
-            this.cboxCodigoMenu.Location = new System.Drawing.Point(283, 65);
+            this.cboxCodigoMenu.Location = new System.Drawing.Point(283, 68);
             this.cboxCodigoMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboxCodigoMenu.Name = "cboxCodigoMenu";
             this.cboxCodigoMenu.Size = new System.Drawing.Size(164, 24);
@@ -367,7 +370,7 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 24;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(979, 455);
+            this.btnEliminar.Location = new System.Drawing.Point(961, 579);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(139, 39);
@@ -386,7 +389,7 @@
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 24;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(1139, 455);
+            this.btnSalir.Location = new System.Drawing.Point(1121, 579);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(123, 39);
@@ -400,7 +403,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 503);
+            this.ClientSize = new System.Drawing.Size(1301, 640);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblFechaSistema);
