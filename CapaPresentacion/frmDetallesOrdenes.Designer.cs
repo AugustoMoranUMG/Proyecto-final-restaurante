@@ -104,7 +104,7 @@
             // 
             this.lblPrecioUnitario.AutoSize = true;
             this.lblPrecioUnitario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioUnitario.Location = new System.Drawing.Point(571, 74);
+            this.lblPrecioUnitario.Location = new System.Drawing.Point(571, 28);
             this.lblPrecioUnitario.Name = "lblPrecioUnitario";
             this.lblPrecioUnitario.Size = new System.Drawing.Size(15, 19);
             this.lblPrecioUnitario.TabIndex = 36;
@@ -112,7 +112,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(575, 26);
+            this.txtCantidad.Location = new System.Drawing.Point(201, 117);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(124, 20);
             this.txtCantidad.TabIndex = 31;
@@ -184,7 +184,7 @@
             // 
             this.lblPrecioTotal.AutoSize = true;
             this.lblPrecioTotal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioTotal.Location = new System.Drawing.Point(571, 119);
+            this.lblPrecioTotal.Location = new System.Drawing.Point(571, 73);
             this.lblPrecioTotal.Name = "lblPrecioTotal";
             this.lblPrecioTotal.Size = new System.Drawing.Size(15, 19);
             this.lblPrecioTotal.TabIndex = 11;
@@ -194,7 +194,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(388, 119);
+            this.label8.Location = new System.Drawing.Point(388, 73);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 19);
             this.label8.TabIndex = 6;
@@ -204,7 +204,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(388, 73);
+            this.label9.Location = new System.Drawing.Point(388, 27);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 19);
             this.label9.TabIndex = 5;
@@ -214,7 +214,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(388, 25);
+            this.label5.Location = new System.Drawing.Point(14, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 19);
             this.label5.TabIndex = 4;

@@ -52,6 +52,8 @@
             this.dgvEncabezadoOrdenes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.cboxDetallesOrdenes = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncabezadoOrdenes)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +67,7 @@
             "Entregado",
             "Finalizado",
             "Cancelado"});
-            this.cboxEstado.Location = new System.Drawing.Point(522, 111);
+            this.cboxEstado.Location = new System.Drawing.Point(547, 118);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(124, 21);
             this.cboxEstado.TabIndex = 33;
@@ -104,6 +106,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -136,7 +139,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(370, 112);
+            this.label7.Location = new System.Drawing.Point(370, 119);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 19);
             this.label7.TabIndex = 7;
@@ -146,7 +149,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(370, 69);
+            this.label8.Location = new System.Drawing.Point(370, 85);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 19);
             this.label8.TabIndex = 6;
@@ -156,7 +159,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(370, 26);
+            this.label9.Location = new System.Drawing.Point(370, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 19);
             this.label9.TabIndex = 5;
@@ -188,9 +191,12 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboxDetallesOrdenes);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cboxCodigoEmpleado);
             this.groupBox1.Controls.Add(this.cboxCodigoMesa);
             this.groupBox1.Controls.Add(this.cboxCodigoCliente);
@@ -240,7 +246,7 @@
             // 
             // dtpFechaOrden
             // 
-            this.dtpFechaOrden.Location = new System.Drawing.Point(522, 24);
+            this.dtpFechaOrden.Location = new System.Drawing.Point(547, 14);
             this.dtpFechaOrden.Name = "dtpFechaOrden";
             this.dtpFechaOrden.Size = new System.Drawing.Size(124, 20);
             this.dtpFechaOrden.TabIndex = 38;
@@ -249,7 +255,7 @@
             // 
             this.lblMontoTotalOrden.AutoSize = true;
             this.lblMontoTotalOrden.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoTotalOrden.Location = new System.Drawing.Point(518, 69);
+            this.lblMontoTotalOrden.Location = new System.Drawing.Point(543, 85);
             this.lblMontoTotalOrden.Name = "lblMontoTotalOrden";
             this.lblMontoTotalOrden.Size = new System.Drawing.Size(15, 19);
             this.lblMontoTotalOrden.TabIndex = 11;
@@ -345,6 +351,25 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // cboxDetallesOrdenes
+            // 
+            this.cboxDetallesOrdenes.FormattingEnabled = true;
+            this.cboxDetallesOrdenes.Location = new System.Drawing.Point(547, 53);
+            this.cboxDetallesOrdenes.Name = "cboxDetallesOrdenes";
+            this.cboxDetallesOrdenes.Size = new System.Drawing.Size(124, 21);
+            this.cboxDetallesOrdenes.TabIndex = 43;
+            this.cboxDetallesOrdenes.SelectedIndexChanged += new System.EventHandler(this.cboxDetallesOrdenes_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(370, 53);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(165, 19);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Codigo Detalles Ordenes:";
+            // 
             // frmEncabezadoOrdenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,5 +419,7 @@
         private System.Windows.Forms.ComboBox cboxCodigoEmpleado;
         private System.Windows.Forms.ComboBox cboxCodigoMesa;
         private System.Windows.Forms.ComboBox cboxCodigoCliente;
+        private System.Windows.Forms.ComboBox cboxDetallesOrdenes;
+        private System.Windows.Forms.Label label6;
     }
 }
