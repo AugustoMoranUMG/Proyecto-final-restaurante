@@ -173,6 +173,5 @@ namespace Sistema_Restaurante
                 lblPrecioTotal.Text = cl_detallesOrdenes.MtdPrecioTotal(int.Parse(txtCantidad.Text), PrecioUnitario).ToString();
             }
         }
-
     }
 }
