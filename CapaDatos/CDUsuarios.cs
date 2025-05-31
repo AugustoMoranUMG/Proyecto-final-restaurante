@@ -81,11 +81,12 @@ namespace CapaDatos
 
         public void MtdEliminarUsuario(int CodigoUsuario)
         {
-            string QueryEliminarUsuario = "Delete tbl_mesas where CodigoUsuarios = @Codigousuarios";
+            string QueryEliminarUsuario = "Delete tbl_usuarios where CodigoUsuario = @Codigousuario";
             SqlCommand CommandEliminarUsuario = new SqlCommand(QueryEliminarUsuario, cd_conexion.MtdAbrirConexion());
             CommandEliminarUsuario.Parameters.AddWithValue("@CodigoUsuario", CodigoUsuario);
             CommandEliminarUsuario.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
+      
         }
 
     }
