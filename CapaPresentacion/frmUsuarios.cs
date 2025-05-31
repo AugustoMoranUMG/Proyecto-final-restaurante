@@ -83,6 +83,7 @@ namespace Sistema_Restaurante
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
+            lblFechaActual.Text = cLusuarios.MtdFechaActual().ToString("dd/MM/yyyy");
             mtdMostrarListaEmpleados();
             mtdConsultarUsuario();
         }
@@ -124,6 +125,33 @@ namespace Sistema_Restaurante
             cboxRol.Text = dgvUsuarios.SelectedCells[4].Value.ToString();
             cboxEstado.Text = dgvUsuarios.SelectedCells[5].Value.ToString();
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            mtdLimpiarCampos();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int CodigoUsuario = int.Parse(txtCodigoUsuario.Text);
+                cdusuarios.MtdEliminarUsuario(CodigoUsuario);
+                MessageBox.Show("Usuario eliminado correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtdConsultarUsuario();
+                mtdLimpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
