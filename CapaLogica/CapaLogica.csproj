@@ -58,6 +58,7 @@
     <Compile Include="CLmesas.cs" />
     <Compile Include="CLPagoOrdenes.cs" />
     <Compile Include="CLPagoPlanillas.cs" />
+    <Compile Include="CLusuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
