@@ -93,6 +93,25 @@ namespace CapaDatos
             cd_conexion.MtdCerrarConexion();
         }
 
+        public bool MtdConsultarEncabezado(int CodigoOrdenDet)
+        {
+            string QueryConsultarEncabezado = "SELECT 1 FROM tbl_EncabezadoOrdenes WHERE CodigoOrdenDet = @CodigoOrdenDet";
+            SqlCommand CommandEliminarDetalle = new SqlCommand(QueryConsultarEncabezado, cd_conexion.MtdAbrirConexion());
+            CommandEliminarDetalle.Parameters.AddWithValue("@CodigoOrdenDet", CodigoOrdenDet);
+            cd_conexion.MtdAbrirConexion();
+            object result = CommandEliminarDetalle.ExecuteScalar(); // devuelve 1 o null
+            cd_conexion.MtdCerrarConexion();
+
+            if (result != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void MtdEliminarDetallesOrdenes(int CodigoOrdenDet)
         {
             string QueryEliminarDetallesOrdenes = "Delete tbl_DetallesOrdenes where CodigoOrdenDet = @CodigoOrdenDet";

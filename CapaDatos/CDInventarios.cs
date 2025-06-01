@@ -63,9 +63,8 @@ namespace CapaDatos
             DataTable dt_inventario = new DataTable();
             sqlAdapter.Fill(dt_inventario);
 
-            return dt_inventario;
-
             cd_conexion.MtdCerrarConexion();
+            return dt_inventario;
         }
 
         public void MtdAgregarInventarios(int CodigoMenu, string Categoria, int Cantidad, DateTime FechaEntrada, DateTime FechaVencimiento, int DiasVigencia, string UsuarioSistema, DateTime FechaSistema)

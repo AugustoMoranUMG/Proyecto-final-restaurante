@@ -171,11 +171,19 @@ namespace Sistema_Restaurante
             {
                 int CodigoOrdenEnc = int.Parse(txtCodigoOrdenEncabezado.Text);
 
-                cd_encabezadoOrdenes.MtdEliminarEncabezadoOrdenes(CodigoOrdenEnc);
-                MessageBox.Show("Encabezado eliminado correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtdConsultarEncabezadoOrdenes();
-                mtdLimpiarCampos();
-            }
+
+                if (cd_encabezadoOrdenes.MtdConsultarPago(CodigoOrdenEnc) == true)
+                {
+                    MessageBox.Show("La fila que intenta eliminar depende de una o más filas en otra tabla, por lo que no se podrá eliminar hasta que deje de depender de ellas", "Error al borrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    cd_encabezadoOrdenes.MtdEliminarEncabezadoOrdenes(CodigoOrdenEnc);
+                    MessageBox.Show("Encabezado eliminado correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtdConsultarEncabezadoOrdenes();
+                    mtdLimpiarCampos();
+                }            
+        }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
