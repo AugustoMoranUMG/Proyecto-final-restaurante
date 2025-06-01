@@ -104,7 +104,6 @@ namespace Sistema_Restaurante
             {
                 int CodigoOrdenDet = int.Parse(cboxDetallesOrdenes.Text.Split('-')[1].Trim());
                 int CodigoCliente = int.Parse(cboxCodigoCliente.Text.Split('-')[0].Trim());
-                //Valores temporales para codigomesa y codigoempleado mientras se crean los metodos correspondientes.
                 int CodigoMesa = int.Parse(cboxCodigoMesa.Text.Split('-')[0].Trim());
                 int CodigoEmpleado = int.Parse(cboxCodigoEmpleado.Text.Split('-')[0].Trim());
                 DateTime FechaOrden = dtpFechaOrden.Value;
@@ -197,8 +196,7 @@ namespace Sistema_Restaurante
             {
                 int CodigoOrdenEnc = int.Parse(txtCodigoOrdenEncabezado.Text);
                 int CodigoOrdenDet = int.Parse(cboxDetallesOrdenes.Text.Split('-')[1].Trim());
-                int CodigoCliente = int.Parse(cboxCodigoCliente.Text.Split('-')[0].Trim());
-                //Valores temporales para codigomesa y codigoempleado mientras se crean los metodos correspondientes.
+                int CodigoCliente = int.Parse(cboxCodigoCliente.Text.Split('-')[0].Trim()); 
                 int CodigoMesa = int.Parse(cboxCodigoMesa.Text.Split('-')[0].Trim());
                 int CodigoEmpleado = int.Parse(cboxCodigoEmpleado.Text.Split('-')[0].Trim());
                 DateTime FechaOrden = dtpFechaOrden.Value;
