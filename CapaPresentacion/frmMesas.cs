@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 
 namespace Sistema_Restaurante
 {
@@ -26,7 +27,7 @@ namespace Sistema_Restaurante
         private void frmMesas_Load(object sender, EventArgs e)
         {
 
-            lblFechaActual.Text = clmesas.MtdFechaActual().ToString();
+            lblFechaActual.Text = clmesas.MtdFechaActual().ToString("dd/MM/yyyy");
             mtdConsultarMesas();
 
         }
@@ -57,7 +58,6 @@ namespace Sistema_Restaurante
             txtUbicacion.Text = " ";
             cboxTipoMesa.Text = " ";
             cboxEstado.Text = " ";
-            cboxUsuarioSistema.Text = " ";
 
         }
 
@@ -72,7 +72,7 @@ namespace Sistema_Restaurante
                 string Ubicacion = txtUbicacion.Text;
                 string TipoMesa = cboxTipoMesa.Text;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = cboxUsuarioSistema.Text;
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = clmesas.MtdFechaActual();
 
                 cdmesas.MtdAgregarMesa(NumeroMesa, CantidadSillas, Ubicacion, TipoMesa, Estado, UsuarioSistema, FechaSistema);
@@ -99,7 +99,7 @@ namespace Sistema_Restaurante
                 string Ubicacion = txtUbicacion.Text;
                 string TipoMesa = cboxTipoMesa.Text;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = cboxUsuarioSistema.Text;
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = clmesas.MtdFechaActual();
 
                 cdmesas.MtdActualizarMesa(CodigoMesa, NumeroMesa, CantidadSillas, Ubicacion, TipoMesa, Estado, UsuarioSistema, FechaSistema);
@@ -124,7 +124,6 @@ namespace Sistema_Restaurante
             txtUbicacion.Text = dgvMesas.SelectedCells[3].Value.ToString();
             cboxTipoMesa.Text = dgvMesas.SelectedCells[4].Value.ToString();
             cboxEstado.Text = dgvMesas.SelectedCells[5].Value.ToString();
-            cboxUsuarioSistema.Text = dgvMesas.SelectedCells[6].Value.ToString();
 
         }
 

@@ -1,5 +1,6 @@
 ﻿using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +35,7 @@ namespace Sistema_Restaurante
         private void frmClientes_Load(object sender, EventArgs e)
         {
 
-            lblFechaActual.Text = clclientes.MtdFechaActual().ToString();
+            lblFechaActual.Text = clclientes.MtdFechaActual().ToString("dd/MM/yyyy");
             mtdConsultarClientes();
 
         }
@@ -47,7 +48,6 @@ namespace Sistema_Restaurante
             txtTelefono.Text = " ";
             cboxCategoria.Text = " ";
             cboxEstado.Text = " ";
-            cboxUsuarioSistema.Text = " ";
 
         }
 
@@ -60,7 +60,7 @@ namespace Sistema_Restaurante
                 string Telefono = txtTelefono.Text;
                 string Categoria = cboxCategoria.Text;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = cboxUsuarioSistema.Text;
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = clclientes.MtdFechaActual();
 
                 cdclientes.MtdAgregarCliente(Nombre, Nit, Telefono, Categoria, Estado, UsuarioSistema, FechaSistema);
@@ -84,7 +84,6 @@ namespace Sistema_Restaurante
             txtTelefono.Text = dgvClientes.SelectedCells[3].Value.ToString();
             cboxCategoria.Text = dgvClientes.SelectedCells[4].Value.ToString();
             cboxEstado.Text = dgvClientes.SelectedCells[5].Value.ToString();
-            cboxUsuarioSistema.Text = dgvClientes.SelectedCells[6].Value.ToString();
 
         }
 
@@ -99,7 +98,7 @@ namespace Sistema_Restaurante
                 string Telefono = txtTelefono.Text;
                 string Categoria = cboxCategoria.Text;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = cboxUsuarioSistema.Text;
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = clclientes.MtdFechaActual();
 
                 cdclientes.MtdActualizarCliente(CodigoCliente, Nombre, Nit, Telefono, Categoria, Estado, UsuarioSistema, FechaSistema);

@@ -16,12 +16,23 @@ namespace Sistema_Restaurante
 {
     public partial class FrmMenuPrincipal: Form
     {
+        private Timer ti;
+
         public FrmMenuPrincipal()
         {
+            ti = new Timer();
+            ti.Tick += new EventHandler(eventoTimer);
             InitializeComponent();
+            ti.Enabled = true;
             //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
+        }
+
+        private void eventoTimer(object ob, EventArgs evt)
+        {
+            DateTime hoy = DateTime.Now;
+            lblReloj.Text = hoy.ToString("G");
         }
 
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
@@ -259,6 +270,11 @@ namespace Sistema_Restaurante
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             LoadUserData();
+        }
+
+        private void lblReloj_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void CloseForms(object sender, FormClosedEventArgs e)

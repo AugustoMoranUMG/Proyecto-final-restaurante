@@ -67,7 +67,7 @@
             "Pagado",
             "Rechazado"});
             this.cboxEstado.Location = new System.Drawing.Point(559, 113);
-            this.cboxEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(124, 21);
             this.cboxEstado.TabIndex = 60;
@@ -85,7 +85,7 @@
             // txtHorasExtras
             // 
             this.txtHorasExtras.Location = new System.Drawing.Point(559, 23);
-            this.txtHorasExtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHorasExtras.Margin = new System.Windows.Forms.Padding(2);
             this.txtHorasExtras.Name = "txtHorasExtras";
             this.txtHorasExtras.Size = new System.Drawing.Size(124, 20);
             this.txtHorasExtras.TabIndex = 58;
@@ -115,7 +115,7 @@
             // 
             this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaPago.Location = new System.Drawing.Point(212, 72);
-            this.dtpFechaPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaPago.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaPago.Name = "dtpFechaPago";
             this.dtpFechaPago.Size = new System.Drawing.Size(124, 20);
             this.dtpFechaPago.TabIndex = 55;
@@ -197,7 +197,7 @@
             // txtPagoPlanilla
             // 
             this.txtPagoPlanilla.Location = new System.Drawing.Point(212, 19);
-            this.txtPagoPlanilla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPagoPlanilla.Margin = new System.Windows.Forms.Padding(2);
             this.txtPagoPlanilla.Name = "txtPagoPlanilla";
             this.txtPagoPlanilla.ReadOnly = true;
             this.txtPagoPlanilla.Size = new System.Drawing.Size(124, 20);
@@ -241,7 +241,7 @@
             // 
             this.cboxCodigoEmpleado.FormattingEnabled = true;
             this.cboxCodigoEmpleado.Location = new System.Drawing.Point(212, 44);
-            this.cboxCodigoEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxCodigoEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
             this.cboxCodigoEmpleado.Size = new System.Drawing.Size(124, 21);
             this.cboxCodigoEmpleado.TabIndex = 62;
@@ -325,10 +325,10 @@
             // lblFechaSistema
             // 
             this.lblFechaSistema.AutoSize = true;
-            this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaSistema.Location = new System.Drawing.Point(835, 22);
+            this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.lblFechaSistema.Location = new System.Drawing.Point(833, 20);
             this.lblFechaSistema.Name = "lblFechaSistema";
-            this.lblFechaSistema.Size = new System.Drawing.Size(11, 15);
+            this.lblFechaSistema.Size = new System.Drawing.Size(15, 19);
             this.lblFechaSistema.TabIndex = 56;
             this.lblFechaSistema.Text = "-";
             // 
@@ -390,7 +390,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFechaSistema);
             this.Controls.Add(this.label14);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPagoPlanillas";
             this.Text = "FrmPagoPlanillas";
             this.Load += new System.EventHandler(this.FrmPagoPlanillas_Load);

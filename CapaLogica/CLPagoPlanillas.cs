@@ -11,8 +11,7 @@ namespace CapaLogica
         // Bono, MontoTotal
         public DateTime MtdFechaSistema()
         {
-            DateTime fechaSistema = DateTime.Now;
-            return fechaSistema;
+            return DateTime.Today;
         }
 
         public double MtdBono (double Salario)

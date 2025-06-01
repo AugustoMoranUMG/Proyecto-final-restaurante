@@ -58,6 +58,7 @@
     <Compile Include="CDMesas.cs" />
     <Compile Include="CDPagoOrdenes.cs" />
     <Compile Include="CDPagoPlanillas.cs" />
+    <Compile Include="CDUsuarios.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

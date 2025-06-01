@@ -73,7 +73,7 @@
             // 
             this.dtpFechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaEntrada.Location = new System.Drawing.Point(584, 33);
-            this.dtpFechaEntrada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaEntrada.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
             this.dtpFechaEntrada.Size = new System.Drawing.Size(124, 20);
             this.dtpFechaEntrada.TabIndex = 50;
@@ -90,7 +90,7 @@
             // 
             this.dtpFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaVencimiento.Location = new System.Drawing.Point(584, 73);
-            this.dtpFechaVencimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaVencimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
             this.dtpFechaVencimiento.Size = new System.Drawing.Size(124, 20);
             this.dtpFechaVencimiento.TabIndex = 51;
@@ -99,10 +99,10 @@
             // lblFechaSistema
             // 
             this.lblFechaSistema.AutoSize = true;
-            this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaSistema.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lblFechaSistema.Location = new System.Drawing.Point(833, 20);
             this.lblFechaSistema.Name = "lblFechaSistema";
-            this.lblFechaSistema.Size = new System.Drawing.Size(11, 15);
+            this.lblFechaSistema.Size = new System.Drawing.Size(15, 19);
             this.lblFechaSistema.TabIndex = 49;
             this.lblFechaSistema.Text = "-";
             this.lblFechaSistema.Click += new System.EventHandler(this.lblFechaSistema_Click);
@@ -238,7 +238,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
             this.iconButton1.Location = new System.Drawing.Point(1111, 123);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(117, 34);
             this.iconButton1.TabIndex = 65;
@@ -253,7 +253,7 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
             this.iconButton2.Location = new System.Drawing.Point(1111, 78);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(117, 34);
             this.iconButton2.TabIndex = 64;
@@ -291,7 +291,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(212, 119);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(124, 20);
             this.txtCantidad.TabIndex = 57;
@@ -300,7 +300,7 @@
             // 
             this.cboxCodigoMenu.FormattingEnabled = true;
             this.cboxCodigoMenu.Location = new System.Drawing.Point(212, 55);
-            this.cboxCodigoMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxCodigoMenu.Margin = new System.Windows.Forms.Padding(2);
             this.cboxCodigoMenu.Name = "cboxCodigoMenu";
             this.cboxCodigoMenu.Size = new System.Drawing.Size(124, 21);
             this.cboxCodigoMenu.TabIndex = 56;
@@ -397,7 +397,7 @@
             this.Controls.Add(this.dgvInventarios);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmInventarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInventarios";

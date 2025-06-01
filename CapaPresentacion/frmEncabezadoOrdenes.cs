@@ -29,6 +29,7 @@ namespace Sistema_Restaurante
             MtdMostrarListaMesas();
             MtdMostrarListaEmpleados();
             mtdConsultarEncabezadoOrdenes();
+            lblFechaActual.Text = cl_encabdezadoOrdenes.MtdFechaActual().ToString("dd/MM/yyyy");
         }
 
         private void MtdMostrarListaClientes()
