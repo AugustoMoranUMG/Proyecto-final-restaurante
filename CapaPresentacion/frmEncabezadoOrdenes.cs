@@ -195,7 +195,7 @@ namespace Sistema_Restaurante
             try
             {
                 int CodigoOrdenEnc = int.Parse(txtCodigoOrdenEncabezado.Text);
-                int CodigoOrdenDet = int.Parse(cboxDetallesOrdenes.Text.Split('-')[1].Trim());
+                int CodigoOrdenDet = int.Parse(cboxDetallesOrdenes.Text);
                 int CodigoCliente = int.Parse(cboxCodigoCliente.Text.Split('-')[0].Trim()); 
                 int CodigoMesa = int.Parse(cboxCodigoMesa.Text.Split('-')[0].Trim());
                 int CodigoEmpleado = int.Parse(cboxCodigoEmpleado.Text.Split('-')[0].Trim());
