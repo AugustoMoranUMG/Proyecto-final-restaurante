@@ -115,7 +115,7 @@ namespace Sistema_Restaurante
                 DateTime fechasistema = cl_pagoplanillas.MtdFechaSistema();
 
                 cd_pagoplanillas.MtdAgregarPagoPlanilla(codigoEmpleado, Fechapago, salario, bono, horasExtras, montoTotal, estado, usuarioSistema, fechasistema);
-                MessageBox.Show("Pago realizado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pago planilla realizado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MtdConsultarPagoPlanilla();
                 MtdLimpiarCampos();
         }
@@ -146,7 +146,7 @@ namespace Sistema_Restaurante
             DateTime fechasistema = cl_pagoplanillas.MtdFechaSistema();
 
             cd_pagoplanillas.MtdActualizarPagoPlanilla(codigoPagoPlanilla, codigoEmpleado, Fechapago, salario, bono, horasExtras, montoTotal, estado, usuarioSistema, fechasistema);
-            MessageBox.Show("Pago actualizado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Pago planilla actualizado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             MtdConsultarPagoPlanilla();
             MtdLimpiarCampos();
         }
@@ -163,7 +163,7 @@ namespace Sistema_Restaurante
                 int CodigoPagoPlanilla = (int.Parse(txtPagoPlanilla.Text));
 
                 cd_pagoplanillas.MtdEliminarPagoPlanilla(CodigoPagoPlanilla);
-                MessageBox.Show("Pago Eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pago planilla eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MtdConsultarPagoPlanilla();
                 MtdLimpiarCampos();
             }
