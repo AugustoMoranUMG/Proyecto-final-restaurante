@@ -20,9 +20,8 @@ namespace CapaDatos
             DataTable dt_Mesa = new DataTable();
             sqlAdapter.Fill(dt_Mesa);
 
-            return dt_Mesa;
-
             cd_conexion.MtdCerrarConexion();
+            return dt_Mesa;
         }
 
         public void MtdAgregarMesa(int NumeroMesa, int CantidadSillas, string Ubicacion, string TipoMesa, string Estado, string UsuarioSistema, DateTime FechaSistema)
@@ -56,6 +55,26 @@ namespace CapaDatos
             cd_conexion.MtdCerrarConexion();
 
 
+        }
+
+        public bool MtdConsultarEncabezado(int CodigoMesa)
+        {
+            string QueryConsultarEncabezado = "SELECT 1 FROM tbl_EncabezadoOrdenes WHERE CodigoMesa = @CodigoMesa";
+            SqlCommand CommandEliminarMesa = new SqlCommand(QueryConsultarEncabezado, cd_conexion.MtdAbrirConexion());
+            CommandEliminarMesa.Parameters.AddWithValue("@CodigoMesa", CodigoMesa);
+            cd_conexion.MtdAbrirConexion();
+            object result = CommandEliminarMesa.ExecuteScalar(); // devuelve 1 o null
+            cd_conexion.MtdCerrarConexion();
+
+            if (result != null)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void MtdEliminarMesa(int CodigoMesa)

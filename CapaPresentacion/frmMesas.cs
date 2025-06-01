@@ -141,10 +141,18 @@ namespace Sistema_Restaurante
             {
                 int CodigoMesa = int.Parse(txtCodigoMesa.Text);
 
-                cdmesas.MtdEliminarMesa(CodigoMesa);
-                MessageBox.Show("Mesa eliminada correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtdConsultarMesas();
-                mtdLimpiarCampos();
+
+                if (cdmesas.MtdConsultarEncabezado(CodigoMesa) == true)
+                {
+                    MessageBox.Show("La fila que intenta eliminar depende de una o más filas en otra tabla, por lo que no se podrá eliminar hasta que deje de depender de ellas", "Error al borrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    cdmesas.MtdEliminarMesa(CodigoMesa);
+                    MessageBox.Show("Mesa eliminada correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtdConsultarMesas();
+                    mtdLimpiarCampos();
+                }
             }
             catch (Exception ex)
             {

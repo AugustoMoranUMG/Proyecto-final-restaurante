@@ -133,10 +133,19 @@ namespace Sistema_Restaurante
             {
                 int CodigoEmpleado = int.Parse(txtCodigoEmpleado.Text);
 
-                cdempleados.MtdEliminarEmpleado(CodigoEmpleado);
-                MessageBox.Show("Cliente eliminado correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtdConsultarEmpleados();
-                mtdLimpiarCampos();
+                if(cdempleados.MtdConsultarUsuario(CodigoEmpleado) == true || cdempleados.MtdConsultarEncabezado(CodigoEmpleado) == true || cdempleados.MtdConsultarPagoPlanillas(CodigoEmpleado) == true)
+                {
+                    MessageBox.Show("La fila que intenta eliminar depende de una o más filas en otra tabla, por lo que no se podrá eliminar hasta que deje de depender de ellas", "Error al borrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    cdempleados.MtdEliminarEmpleado(CodigoEmpleado);
+                    MessageBox.Show("Cliente eliminado correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtdConsultarEmpleados();
+                    mtdLimpiarCampos();
+                }
+
+                
             }
             catch (Exception ex)
             {

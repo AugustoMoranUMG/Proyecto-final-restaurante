@@ -114,10 +114,17 @@ namespace Sistema_Restaurante
             {
                 int CodigoOrdenDet = int.Parse(txtCodigoOrdenDetalles.Text);
 
-                cd_detallesOrdenes.MtdEliminarDetallesOrdenes(CodigoOrdenDet);
-                MessageBox.Show("Orden eliminada correctamente", "Eliminar Orden", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtdConsultarDetallesOrdenes();
-                mtdLimpiarCampos();
+                if (cd_detallesOrdenes.MtdConsultarEncabezado(CodigoOrdenDet) == true)
+                {
+                    MessageBox.Show("La fila que intenta eliminar depende de una o más filas en otra tabla, por lo que no se podrá eliminar hasta que deje de depender de ellas", "Error al borrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    cd_detallesOrdenes.MtdEliminarDetallesOrdenes(CodigoOrdenDet);
+                    MessageBox.Show("Orden eliminada correctamente", "Eliminar Orden", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtdConsultarDetallesOrdenes();
+                    mtdLimpiarCampos();
+                }
             }
             catch (Exception ex)
             {

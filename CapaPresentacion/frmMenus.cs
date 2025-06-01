@@ -101,10 +101,17 @@ namespace Sistema_Restaurante
             {
                 int CodigoMenu = (int.Parse(txtCodigoMenu.Text));
 
-                cd_menus.MtdEliminarMenu(CodigoMenu);
-                MessageBox.Show("Menu Eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MtdConsultarMenu();
-                MtdLimpiarCampos();
+                if (cd_menus.MtdConsultarInventario(CodigoMenu) == true || cd_menus.MtdConsultarDetalles(CodigoMenu) == true)
+                {
+                    MessageBox.Show("La fila que intenta eliminar depende de una o más filas en otra tabla, por lo que no se podrá eliminar hasta que deje de depender de ellas", "Error al borrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    cd_menus.MtdEliminarMenu(CodigoMenu);
+                    MessageBox.Show("Menu Eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MtdConsultarMenu();
+                    MtdLimpiarCampos();
+                }
             }
             catch (Exception ex)
             {

@@ -20,9 +20,8 @@ namespace CapaDatos
             DataTable dt_Cliente = new DataTable();
             sqlAdapter.Fill(dt_Cliente);
 
-            return dt_Cliente;
-
             cd_conexion.MtdCerrarConexion();
+            return dt_Cliente;
         }
 
         public void MtdAgregarCliente(string Nombre, string Nit, string Telefono, string Categoria, string Estado, string UsuarioSistema, DateTime FechaSistema)
@@ -56,6 +55,25 @@ namespace CapaDatos
             cd_conexion.MtdCerrarConexion();
 
 
+        }
+        public bool MtdConsultarEncabezado(int CodigoCliente)
+        {
+            string QueryConsultarEncabezado = "SELECT 1 FROM tbl_EncabezadoOrdenes WHERE CodigoCliente = @CodigoCliente";
+            SqlCommand CommandEliminarCliente = new SqlCommand(QueryConsultarEncabezado, cd_conexion.MtdAbrirConexion());
+            CommandEliminarCliente.Parameters.AddWithValue("@CodigoCliente", CodigoCliente);
+            cd_conexion.MtdAbrirConexion();
+            object result = CommandEliminarCliente.ExecuteScalar(); // devuelve 1 o null
+            cd_conexion.MtdCerrarConexion();
+
+            if (result != null)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void MtdEliminarCliente(int CodigoCliente)
