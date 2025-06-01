@@ -20,9 +20,8 @@ namespace CapaDatos
             DataTable dt_menu = new DataTable();
             sqlAdapter.Fill(dt_menu);
 
-            return dt_menu;
-
             cd_conexion.MtdCerrarConexion();
+            return dt_menu;
         }
 
         public void MtdAgregarMenu(string Nombre, string Ingredientes, string Categoria, decimal Precio, string Estado, string UsuarioSistema, DateTime FechaSistema)
@@ -54,6 +53,46 @@ namespace CapaDatos
             CommandActualizarMenu.Parameters.AddWithValue("@FechaSistema", FechaSistema);
             CommandActualizarMenu.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
+        }
+
+        public bool MtdConsultarInventario(int CodigoMenu)
+        {
+            string QueryConsultarInventario = "SELECT 1 FROM tbl_Inventarios WHERE CodigoMenu = @CodigoMenu";
+            SqlCommand CommandEliminarMenu = new SqlCommand(QueryConsultarInventario, cd_conexion.MtdAbrirConexion());
+            CommandEliminarMenu.Parameters.AddWithValue("@CodigoMenu", CodigoMenu);
+            cd_conexion.MtdAbrirConexion();
+            object result = CommandEliminarMenu.ExecuteScalar(); // devuelve 1 o null
+            cd_conexion.MtdCerrarConexion();
+
+            if (result != null)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool MtdConsultarDetalles(int CodigoMenu)
+        {
+            string QueryConsultarDetalles = "SELECT 1 FROM tbl_DetallesOrdenes WHERE CodigoMenu = @CodigoMenu";
+            SqlCommand CommandEliminarMenu = new SqlCommand(QueryConsultarDetalles, cd_conexion.MtdAbrirConexion());
+            CommandEliminarMenu.Parameters.AddWithValue("@CodigoMenu", CodigoMenu);
+            cd_conexion.MtdAbrirConexion();
+            object result = CommandEliminarMenu.ExecuteScalar(); // devuelve 1 o null
+            cd_conexion.MtdCerrarConexion();
+
+            if (result != null)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void MtdEliminarMenu(int CodigoMenu)

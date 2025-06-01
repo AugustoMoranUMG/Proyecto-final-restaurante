@@ -58,6 +58,65 @@ namespace CapaDatos
 
         }
 
+        public bool MtdConsultarUsuario(int CodigoEmpleado)
+        {
+            string QueryConsultarUsuario = "SELECT 1 FROM tbl_Usuarios WHERE CodigoEmpleado = @CodigoEmpleado";
+            SqlCommand CommandEliminarEmpleado = new SqlCommand(QueryConsultarUsuario, cd_conexion.MtdAbrirConexion());
+            CommandEliminarEmpleado.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
+            cd_conexion.MtdAbrirConexion();
+            object result = CommandEliminarEmpleado.ExecuteScalar(); // devuelve 1 o null
+            cd_conexion.MtdCerrarConexion();
+
+            if (result != null){
+                    
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool MtdConsultarEncabezado(int CodigoEmpleado)
+        {
+            string QueryConsultarEncabezado = "SELECT 1 FROM tbl_EncabezadoOrdenes WHERE CodigoEmpleado = @CodigoEmpleado";
+            SqlCommand CommandEliminarEmpleado = new SqlCommand(QueryConsultarEncabezado, cd_conexion.MtdAbrirConexion());
+            CommandEliminarEmpleado.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
+            cd_conexion.MtdAbrirConexion();
+            object result = CommandEliminarEmpleado.ExecuteScalar(); // devuelve 1 o null
+            cd_conexion.MtdCerrarConexion();
+
+            if (result != null)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool MtdConsultarPagoPlanillas(int CodigoEmpleado)
+        {
+            string QueryConsultarPagoPlanillas = "SELECT 1 FROM tbl_PagoPlanillas WHERE CodigoEmpleado = @CodigoEmpleado";
+            SqlCommand CommandEliminarEmpleado = new SqlCommand(QueryConsultarPagoPlanillas, cd_conexion.MtdAbrirConexion());
+            CommandEliminarEmpleado.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
+            cd_conexion.MtdAbrirConexion();
+            object result = CommandEliminarEmpleado.ExecuteScalar(); // devuelve 1 o null
+            cd_conexion.MtdCerrarConexion();
+
+            if (result != null)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void MtdEliminarEmpleado(int CodigoEmpleado)
         {
             string QueryEliminarEmpleado = "Delete tbl_empleados where CodigoEmpleado = @CodigoEmpleado";

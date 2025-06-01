@@ -161,6 +161,26 @@ namespace CapaDatos
             cd_conexion.MtdCerrarConexion();
         }
 
+        public bool MtdConsultarPago(int CodigoOrdenEnc)
+        {
+            string QueryConsultarPago = "SELECT 1 FROM tbl_PagoOrdenes WHERE CodigoOrdenEnc = @CodigoOrdenEnc";
+            SqlCommand CommandEliminarEncabezadoOrdenes = new SqlCommand(QueryConsultarPago, cd_conexion.MtdAbrirConexion());
+            CommandEliminarEncabezadoOrdenes.Parameters.AddWithValue("@CodigoOrdenEnc", CodigoOrdenEnc);
+            cd_conexion.MtdAbrirConexion();
+            object result = CommandEliminarEncabezadoOrdenes.ExecuteScalar(); // devuelve 1 o null
+            cd_conexion.MtdCerrarConexion();
+
+            if (result != null)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void MtdEliminarEncabezadoOrdenes(int CodigoOrdenEnc)
         {
             string QueryEliminarEncabezadoOrdenes = "Delete tbl_EncabezadoOrdenes where CodigoOrdenEnc = @CodigoOrdenEnc";

@@ -126,10 +126,18 @@ namespace Sistema_Restaurante
             {
                 int CodigoCliente = int.Parse(txtCodigoCliente.Text);
 
-                cdclientes.MtdEliminarCliente(CodigoCliente);
-                MessageBox.Show("Cliente eliminado correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtdConsultarClientes();
-                mtdLimpiarCampos();
+
+                if (cdclientes.MtdConsultarEncabezado(CodigoCliente) == true)
+                {
+                    MessageBox.Show("La fila que intenta eliminar depende de una o más filas en otra tabla, por lo que no se podrá eliminar hasta que deje de depender de ellas", "Error al borrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    cdclientes.MtdEliminarCliente(CodigoCliente);
+                    MessageBox.Show("Cliente eliminado correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtdConsultarClientes();
+                    mtdLimpiarCampos();
+                }
             }
             catch (Exception ex)
             {
