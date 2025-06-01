@@ -125,7 +125,7 @@ namespace Sistema_Restaurante
             mtdLimpiarCampos();
 
         }
-
+    
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
