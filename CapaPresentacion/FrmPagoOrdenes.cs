@@ -37,9 +37,9 @@ namespace Sistema_Restaurante
                 int CodigoPago = (int.Parse(txtCodigoPago.Text));
 
                 cd_pagoordenes.MtdEliminarPagoOrden(CodigoPago);
-                MessageBox.Show("Pago Eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pago Orden Eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MtdConsultarPagoOrdenes();
-                /*MtdLimpiarCampos();*/
+                MtdLimpiarCampos();
             }
             catch (Exception ex)
             {
@@ -127,7 +127,7 @@ namespace Sistema_Restaurante
                 DateTime FechaSistema = cl_pagoordenes.MtdFechaActual();
 
                 cd_pagoordenes.MtdAgregarPagoOrdenes(CodigoOrdenEnc, MontoOrden, Propina, Impuesto, Descuento, TotalPago, MetodoPago, Estado, FechaPago, UsuarioSistema, FechaSistema);
-                MessageBox.Show("Pago de la orden guardado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pago Orden Guardado Correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MtdConsultarPagoOrdenes();
                 MtdLimpiarCampos();
             }
@@ -186,7 +186,7 @@ namespace Sistema_Restaurante
                 DateTime FechaSistema = cl_pagoordenes.MtdFechaActual();
 
                 cd_pagoordenes.MtdActualizarPagoOrdenes(CodigoPago, CodigoOrdenEnc, MontoOrden, Propina, Impuesto, Descuento, TotalPago, MetodoPago, Estado, FechaPago, UsuarioSistema, FechaSistema);
-                MessageBox.Show("Orden actualizada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pago Orden Actualizado Correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MtdConsultarPagoOrdenes();
                 MtdLimpiarCampos();
             }

@@ -140,7 +140,7 @@ namespace Sistema_Restaurante
                 DateTime fechasistema = cl_inventarios.MtdFechaSistema();
 
                 cd_inventarios.MtdActualizarInventario(codigoinventario, codigomenu, categorias, cantidad, Fechaentrada, Fechavencimiento, diasvigencia, usuarioSistema, fechasistema);
-                MessageBox.Show("Menú agregado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Inventario Actualizado Correctamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MtdConsultarInventario();
                 MtdLimpiarCampos();
             }
@@ -186,7 +186,7 @@ namespace Sistema_Restaurante
                 DateTime fechasistema = cl_inventarios.MtdFechaSistema();
 
                 cd_inventarios.MtdAgregarInventarios(codigomenu, categorias, cantidad, Fechaentrada, Fechavencimiento, diasvigencia, usuarioSistema, fechasistema);
-                MessageBox.Show("Menú agregado exitosamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Inventario Agregado Correctamente", "Guardado exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MtdConsultarInventario();
                 MtdLimpiarCampos();
             }
